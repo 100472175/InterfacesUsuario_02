@@ -1,17 +1,21 @@
+
 .menu_top{
     height: 30vh;
+    margin-top: 10vh;
 }
 .menu_button{
     height: 70vh;
-    background-color: midnightblue;
 }
 .menu_progess_bar {
-    margin: 5vh auto;
+    margin: auto;
     display: grid;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap: 5%;
-
+}
+.menu_progess_bar button{
+    background-color: transparent;
+    border: none;
 }
 .menu_choose{
     margin: auto;
@@ -22,20 +26,92 @@
 
 }
 .menu_choose button{
-    border-radius: 5px;
+    border-radius: 30px;
+    height: 15vh;
+    background-color: transparent;
+    border: none;
 }
+.menu_choose button:first-child{
+    margin-top: 5%;
+    background-color:#E6CDBA;
 
+}
+/*
 .menu_cart{
     position: relative;
 }
 .menu_cart img{
     width: 40px;
 }
-
-.menu_list_foos_select{
+*/
+.menu_dish{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 5%; /*cambiar*/
-    row-gap: 5%; /*cambiar*/
-    margin-top: 5%; /*cambiar*/
+    column-gap: 5vw;
+    row-gap: 5vh;
+    margin: 1vh auto;
+}
+
+/*Formato de cada plato*/
+.elemento{
+    text-align: center;
+    background-color: #F6EDE6;
+    padding: 5%;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    height: auto;
+
+
+}
+.elemento img {
+    float: left;
+    aspect-ratio: 1;
+    width: 40%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.titulo{
+    font-weight: 600;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 1%;
+
+}
+.precio{
+    margin: 2%;
+    font-size: 0.5em;
+    text-align: center;
+}
+.menos{
+    border: black;
+    border-radius: 4px;
+}
+.elemento button{
+    background-color: #1c1f25;
+    color: #dedede;
+    width: 60%;
+    border: none;
+    text-align: center;
+    margin: auto;
+    height: 5%;
+    font-size: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+.elemento button:hover{
+    color:black;
+    border: black solid 1px;
+    background-color: white;
+}
+.menu_progess_bar_scuart{
+    width: 60%;
+    height: 5%;
+    background: #E6CDBA;
+    border-radius: 30px;
+    margin: auto;
+
+
 }
