@@ -2,15 +2,20 @@
 * {
     margin: 0;
     padding: 0;
-    /*overflow-x: hidden;*/
     font-size: 25px;
+    font-family: "Perpetua", serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    background-color: #FFFBF8
+}
+
+header {
+	z-index: 3;
+	background-color: #7E4D29
 }
 
 section {
-	width: 100vw
+	width: 100vw;
+	background-color: #FFFBF8
 }
 
 /*FORMATO PARA PC*/
