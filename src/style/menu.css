@@ -1,0 +1,41 @@
+.menu_top{
+    height: 30vh;
+}
+.menu_button{
+    height: 70vh;
+    background-color: midnightblue;
+}
+.menu_progess_bar {
+    margin: 5vh auto;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 5%;
+
+}
+.menu_choose{
+    margin: auto;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5%;
+
+}
+.menu_choose button{
+    border-radius: 5px;
+}
+
+.menu_cart{
+    position: relative;
+}
+.menu_cart img{
+    width: 40px;
+}
+
+.menu_list_foos_select{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5%; /*cambiar*/
+    row-gap: 5%; /*cambiar*/
+    margin-top: 5%; /*cambiar*/
+}
