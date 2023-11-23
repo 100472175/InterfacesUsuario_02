@@ -8,12 +8,31 @@
     scroll-behavior: smooth;
 }
 
-header {
+.main_header {
+	width: 100vw;
+	height: 5vh;
+	position: fixed;
+	top: 0;
 	z-index: 3;
 	background-color: #7E4D29
 }
 
+.main_header nav {
+	display: grid;
+	grid-template-columns: 4fr 0.8fr 1fr 0.5fr 1fr 1fr;
+	padding-right: 2vw;
+}
+
+.main_header a {
+	color: white;
+	margin-top: 0.8vh; 
+	font-size: 0.75rem;
+	text-align: center
+}
+
+
 section {
+	height: 95vh;
 	width: 100vw;
 	background-color: #FFFBF8
 }

@@ -10,6 +10,10 @@
 	display: grid;
 }
 
+.register_text a {
+	margin-top: 5vh;
+}
+
 .register_form {
 	margin: auto;
 	height: 50vh;
