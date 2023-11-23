@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Link de la página de estilos y título de la página-->
+        <link rel="stylesheet" href="style/stylesheet_menu.css">
+        <title>Menu</title>
+        <meta name="viewport" content="width=device-width">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="java.js"></script>
+    </head>
+    <body>
+    	<!--Menú de migas de pan-->
+    	<section id="migas_de_pan">
+    		<p class="selec" id="menu_seleccion">Selección</p>
+    		<p class="no_selec" id="menu_revision_pago">Revisión</p>
+    		<p class="cant_selec" id="menu_estado">Estado</p>
+    	</section>
+    	<!--Secció del menú de selección-->
+        <section id="seleccion">
+                <header>
+                    <img src="images/iconos/icono_global.png" alt="icono contador" id="icono_contador">
+                    <p id="contador_global">0</p>
+                </header>
+                <!--Cada uno de los artículos que tiene el menú, que tienen el mismo formato-->
+                <article class="seleccion_art">
+                <img src="images/comidas/pollo_curry.jpg" alt="pollo al curry">
+                <h6>Pollo al curry</h6>
+                <p class="precio">3.00</p>
+               		<div>
+		                <button onclick="disminuir('pollo_curry')">-</button>
+		                <p id="pollo_curry">0</p>
+		                <button onclick="aumentar('pollo_curry')">+</button>
+		           	</div>
+            	</article>
+            	<article class="seleccion_art">
+                <img src="images/comidas/pollo_teriyaki.jpg" alt="pollo teriyaki">
+                <h6>Pollo teriyaki</h6>
+                <p class="precio">12.50</p>
+                <div>
+                    <button onclick="disminuir('pollo_teriyaki')">-</button>
+                    <p id="pollo_teriyaki">0</p>
+                    <button onclick="aumentar('pollo_teriyaki')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/ramen.jpeg" alt="ramen">
+                <h6>Ramen</h6>
+                <p class="precio">6.00</p>
+                <div>
+                    <button onclick="disminuir('ramen')">-</button>
+                    <p id="ramen">0</p>
+                    <button onclick="aumentar('ramen')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/sake_tira_ternera.jpeg" alt="sake tira de ternera">
+                <h6>Sake tira de ternera</h6>
+                <p class="precio">9.50</p>
+                <div>
+                    <button onclick="disminuir('sake_ternera')">-</button>
+                    <p id="sake_ternera">0</p>
+                    <button onclick="aumentar('sake_ternera')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/sopa_miso.jpg" alt="Sopa de miso">
+                <h6>Sopa de miso</h6>
+                <p class="precio">8.99</p>
+                <div>
+                    <button onclick="disminuir('sopa_miso')">-</button>
+                    <p id="sopa_miso">0</p>
+                    <button onclick="aumentar('sopa_miso')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/takoyaki.jpg" alt="Takoyaki">
+                <h6>Takoyaki</h6>
+                <p class="precio">5.00</p>
+                <div>
+                    <button onclick="disminuir('takoyaki')">-</button>
+                    <p id="takoyaki">0</p>
+                    <button onclick="aumentar('takoyaki')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/tempura_langostino.jpg" alt="Tempura langostino">
+                <h6>Tempura langostino</h6>
+                <p class="precio">4.00</p>
+                <div>
+                    <button onclick="disminuir('tempura_langostino')">-</button>
+                    <p id="tempura_langostino">0</p>
+                    <button onclick="aumentar('tempura_langostino')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/yakiudon.jpeg" alt="yakiudon">
+                <h6>Yakiudon</h6>
+                <p class="precio">8.50</p>
+                <div>
+                    <button onclick="disminuir('yakiudon')">-</button>
+                    <p id="yakiudon">0</p>
+                    <button onclick="aumentar('yakiudon')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/gunkan_red.jpg" alt="gunkan_red">
+                <h6>Gunkan red</h6>
+                <p class="precio">2.00</p>
+                <div>
+                    <button onclick="disminuir('gunkan')">-</button>              
+                    <p id="gunkan">0</p>
+                    <button onclick="aumentar('gunkan')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/nigiri_atun.jpg" alt="nigiri de atún">
+                <h6>Nigiri de atún</h6>
+                <p class="precio">1.00</p>
+                <div>
+                    <button onclick="disminuir('nigiri_atun')">-</button>
+                    <p id="nigiri_atun">0</p>
+                    <button onclick="aumentar('nigiri_atun')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/nigiri_langostino.jpg" alt="nigiri de langostino">
+                <h6>Nigiri de langostino</h6>
+                <p class="precio">1.50</p>
+                <div>
+                    <button onclick="disminuir('nigiri_langostino')">-</button>
+                    <p id="nigiri_langostino">0</p>
+                    <button onclick="aumentar('nigiri_langostino')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/sashimi_pez_mantequilla.jpg" alt="Sashimi de pez mantequilla">
+                <h6>Sashimi de pez mantequilla</h6>
+                <p class="precio">8.99</p>
+                <div>
+                    <button onclick="disminuir('sashimi_pez_mantequilla')">-</button>
+                    <p id="sashimi_pez_mantequilla">0</p>
+                    <button onclick="aumentar('sashimi_pez_mantequilla')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/sashimi_salmon.jpg" alt="sashimi_salmon">
+                <h6>Sashimi salmon</h6>
+                <p class="precio">12.50</p>
+                <div>
+                    <button onclick="disminuir('sashimi_salmon')">-</button>
+                    <p id="sashimi_salmon">0</p>
+                    <button onclick="aumentar('sashimi_salmon')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/temaki_salmon.jpg" alt="temaki de salmon">
+                <h6>Temaki de salmon</h6>
+                <p class="precio">2.55</p>
+                <div>
+                    <button onclick="disminuir('temaki_salmon')">-</button>
+                    <p id="temaki_salmon">0</p>
+                    <button onclick="aumentar('temaki_salmon')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/tuna_maki.jpg" alt="tuna maki">
+                <h6>Tuna maki</h6>
+                <p class="precio">2.00</p>
+                <div>
+                    <button onclick="disminuir('tuna_maki')">-</button>
+                    <p id="tuna_maki">0</p>
+                    <button onclick="aumentar('tuna_maki')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/ura_mango.jpeg" alt="ura mango">
+                <h6>Ura mango</h6>
+                <p class="precio">6.00</p>
+                <div>
+                    <button onclick="disminuir('ura_mango')">-</button>
+                    <p id="ura_mango">0</p>
+                    <button onclick="aumentar('ura_mango')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/ura_roll.jpg" alt="ura roll">
+                <h6>Ura roll</h6>
+                <p class="precio">12.00</p>
+                <div>
+                    <button onclick="disminuir('ura_roll')">-</button>
+                    <p id="ura_roll">0</p>
+                    <button onclick="aumentar('ura_roll')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/comidas/uramaki.jpg" alt="uramaki">
+                <h6>Uramaki</h6>
+                <p class="precio">7.50</p>
+                <div>
+                    <button onclick="disminuir('uramaki')">-</button>
+                    <p id="uramaki">0</p>
+                    <button onclick="aumentar('uramaki')">+</button>
+                </div>
+            </article>
+            <hr>
+            <article class="seleccion_art">
+                <img src="images/bebidas/agua.jpg" alt="agua">
+                <h6>Agua</h6>
+                <p class="precio">1.80</p>
+                <div>
+                    <button onclick="disminuir('agua')">-</button>
+                    <p id="agua">0</p>
+                    <button onclick="aumentar('agua')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/bebidas/bunuel.jpeg" alt="buñuel">
+                <h6>Buñuel</h6>
+                <p class="precio">8.00</p>
+                <div>
+                    <button onclick="disminuir('bunuel')">-</button>
+                    <p id="bunuel">0</p>
+                    <button onclick="aumentar('bunuel')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/bebidas/coca_cola.jpg" alt="coca-cola">
+                <h6>Coca-cola</h6>
+                <p class="precio">2.30</p>
+                <div>
+                    <button onclick="disminuir('coca_cola')">-</button>
+                    <p id="coca_cola">0</p>
+                    <button onclick="aumentar('coca_cola')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/bebidas/fanta.jpg" alt="fanta">
+                <h6>Fanta</h6>
+                <p class="precio">2.30</p>
+                <div>
+                    <button onclick="disminuir('fanta')">-</button>
+                    <p id="fanta">0</p>
+                    <button onclick="aumentar('fanta')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/bebidas/gimlet.jpeg" alt="gimlet">
+                <h6>Gimlet</h6>
+                <p class="precio">4.50</p>
+                <div>
+                    <button onclick="disminuir('gimlet')">-</button>
+                    <p id="gimlet">0</p>
+                    <button onclick="aumentar('gimlet')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/bebidas/gin_tonic.jpeg" alt="gin tonic">
+                <h6>Gin tonic</h6>
+                <p class="precio">8.00</p>
+                <div>
+                    <button onclick="disminuir('gin_tonic')">-</button>
+                    <p id="gin_tonic">0</p>
+                    <button onclick="aumentar('gin_tonic')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/bebidas/koi_pond.jpeg" alt="Koi pond">
+                <h6>Koi pond</h6>
+                <p class="precio">10.00</p>
+                <div>
+                    <button onclick="disminuir('koi_pond')">-</button>
+                    <p id="koi_pond">0</p>
+                    <button onclick="aumentar('koi_pond')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/bebidas/mojito.jpeg" alt="mojito">
+                <h6>Mojito</h6>
+                <p class="precio">6.00</p>
+                <div>
+                    <button onclick="disminuir('mojito')">-</button>
+                    <p id="mojito">0</p>
+                    <button onclick="aumentar('mojito')">+</button>
+                </div>
+            </article>
+            <article class="seleccion_art">
+                <img src="images/bebidas/sake.jpeg" alt="sake">
+                <h6>Sake</h6>
+                <p class="precio">5.00</p>
+                <div>
+                    <button onclick="disminuir('sake')">-</button>
+                    <p id="sake">0</p>
+                    <button onclick="aumentar('sake')">+</button>
+                </div>
+            </article>
+        </section>
+        <!--Sección del menú de revisión de pago-->
+        <section id="revision_pago">
+        	<!--Contiene en total a pagar-->
+        	<h2 id="pagar">0</h2>
+        	<!--Div que contiene el texto del pedido-->
+        	<div>
+				<p id="texto_pedido"></p>
+			</div>
+			<button id="boton_pedido">Hacer pedido</button>
+        </section>
+        <!--Sección del menú de estado-->
+        <section id="estado">
+        	<h2>¡Tu pedido ha sido realizado correctamente!</h2>
+        	<!--Contador y animación-->
+    		<p id="contador">10:00</p>
+    		<img src="images/iconos/en_camino.gif" alt="en camino" id="moto">
+        </section>
+    </body>

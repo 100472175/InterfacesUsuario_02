@@ -1,0 +1,707 @@
+/*Código de css, hoja de estilo*/
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 25px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*Clase que le asigna float left a todas las clases que comienzen con col*/
+[class*="col-"]{
+    float: left;
+}
+
+/*Estilo del menú desplegable*/
+#main_nav {
+	display: none;
+	width: 70%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	opacity: 0.9;
+	background-color: rgb(0, 0, 0);
+}
+
+#main_nav > h2 {
+	color: #E75400;
+	font-size: 1rem;
+	text-align: center;
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+.link {
+	text-decoration: none;
+	color: #E74500;
+}
+
+#boton_menu {
+	margin-top: 10px;
+	margin-right: 5px;
+	display: block;
+	position:fixed;
+	top: 0%;
+	right: 0%;
+	width: 80px;
+	height: 80px;
+}
+
+#abrir_menu {
+	display: block;
+	width: 60px;
+	height: 60px;
+}
+
+#cerrar_menu {
+	display: none;
+	width: 60px;
+	height: 60px;
+}
+
+/*Estilo del footer, fijado abajo de la página*/
+footer {
+    background-color: black;
+    width: 100vw;
+    height: 3.5vh;
+    position: fixed;
+    bottom: 0;
+}
+
+/*Estilo de los links del footer*/
+footer > a{
+    text-decoration: none;
+    float: left
+}
+
+/*Estilo del texto que te lleva al inicio de la página*/
+footer a > p{
+    color: #E74500;
+    text-align: left;
+    margin-top: 0.5vh;
+    font-size: 1.1rem;
+    font-family: 'Brush Script MT', cursive;
+}
+
+/*Estilo del navegador del footer, con los links a las redes sociales*/
+footer > nav{
+    text-align:right;
+    margin-top: 0.5vh;
+    margin-right: 1vw;
+}
+footer nav a > img{
+    width: 28px;
+    height: 28px;
+}
+
+/*Estilo de las secciones*/
+section {
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+}
+
+/*ID que define el estilo de las columnas izquierda y derecha de la primera página*/
+#pag_1_left {
+    height: auto;
+    background-image: url("../images/fondos/pag1.png");
+    background-size: cover;
+}
+
+#pag_1_right {
+	display: none;
+    height: auto;
+    background-color: rgb(105, 105, 105);
+}
+
+/*Divs que sirven para fijas las imágenes de la columna izquierda*/
+#pag_1_left > div {
+    text-align: center;
+}
+
+#pag_1_left div > img {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+
+#pag_1_left h2 {
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.3rem;
+}
+
+#pag_1_left > nav {
+    text-align: center;
+    margin: 3%;
+}
+
+#pag_1_left nav > video{
+    width:440px;
+    height:250px;
+}
+
+/*Estilo de cada uno de los navegadores de la columna derecha*/
+#pag_1_right > nav {
+    width: 47%;
+    height: 30vh;
+    background-color: rgb(48, 48, 48);
+    float: left;
+    margin-left: 2.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: #E74500;
+    text-align: center;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: right;
+}
+
+#pag_1_right nav > p {
+    margin-top: 20%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Brush Script MT', cursive;
+    display: inline-block;
+    background: rgb(48, 48, 48);
+    border-radius: 40%;
+}
+
+#pag_1_right nav a > p {
+    margin-top: 20%;
+    color: #E74500;
+    font-size: 1.2rem;
+    text-align: center;
+    display: inline-block;
+    background: rgb(48, 48, 48);
+    border-radius: 40%;
+    font-family: 'Brush Script MT', cursive;
+}
+
+
+
+#pag_1_right nav a > p:hover {
+	text-decoration: underline;
+}
+
+/*ID's que tienen el icono de cada uno de los navs*/
+#nav_1{
+    background-image: url("../images/iconos/staff.png");
+}
+
+#nav_2{
+    background-image: url("../images/iconos/menu.png");
+}
+
+#nav_3{
+    background-image: url("../images/iconos/cocktails.png");
+}
+
+#nav_4{
+    background-image: url("../images/iconos/reserva.png");
+}
+
+#nav_5{
+    background-image: url("../images/iconos/pedidos.png");
+}
+
+#nav_6{
+    background-image: url("../images/iconos/sobre_nosostros.png");
+}
+
+/*Clase que define los contenedores de textos de las páginas 2-4*/
+.texto_grande {
+    text-align: center;
+    background-position: right;
+    background-size: cover;
+    float: left;
+    height: auto;
+}
+
+.texto_grande > p {
+    font-size: 0.785rem;
+    margin: 5%;
+    font-weight: bold;
+}
+
+/*Id's que definen las imagenes de fondo de cada página*/
+#bg_2{
+    background-image: url("../images/fondos/pag2.png");
+}
+
+#bg_3{
+    background-image: url("../images/fondos/pag3.png");
+}
+
+#bg_4{
+    background-image: url("../images/fondos/pag4.png");
+}
+
+/*Galería, define el estilo de las galerías de imágenes de las páginas 2-4*/
+.galeria {
+    background-color:  rgb(124, 124, 124);
+    float: left;
+    height: auto;
+    overflow-y: hidden;
+}
+
+.galeria > h2{
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-size: 2rem;
+    color: #E74500;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.galeria div{
+    text-align: center;
+    display: flex;
+    width: 90%;
+    height: 80%;
+    margin-left: 5%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.galeria div > img {
+    flex: 0 0 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+.botones{
+    float: left;
+}
+
+.botones button {
+    height: 5%;
+	cursor: pointer;
+	background-color: rgb(0, 0, 0);
+	opacity: 0.6;
+	color: #E75400;
+	border: none;
+	width: 50%;
+    margin: 0;
+}
+
+.botones button:hover {
+	opacity: 1;
+}
+
+/*Formulario*/
+#formulario {
+    background-color: rgb(48, 48, 48);
+    height: auto;
+}
+
+#formulario > h2 {
+    color: #E74500;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Brush Script MT', cursive;
+}
+
+#formulario > div {
+    width: 60vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    border-radius: 5px;
+    background-color: rgb(48, 48, 48);
+}
+
+#valor_incorrecto p {
+	color: #E75400;
+	text-align: center;
+}
+
+#formulario div form > button {
+    background-color: rgb(160, 160, 160);
+    border-color: #E74500;
+    color: black;
+    padding: 1vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+/*Contacto*/
+#info_contacto {
+	background-color:rgb(124, 124, 124);
+	height: auto;
+}
+
+#info_contacto h2 {
+	color: #E75400;
+	margin-top: 3vh;
+	margin-bottom: 2vh;
+	text-align: center;
+	font-size: 2rem;
+	font-family: 'Brush Script MT', cursive;
+}
+
+#info_contacto h3 {
+	color: #E75400;
+	text-align: center;
+	font-family: 'Brush Script MT'; 
+}
+
+/*Info de contacto*/
+#info_contacto div {
+	float: left;
+}
+
+#info_contacto div form {
+	margin: 5%;
+}
+
+#info_contacto div form input {
+	height: 30px;
+}
+
+#info_contacto div form > #mensaje {
+	height: 300px;
+	font-size: 0.75rem;
+	width: 100%;
+	resize: none;
+}
+
+#info_contacto div form button {
+	margin-left: 42.5%;
+}
+
+#info_contacto div p {
+	text-align:left;
+	margin: 5%;
+	font-weight: bold;
+	font-size: 0.785rem;	
+}
+
+#info_contacto div nav{
+    text-align:center;
+    margin-top: 0.5vh;
+    margin-right: 1vw;
+}
+
+#info_contacto div nav a img{
+    width: 10%;
+    height: auto;
+}
+
+/*Formulario de contacto*/
+label {
+    color: #E74500;
+}
+
+input[type=text] {
+    width: 98%;
+    padding: 8px;
+    margin: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+ 
+input[type=submit] {
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+    color: #E74500;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color: rgb(105, 105, 105);
+}
+
+/*Separador entre páginas*/
+hr{
+    border: 0;
+    height: 1vh;
+    width: 100vw;
+    background-color: #E74500;
+}
+
+/*Clases que asisten con el reajustado de la página en formato movil y tablet*/
+.righty {
+    right: 0;
+    background-position: left;
+}
+
+.lefty {
+    left: 0;
+}
+
+/*Clases que definen las animaciones de scroll*/
+.reveal{
+    position: relative;
+    opacity: 0;
+
+}
+
+.reveal.active{
+    opacity: 1;
+}
+
+.active.derecha{
+    animation: derecha 1s ease-in;
+
+}
+
+.active.izquierda{
+    animation: izquierda 1s ease-in;
+}
+
+@keyframes derecha{
+    0%{
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes izquierda{
+    0%{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/*Width para las columnas del móvil*/
+[class*="col-"]{
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    /*Tablet*/
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+	#main_nav {
+		display: none;
+	}
+
+	#boton_menu {
+		display: none;
+	}
+
+    #pag_1_left {
+        background-image: url("../images/fondos/pag1_tablet.png");
+        background-size: cover;
+        height:auto;
+    }
+
+    #pag_1_left div > img {
+    	width: 250px;
+        height: 250px;
+    }
+
+	#pag_1_right {
+		display: block;
+	}
+
+    #pag_1_right nav > p {
+        margin-top: 20%;
+    }
+
+    #pag_1_right nav a > p {
+        margin-top: 20%;
+    }
+
+    .texto_grande > p{
+        font-size: 0.9rem;
+        margin: 5%;
+    }
+    
+    #formulario {
+        height: auto;
+    }
+    
+    #info_contacto h3 {
+    	text-align: left;
+    	margin-left: 20%;
+    }
+    
+    #info_contacto div nav {
+    	text-align: left;
+    	margin-top: 5%;
+    	margin-left: 24%;
+    }
+    
+    #info_contacto div nav a img {
+    	width: 15%;
+    	height: auto;
+    }
+    
+  }
+
+@media screen and (min-width:768px) {
+    /*Ordenador*/
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;} 
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    
+    #main_nav {
+    	display: none;
+    }
+    
+    #boton_menu {
+    	display: none;
+    }
+    
+    footer {
+        height: 5vh;
+    }
+
+    #pag_1_left {
+        background-image: url("../images/fondos/pag1.png");
+        background-size: cover;
+        height:100vh;
+    }
+
+    #pag_1_left div > img {
+        height: 200px; 
+        width: 200px;
+    }
+
+    #pag_1_left nav > video{
+        aspect-ratio: 16/9;
+        width: 90%;
+        height: auto;
+    }
+
+    #pag_1_right {
+        height:100vh;
+    	display: block;
+    }
+
+    #pag_1_right nav{
+        height: 30vh;
+    }
+
+    #pag_1_right nav > p {
+        margin-top: 0%;
+        top: 43%;
+        position: relative;
+    }
+
+    #pag_1_right nav a > p {
+        margin-top: 0%;
+        top: 43%;
+        position: relative;
+    }
+
+    #nav_1{
+        background-image: url("../images/iconos/staff_ord.png");
+    }
+    
+    #nav_2{
+        background-image: url("../images/iconos/menu_ord.png");
+    }
+    
+    #nav_3{
+        background-image: url("../images/iconos/cocktails_ord.png");
+    }
+    
+    #nav_4{
+        background-image: url("../images/iconos/reserva_ord.png");
+    }
+    
+    #nav_5{
+        background-image: url("../images/iconos/pedidos_ord.png");
+    }
+    
+    #nav_6{
+        background-image: url("../images/iconos/sobre_nosotros_ord.png");
+    }
+
+    .texto_grande {
+        height: 100vh;
+    }
+
+    .texto_grande > p{
+        margin-top: 15%;
+        font-size: 1rem;
+    }
+
+    .galeria {
+        height: 100vh;
+    }
+    .galeria > h2 {
+    	margin-top: 1.5vh;
+    	margin-bottom: 1vh;
+    }
+    
+    .galeria div {
+        width: 90%;
+        margin-left: 5%;
+        height: auto;
+    }
+    
+    #formulario {
+        height: 100vh;
+    }
+     
+    #info_contacto {
+    	height: 100vh;
+    } 
+    
+    #info_contacto div nav{
+    	text-align:left;
+    	margin-top: 10%;
+    	margin-left: 3%;
+	}
+
+	#info_contacto div nav a img{
+    	width: 18%;
+    	height: auto;
+	}
+     
+    input[type=text] {
+    	width: 99%;
+    }
+    
+    .righty {
+        float: right;
+        right: 0;
+    }
+
+    .lefty {
+        left: 0;
+    }
+  }
