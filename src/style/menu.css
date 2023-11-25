@@ -62,7 +62,6 @@
     border-radius: 30px;
     height: auto;
 
-
 }
 .elemento img {
     float: left;
@@ -112,6 +111,7 @@
     background: #E6CDBA;
     border-radius: 30px;
     margin: auto;
-
+}
+.menu_elem_right{
 
 }
