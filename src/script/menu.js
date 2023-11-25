@@ -54,19 +54,16 @@ window.addEventListener('load', () => {
 
 // Inicio de la aplicación, que se ejecuta nada más cargar la página.
 function initApp(st_elem) {
-    /*
     while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
     }
-
-     */
     let prods = Array.from(cosas).slice(st_elem, (st_elem + 6))
     prods.forEach((value) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('elemento');
         newDiv.innerHTML = `
             <img src="${value.imagen}" alt="imagen_del_producto">
-            <div>
+            <div class="menu_elemt_right">
                 <div class="titulo">${value.nombre}</div>
                 <div class="menos">-</div>
                 <div class="precio">${value.precio.toLocaleString()} €</div>
