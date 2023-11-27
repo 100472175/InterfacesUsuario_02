@@ -1,7 +1,7 @@
 
 .menu_top{
     height: 30vh;
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 .menu_button{
     height: 70vh;
@@ -23,27 +23,19 @@
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 5%;
-
 }
 .menu_choose button{
     border-radius: 30px;
     height: 15vh;
     background-color: transparent;
     border: none;
+    margin-top: 10%;
 }
+/* Cambiar al js*/
 .menu_choose button:first-child{
-    margin-top: 5%;
     background-color:#E6CDBA;
+}
 
-}
-/*
-.menu_cart{
-    position: relative;
-}
-.menu_cart img{
-    width: 40px;
-}
-*/
 .menu_dish{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -61,14 +53,14 @@
     letter-spacing: 1px;
     border-radius: 30px;
     height: auto;
-
 }
 .elemento img {
     float: left;
     aspect-ratio: 1;
-    width: 40%;
+    width: 45%;
     object-fit: cover;
     border-radius: 15px;
+    margin-top: 3vh;
 }
 
 .titulo{
@@ -76,34 +68,27 @@
     font-size: 0.75em;
     text-align: center;
     padding: 1%;
-
 }
 .precio{
     margin: 2%;
     font-size: 0.5em;
     text-align: center;
 }
-.menos{
-    border: black;
-    border-radius: 4px;
-}
-.elemento button{
-    background-color: #1c1f25;
-    color: #dedede;
-    width: 60%;
-    border: none;
-    text-align: center;
-    margin: auto;
-    height: 5%;
-    font-size: 1em;
-    border-radius: 30px;
-    cursor: pointer;
 
+.menu_saber_mas{
+    background-color: #E6CDBA;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    cursor: pointer;
+    font-size: 0.75em;
+    padding: 1vh;
 }
+
 .elemento button:hover{
     color:black;
-    border: black solid 1px;
-    background-color: white;
+    border: #E6CDBA solid 2px;
+    background-color: transparent;
 }
 .menu_progess_bar_scuart{
     width: 60%;
@@ -112,6 +97,56 @@
     border-radius: 30px;
     margin: auto;
 }
-.menu_elem_right{
-
+.menu_elemt_right{
+    float:right ;
+    width: 50%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
 }
+.menu_menos{
+    background-color: transparent;
+    color: black;
+    border: #E6CDBA solid 2px;
+    border-radius:  50px;
+    font-size: 0.75em;
+}
+.menu_mas{
+    background-color: transparent;
+    color: black;
+    border:  #E6CDBA solid 2px;
+    border-radius:50px;
+    font-size: 0.75em;
+}
+.menu_cantidad{
+    font-size: 0.75em;
+    margin: auto;
+}
+.menu_selcion_cantidad{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin: auto;
+}
+
+.cesta{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 10%;
+    height: 10%;
+}
+.menu_cart_open{
+    position: absolute;
+    z-index: 3;
+    width: 30%;
+    height: 80%;
+    background-color: #F6EDE6;
+    top: 10%;
+    right: 5%;
+    border-radius: 20px;
+}
+.menu_cerrar_compra{
+    position: absolute;
+    top: 5%;
+    right: 8%;
+}
+
