@@ -1,19 +1,18 @@
 /*Estilo del login*/
 body {
-	overflow-y: hidden;
+	overflow-y: auto;
+}
+
+#log-in {
+	display: block;
+}
+
+#sign-up {
+	display: none;
 }
 
 section {
 	height: 100vh;
-}
-
-.register_image {
-	background-repeat: no-repeat;
-	background-size: cover;
-	aspect-ratio: 600/1065;
-	margin-top: 5vh;
-	height: 95vh;
-	width: auto;
 }
 
 #login_image {
@@ -26,23 +25,30 @@ section {
 	float: left;
 }
 
+.register_image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	aspect-ratio: 600/1065;
+	margin-top: 5vh;
+	height: 95vh;
+}
+
 .register_text {
 	float: left;
 }
 
-.register_text a {
-	margin-top: 5vh;
-}
-
 .register_form {
-	margin: auto;
-	height: 50vh;
-	margin-top: 25%;
+	margin-left: 25vw;
+	margin-top: 20vh;
 	background-color: #F6EDE6;
 	box-shadow: 0 4px 4px black;
 	border-radius: 15px;
 	display: grid;
-	grid-template-rows: 1fr 2.25fr 0.65fr 0.65fr 1fr;
+}
+
+.register_form a {
+	text-align: center;
+	font-size: 0.75em;
 }
 
 .register_form h2{
@@ -50,29 +56,14 @@ section {
 	margin-top: 5%; 
 }
 
-#register_form_login {
-	display: grid;
-	grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
-}
-
-#register_form_login label {
+.register_form label {
 	width: 70%;
 	margin: auto;
-	font-size: 20px;
+	font-size: 0.78em;
 }
 
-.register_form button {
-	width: 60%;
-	height: 5vh;
-	margin: 1%;
-	border-radius: 25px;
-	background-color: #7E4D29;
-	color: white;
-	margin: auto;
-	font-size: 20px;
-}
-
-#register_form_login input {
+.register_form input {
+	font-size: 0.9em;
 	width: 70%;
 	margin: auto;
 	margin-bottom: 5%;
@@ -81,9 +72,38 @@ section {
 	border-bottom: 2px solid black;
 }
 
+.register_form button {
+	width: 60%;
+	height: 6vh;
+	margin: 1%;
+	border-radius: 25px;
+	background-color: #7E4D29;
+	color: white;
+	margin: auto;
+	font-size: 20px;
+}
+
 .register_form_subtext {
 	font-size: 16px;
 	margin: auto;
 }
 
+#register_form_login {
+	height: 55vh;
+	grid-template-rows: 0.1fr 1fr 2fr 0.7fr 0.7fr 0.6fr;
+}
 
+#register_form_login form {
+	display: grid;
+	grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
+}
+
+#register_form_signup {
+	height: 60vh;
+	grid-template-rows: 0.1fr 1.35fr 4fr 1fr 1fr;
+}
+
+#register_form_signup form {
+	display: grid;
+	grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr
+}

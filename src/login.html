@@ -5,6 +5,7 @@
     <title>Login - Café Florencia</title>
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/login.css">
+    <script src="./script/login.js"></script>
 </head>
 <body>
 	<header class="main_header">
@@ -19,25 +20,39 @@
 	</header>
 	<section id="log-in">
 		<article class="register_text col-7 col-t-12">
-			<a>&lt;Ir atrás</a>
-			<div class="register_form col-5 col-t-12">	
+			<div class="register_form col-5 col-t-12" id="register_form_login">	
+				<a>&lt;Ir atrás</a>
 				<h2>LOGIN</h2>
-				<form id="register_form_login">
+				<form>
 					<label for="login_user_name" class="register_label">Nombre de usuario*</label>
 					<input type="text" id="login_user_name" placeholder="Nombre">
 					<label for="login_pwd" class="register_label">Contraseña*</label>
 					<input type="text" id="login_pwd" placeholder="Contraseña">
 				</form>
-				<button>Inicio Sesión</button>
-				<button>Regístrate</button>
+				<button id="try_to_log_in">Inicio Sesión</button>
+				<button id="go_to_sign_up" onclick="go_to_sign_up()">Regístrate</button>
 				<p class="register_form_subtext">* Campo obligatorio</p>
 			</div>
 		</article>
 		<article class="col-t-12 register_image" id="login_image"> </article>
 	</section>
-	<section id="sign_up">
+	<section id="sign-up">
 		<article class="col-t-12 register_image" id="signup_image"></article>
 		<article class="register_text col-7 col-t-12">
+			<div class="register_form col-5 col-t-12" id="register_form_signup">
+				<a onclick="go_to_log_in()">&lt;Ir atrás</a>
+				<h2>SIGN UP</h2>
+				<form>
+					<label for="signup_user_name" class="register_label">Nombre de usuario*</label>
+					<input type="text" id="signup_user_name" placeholder="Nombre">
+					<label for="signup_pwd" class="register_label">Contraseña*</label>
+					<input type="text" id="signup_pwd" placeholder="Contraseña">
+					<label for="signup_email" class="register_label">Correo electrónico*</label>
+					<input type="signup_email" id="sugnup_email" placeholder="Correo">
+				</form>
+				<button>Regístrate</button>
+				<p class="register_form_subtext">* Campo obligatorio</p>
+			</div>
 		</article>
 		
 	</section>
