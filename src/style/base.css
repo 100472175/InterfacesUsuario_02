@@ -6,6 +6,7 @@
     font-family: "Perpetua", serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
 }
 
 .main_header {
@@ -30,11 +31,12 @@
 	text-align: center
 }
 
-
+body{
+	background-color: #FFFBF8
+}
 section {
 	height: 95vh;
 	width: 100vw;
-	background-color: #FFFBF8
 }
 
 /*FORMATO PARA PC*/

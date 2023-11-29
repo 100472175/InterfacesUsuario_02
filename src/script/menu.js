@@ -53,18 +53,30 @@ let equis = document.querySelector(".menu_cerrar_compra");
 let menu_carrito = document.querySelector(".menu_cart_open");
 let lista_platos_selecionados = document.querySelector(".menu_list_foos_select");
 let totalCarrito = document.querySelector(".menu_Total");
-/*
-let body = document.querySelector(".menu");
-let abrirCompra = document.querySelector(".menu_cart");
-let cerrarCompra = document.querySelector(".menu_cerrar_compra");
-let lista_comida = document.querySelector(".menu_list_foos_select");
-let cantidad = document.querySelector(".menu_cuantity");
-let eleme = document.querySelector(".menu_cart_open");
-*/
+let menu_ir_revision = document.querySelector(".step_2");
+let menu = document.querySelector(".menu");
+let revisar_ir_menu = document.querySelector(".step_1");
+let revisar_pedido = document.querySelector(".revisar_pedido")
+let lista_revision = document.querySelector(".revision_platos")
+let totalrevision = document.querySelector(".revision_Total");
+let lista_platos_selecionados_revision = document.querySelector(".revision_list_food_select");
+
 window.addEventListener('load', () => {
-    initApp(0);
     menu_carrito.style.display = 'none'
-    cesta.display.style.display = 'block'
+    menu.style.display = 'block'
+    revisar_pedido.style.display = 'none'
+    initApp(0);
+})
+menu_ir_revision.addEventListener('click', () => {
+    menu.style.display = 'none'
+    revisar_pedido.style.display = 'block'
+    mostarElemento()
+
+})
+revisar_ir_menu.addEventListener('click', () => {
+    menu.style.display = 'block'
+    revisar_pedido.style.display = 'none'
+    initApp(0);
 })
 
 function initApp(st_elem) {
@@ -91,28 +103,13 @@ function initApp(st_elem) {
     })
     recargaElemento();
 }
-function cambiarCantidad_suma(key){
-    platos[key].cantidad = platos[key].cantidad + 1 ;
-    platos[key].coste = platos[key].precio * platos[key].cantidad
-    initApp(0)
-    recargaElemento();
 
-}
-function cambiarCantidad_resta(key){
-    if (platos[key].cantidad > 0) {
-        platos[key].cantidad = platos[key].cantidad - 1;
-        platos[key].coste = platos[key].precio * platos[key].cantidad
-        initApp(0)
-        recargaElemento();
-    }
-}
 cesta.addEventListener('click', () => {
     menu_carrito.style.display = 'block'
-    cesta.style.display = 'none'
 })
 equis.addEventListener('click', () => {
     menu_carrito.style.display = 'none'
-    cesta.style.display = 'block'
+
 })
 
 
@@ -144,27 +141,70 @@ function recargaElemento() {
     cantidad.innerText = cuenta;
 }
 
-
-/*
-// Función para mostrar los elementos del carrito en el "paso 2"
-function mostrarElemento() {
-    reserva.innerHTML = '';
-    lista_comidas.forEach((value, key) => {
-        if (value != null) {
+function mostarElemento() {
+    lista_revision.innerHTML ='';
+    let prods = Array.from(platos);
+    prods.forEach((value, key) => {
+        if (value.cantidad > 0) {
+            value.coste = value.precio * value.cantidad
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-            <div><img src="images/${value.imagen}" alt="imagen_del_producto3"></div>
-            <div>${value.nombre}</div>
-            <div>${cosas[key].precio} €</div>
-            <div>${value.precio.toLocaleString()} €</div>
-            <div class="contador">${value.cantidad} u</div>`;
-            reserva.appendChild(newDiv);
+                <img src="${value.imagen}" alt="imagen_del_producto">
+                <div>${value.nombre}</div>
+                <div class="precio"> ${value.coste} €</div>
+                <div>
+                    <button class="menu_menos" onclick="cambiarCantidad_resta_m(${key})">-</button>
+                    <div class="menu_cantidad">${value.cantidad}</div>
+                    <button class="menu_mas" onclick="cambiarCantidad_suma_m(${key})">+</button> 
+                </div>
+                <img src="media/basura.svg" alt="imagen_del_producto">`;
+            lista_revision.appendChild(newDiv);
+        }
+        revisfinal()
+    })
+}
+function revisfinal() {
+    lista_platos_selecionados_revision.innerHTML ='';
+    let precioTotal = 0;
+    let prods = Array.from(platos);
+    prods.forEach((value, key) => {
+        precioTotal = precioTotal + value.coste;
+        if (value.cantidad > 0) {
+            value.coste = value.precio * value.cantidad
+            let newDiv = document.createElement('li');
+            newDiv.innerHTML = `
+                <div>${value.nombre}</div>
+                <div class="precio"> ${value.coste} €</div>
+                <div> ${value.cantidad} u</div>
+                `;
+            lista_platos_selecionados_revision.appendChild(newDiv);
         }
     })
-    precio_total.innerText = "Total: ".concat(precio_compra.toLocaleString()).concat(' €');
+    totalrevision.innerText = "Total ".concat(precioTotal.toLocaleString()).concat(' €');
 }
-*/
 
+function cambiarCantidad_suma(key){
+    platos[key].cantidad = platos[key].cantidad + 1 ;
+    platos[key].coste = platos[key].precio * platos[key].cantidad
+    initApp(0);
+}
+function cambiarCantidad_resta(key){
+    if (platos[key].cantidad > 0) {
+        platos[key].cantidad = platos[key].cantidad - 1;
+        platos[key].coste = platos[key].precio * platos[key].cantidad
+        initApp(0);
+    }
+}
 
-
-
+function cambiarCantidad_suma_m(key){
+    platos[key].cantidad = platos[key].cantidad + 1 ;
+    platos[key].coste = platos[key].precio * platos[key].cantidad
+    mostarElemento();
+}
+function cambiarCantidad_resta_m(key){
+    if (platos[key].cantidad > 0) {
+        platos[key].cantidad = platos[key].cantidad - 1;
+        platos[key].coste = platos[key].precio * platos[key].cantidad
+        mostarElemento();
+    }
+}
