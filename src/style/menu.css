@@ -1,29 +1,45 @@
+/* Barra de progreso */
+.progess_bar{
+    height: 15vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: auto;
+    margin-top: 6vh;
+    background-color:#FFFBF8;
+    place-content: center;
+
+}
+.progess_bar_button{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 5%;
+
+}
+.progess_bar button{
+    background-color: transparent;
+    border: none;
+    font-size: 0.9em;
+    text-align: center;
+}
+.progess_bar_line{
+    height: 30%;
+    background: #E6CDBA;
+    border-radius: 30px;
+}
+.progess_bar_line2{
+    height: 30%;
+    background: #7E4D29;
+    border-radius: 30px;
+    z-index: 2;
+}
 
 .menu_top{
-    height: 30vh;
-    margin-top: 5vh;
+    height: 25vh;
 }
 .menu_button{
     height: 70vh;
 }
-.menu_progess_bar {
-    margin: auto;
-    display: grid;
-    place-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    gap: 5%;
-}
-.menu_progess_bar button{
-    background-color: transparent;
-    border: none;
-}
-.menu_progess_bar_scuart{
-    width: 60%;
-    height: 5%;
-    background: #E6CDBA;
-    border-radius: 30px;
-    margin: auto;
-}
+
 .menu_choose{
     margin: auto;
     display: grid;
@@ -33,11 +49,15 @@
 }
 .menu_choose button{
     border-radius: 30px;
-    height: 15vh;
+    height: 17vh;
+    width: 17vh;
     background-color: transparent;
     border: none;
     margin-top: 10%;
+    font-size: 0.8em;
+
 }
+
 /* Cambiar al js*/
 .menu_choose button:first-child{
     background-color:#E6CDBA;
@@ -121,7 +141,7 @@
     height: auto;
 }
 
-button:hover{
+.elemento button:hover{
     color:black;
     border: #E6CDBA solid 2px;
     background-color: transparent;
@@ -140,6 +160,17 @@ button:hover{
     width: 10%;
     height: 10%;
 }
+.menu_cuantity{
+    position: absolute;
+    top: 10%;
+    right: 7%;
+    width: 25px;
+    height: 25px;
+    background-color: #7E4D29;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+}
 .menu_cart_open{
     position: absolute;
     z-index: 3;
@@ -149,6 +180,9 @@ button:hover{
     top: 10%;
     right: 5%;
     border-radius: 20px;
+}
+.menu_cart_open ul{
+    height: 60%;
 }
 .menu_cerrar_compra{
     position: absolute;
@@ -186,7 +220,6 @@ button:hover{
     font-size: 0.75em;
     padding: 7%;
     text-align: center;
-
 }
 
 .menu_list_foos_select li div:last-child {
@@ -202,7 +235,6 @@ button:hover{
 .menu_go_back{
     position: absolute;
     left: 3vw;
-
 }
 .menu_alergies{
     background-color: #FFF8F4;
@@ -221,3 +253,67 @@ button:hover{
     text-align: center;
 }
 
+.revision_platos li{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    background-color: #F6EDE6;
+    margin-left: 10vw;
+    border-radius: 15px;
+    margin-bottom: 2%;
+}
+.revision_platos li img{
+    height: 15vh;
+
+}
+.revision_platos li div:nth-child(4){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+.revision_platos li img:last-child{
+    height: 5vh;
+
+}
+.revision_go_back{
+    position: absolute;
+    left: 3vw;
+}
+.revision_final{
+    position: absolute;
+    z-index: 3;
+
+    height: 60%;
+    background-color: #F6EDE6;
+    top: 20%;
+    right: 5%;
+    border-radius: 20px;
+
+}
+.revision_button_chek{
+    position: absolute;
+    left: 40%;
+    background-color: #7E4D29;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    bottom: 5%;
+}
+.revision_Total{
+    position: absolute;
+    left: 41%;
+    bottom: 20%;
+}
+.revision_final h1{
+    text-align: center;
+    margin-top: 5%;
+}
+.revision_final ul{
+    height: 50%;
+    margin: 5%;
+}
+.revision_list_food_select li{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
