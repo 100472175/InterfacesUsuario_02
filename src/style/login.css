@@ -3,6 +3,10 @@ body {
 	overflow-y: auto;
 }
 
+section {
+	height: 100vh;
+}
+
 #log-in {
 	display: block;
 }
@@ -11,8 +15,19 @@ body {
 	display: none;
 }
 
-section {
-	height: 100vh;
+#register_logged_in {
+	display: none;
+	margin-left: 25vw;
+	margin-top: 30vh;
+	height: auto;
+	background-color: #F6EDE6;
+	border-radius: 15px;
+	box-shadow: 0 4px 4px black;
+	grid-template-rows: 2fr 2fr 1.5fr;
+}
+
+#register_logged_in button {
+	margin-bottom: 2.5%;
 }
 
 #login_image {
@@ -51,18 +66,22 @@ section {
 	font-size: 0.75em;
 }
 
-.register_form h2{
+p {
+	text-align: center;
+}
+
+h2{
 	text-align: center;
 	margin-top: 5%; 
 }
 
-.register_form label {
+label {
 	width: 70%;
 	margin: auto;
 	font-size: 0.78em;
 }
 
-.register_form input {
+input {
 	font-size: 0.9em;
 	width: 70%;
 	margin: auto;
@@ -72,7 +91,7 @@ section {
 	border-bottom: 2px solid black;
 }
 
-.register_form button {
+button {
 	width: 60%;
 	height: 6vh;
 	margin: 1%;
