@@ -11,13 +11,40 @@ function go_to_log_in() {
 function welcome_message(op, name=null) {
 	if (op == 1) {
 		document.getElementById("register_form_login").style.display = "none";
-		document.getElementById("register_welcome_mssg").innerHTML = "Bienvenido/a, " + name;
+		document.getElementById("register_welcome_mssg").innerHTML = "Te damos la bienvenida, " + name;
 		document.getElementById("register_logged_in").style.display = "grid";
 	}
 	else if (op == 0) {
 		document.getElementById("register_form_login").style.display = "grid";
 		document.getElementById("register_logged_in").style.display = "none";
 	}
+}
+
+function error_message(mssg, page) {
+	var div = document.getElementById("register_error_div");
+	var login = document.getElementById("register_form_login")
+	var signup = document.getElementById("register_form_signup");
+	var p = document.getElementById("register_error_p");
+	p.innerHTML = mssg;
+	if (page == 0) {
+		div.style.marginLeft = "17vw";
+	}
+	else if (page == 1) {
+		div.style.marginLeft = "43vw";
+	}
+	login.style.display = "none";
+	signup.style.display = "none";
+	div.style.display = "grid";
+	
+}
+
+function hide_error() {
+	var login = document.getElementById("register_form_login");
+	var signup = document.getElementById("register_form_signup");
+	var div = document.getElementById("register_error_div");
+	div.style.display = "none";
+	login.style.display = "grid";
+	signup.style.display = "grid";
 }
 
 function close_session(){
@@ -30,24 +57,23 @@ function log_in(){
 	var pwd = document.getElementById('login_pwd').value;
 	
 	if (check_name(name) == 0) {
-		alert("Debe introducir un nombre");
+		error_message("Debe introducir un nombre válido", 0);
 		return -1;
 	}
 	
 	if (check_user(name) == 0) {
-		alert("No existe ese usuario");
+		error_message("No existe ese usuario", 0);
 		return -1;
 	}
 	
 	var user = localStorage.getItem(name, pwd);
 	var index = user.indexOf(";");
 	if (user.substring(index + 1) != pwd) {
-		alert("Constraseña incorrecta");
+		error_message("Constraseña incorrecta", 0);
 		return -1;
 	}
-	alert("¡Sesión iniciada correctamente!");
 	welcome_message(1, name);
-	sessionStorage.setItem(name);
+	sessionStorage.setItem(name, user);
 } 
 
 function sign_up() {
@@ -56,28 +82,27 @@ function sign_up() {
 	var email = document.getElementById('signup_email').value;
 	
 	if (check_name(name) == 0) {
-		alert("Nombre no válido");
+		error_message("Nombre no válido", 1);
 		return -1;
 	}
 	
 	if (check_pwd(pwd) == -1) {
-		alert("Contraseña no válida");
+		error_message("Contraseña no válida", 1);
 		return -1;
 	}
 	
 	if (check_email(email) == 0) {
-		alert("Correo electrónico no válido");
+		error_message("Correo electrónico no válido", 1);
 		return -1;
 	}
 	
 	if (check_user(name) == -1) {
-		alert("Ese usuario ya está registrado");
+		error_message("Ese usuario ya está registrado", 1);
 		return -1;
 	}
 	
 	localStorage.setItem(name, email + ";" + pwd);
 	sessionStorage.setItem(name, pwd);
-	alert("¡Cuenta creada con exito!");
 	welcome_message(1, name);
 	go_to_log_in()
 }

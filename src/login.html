@@ -18,6 +18,7 @@
 			<a>Sobre Nosotros</a>
 		</nav>
 	</header>
+	<div id="register_error_div"><p id="register_error_p"></p><button onclick="hide_error()">Aceptar</button></div>
 	<section id="log-in">
 		<article class="register_text col-7 col-t-12">
 			<div class="register_form col-5 col-t-12" id="register_form_login">	
@@ -29,14 +30,14 @@
 					<label for="login_pwd" class="register_label">Contraseña*</label>
 					<input type="text" id="login_pwd" placeholder="Contraseña">
 				</form>
-				<button id="try_to_log_in" onclick="log_in()">Inicio Sesión</button>
-				<button id="go_to_sign_up" onclick="go_to_sign_up()">Registro</button>
+				<button type="submit" id="try_to_log_in" onclick="log_in()">Inicio Sesión</button>
+				<button type="submit" id="go_to_sign_up" onclick="go_to_sign_up()">Registro</button>
 				<p class="register_form_subtext">* Campo obligatorio</p>
 			</div>
 			<div class = "col-5 col-t-12" id="register_logged_in">
 				<h2>Sesión iniciada</h2>
 				<p id="register_welcome_mssg"></p>
-				<button id="close_session" onclick="close_session()">Cerrar Sesión</button>
+				<button id="close_session" type="submit" onclick="close_session()">Cerrar Sesión</button>
 			</div>
 		</article>
 		<article class="col-t-12 register_image" id="login_image"> </article>
@@ -55,7 +56,7 @@
 					<label for="signup_email" class="register_label">Correo electrónico*</label>
 					<input type="text" id="signup_email" placeholder="Correo">
 				</form>
-				<button onclick="sign_up()">Regístrate</button>
+				<button type="submit" onclick="sign_up()">Regístrate</button>
 				<p class="register_form_subtext">* Campo obligatorio</p>
 			</div>
 		</article>
