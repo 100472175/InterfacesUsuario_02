@@ -140,9 +140,14 @@ button {
 	grid-template-rows: 2fr 2fr;
 }
 
+#register_error_div p {
+	text-align: center;
+	margin-top: 8%;
+}
+
 #register_error_div button {
 	margin: auto;
-	color: white;
-	background-color: black;
+	color: black;
+	background-color: #F6EDE6;
 	border: none;
 }

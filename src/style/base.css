@@ -20,7 +20,7 @@
 
 .main_header nav {
 	display: grid;
-	grid-template-columns: 4fr 0.8fr 1fr 0.5fr 1fr 1fr;
+	grid-template-columns: 1fr 4fr 1fr 0.1fr 0.4fr 0.1fr 1.1fr 0.1fr 0.5fr 0.1fr 0.75fr;
 	padding-right: 2vw;
 }
 
@@ -29,6 +29,32 @@
 	margin-top: 0.8vh; 
 	font-size: 0.75rem;
 	text-align: center
+}
+
+.main_header p {
+	color: white;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.main_header button {
+	border:none;
+	height: 5vh;
+}
+
+#logo {
+	text-align: left;
+}
+
+#menu_h {
+	display: none;
+	width: 40vw;
+	height: 100vh;
+	position: absolute;
+}
+
+#menu_h a {
+	text-align: center;
 }
 
 body{

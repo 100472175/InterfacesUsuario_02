@@ -10,14 +10,28 @@
 <body>
 	<header class="main_header">
 		<nav>
-			<a>Café Florencia</a>
+			<button>H</button>
+			<a id="logo">Café Florencia</a>
 			<a>Especialidades</a>
+			<p>|</p>
 			<a>Menu</a>
-			<a>Registro</a>
-			<a>Reserva</a>
+			<p>|</p>
 			<a>Sobre Nosotros</a>
+			<p>|</p>
+			<a>Reserva</a>
+			<p>|</p>
+			<a>Registro</a>
 		</nav>
 	</header>
+	<aside id="menu_h">
+		<button>Cerrar</button>
+		<a>Café Florencia<br></a>
+		<a>Especialidades<br></a>
+		<a>Menu<br></a>
+		<a>Sobre Nosotros<br></a>
+		<a>Reserva<br></a>
+		<a>Registro</a>
+	</aside>
 	<div id="register_error_div"><p id="register_error_p"></p><button onclick="hide_error()">Aceptar</button></div>
 	<section id="log-in">
 		<article class="register_text col-7 col-t-12">
@@ -46,7 +60,7 @@
 		<article class="col-t-12 register_image" id="signup_image"></article>
 		<article class="register_text col-7 col-t-12">
 			<div class="register_form col-5 col-t-12" id="register_form_signup">
-				<a onclick="go_to_log_in()">&lt;Volver a Log-In</a>
+				<a onclick="go_to_log_in()">&lt;Log-In</a>
 				<h2>SIGN-UP</h2>
 				<form>
 					<label for="signup_user_name" class="register_label">Nombre de usuario*</label>
