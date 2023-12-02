@@ -95,6 +95,7 @@ button {
 	width: 60%;
 	height: 6vh;
 	margin: 1%;
+	border: none;
 	border-radius: 25px;
 	background-color: #7E4D29;
 	color: white;
@@ -151,3 +152,44 @@ button {
 	background-color: #F6EDE6;
 	border: none;
 }
+
+@media screen and (max-width: 768px) {
+	.register_form {
+		margin-left: 12.5vw;
+		margin-top: 20vh;
+	}
+	
+	.register_image {
+		display: none;
+	}
+	
+	#sign-up {
+		background-image: url("../media/signup.jpg");
+		background-size: cover;
+	}
+	
+	#log-in {
+		background-image: url("../media/login.jpg");
+		background-size: cover;
+	}
+	
+	#register_error_div {
+		width: 68vw;
+	}
+	
+	#register_error_div p {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.register_form {
+		margin-left: 0vw;
+		margin-top: 20vh;
+	}
+	
+	.main_header_link {
+		display: none;
+	}
+}
+

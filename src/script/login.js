@@ -26,12 +26,16 @@ function error_message(mssg, page) {
 	var signup = document.getElementById("register_form_signup");
 	var p = document.getElementById("register_error_p");
 	p.innerHTML = mssg;
+	
 	if (page == 0) {
 		div.style.marginLeft = "17vw";
 	}
+	
 	else if (page == 1) {
-		div.style.marginLeft = "43vw";
+		if (window.innerWidth > 768) {div.style.marginLeft = "43vw";}
+		else {div.style.marginLeft = "17vw";}
 	}
+	
 	login.style.display = "none";
 	signup.style.display = "none";
 	div.style.display = "grid";
