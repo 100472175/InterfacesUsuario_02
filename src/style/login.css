@@ -31,12 +31,12 @@ section {
 }
 
 #login_image {
-	background-image: url("menu/login.jpg");
+	background-image: url("../media/menu/login.jpg");
 	float: right;
 }
 
 #signup_image {
-	background-image: url("menu/signup.jpg");
+	background-image: url("../media/menu/signup.jpg");
 	float: left;
 }
 
