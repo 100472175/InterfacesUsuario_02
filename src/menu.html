@@ -10,21 +10,26 @@
 
 </head>
 <body>
-    <header class="main_header ">
-        <nav>
-            <a>Café Florencia</a>
-            <a>Especialidades</a>
-            <a>Menu</a>
-            <a>Registro</a>
-            <a>Reserva</a>
-            <a>Sobre Nosotros</a>
-        </nav>
-    </header>
+<header class="main_header">
+    <nav>
+        <button>H</button>
+        <a id="logo">Café Florencia</a>
+        <a>Especialidades</a>
+        <p>|</p>
+        <a>Menu</a>
+        <p>|</p>
+        <a>Sobre Nosotros</a>
+        <p>|</p>
+        <a>Reserva</a>
+        <p>|</p>
+        <a>Registro</a>
+    </nav>
+</header>
     <div class="progess_bar  col-8" >
         <nav class="progess_bar_button ">
             <button class="step_1">Menu</button>
-            <button class="step_2">Revion Pedido</button>
-            <button class="step_3">Pago e inicio sesion</button>
+            <button class="step_2">Revision Pedido</button>
+            <button class="step_3">Pago e inicio sesión</button>
             <button class="step_4">Confirmacion</button>
         </nav>
         <div class="progess_bar_line col-12" ></div>
@@ -33,21 +38,21 @@
 
     <section class="menu col-12">
         <article class="menu_top">
-            <div class="menu_go_back">
-                <p> < Inicio</p>
+            <div class="go_back">
+                <p> <img src="media/menu/flecha.svg" alt="flecha"> Inicio</p>
             </div>
             <div class="menu_bar_line col-12" ></div>
 
             <nav class="menu_choose col-6">
-                <button class="menu_coffe"><img src="media/taza-de-cafe.svg" alt="Cafe"><br>Cafe</button>
-                <button class="menu_sweet_drinks"><img src="media/batido.svg" alt="Cafe"><br>Bebidas</button>
-                <button class="menu_delicatessen"><img src="media/macarron.svg" alt="Cafe"><br>Delicatessen</button>
-                <button class="menu_cakes"><img src="media/porcion-de-tarta.svg" alt="Cafe"><br>Tartas</button>
-                <button class="menu_bakery"><img src="media/tortitas.svg" alt="Cafe"><br>Reposteria</button>
+                <button class="menu_coffe"><img src="media/menu/taza-de-cafe.svg" alt="Cafe"><br>Cafe</button>
+                <button class="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Cafe"><br>Bebidas</button>
+                <button class="menu_delicatessen"><img src="media/menu/macarron.svg" alt="Cafe"><br>Delicatessen</button>
+                <button class="menu_cakes"><img src="media/menu/porcion-de-tarta.svg" alt="Cafe"><br>Tartas</button>
+                <button class="menu_bakery"><img src="media/menu/tortitas.svg" alt="Cafe"><br>Reposteria</button>
             </nav>
 
             <div class="menu_car col-1">
-                <img class="cesta" src="media/carrito-de-compra.svg" alt="Cesta">
+                <img class="cesta" src="media/menu/carrito-de-compra.svg" alt="Cesta">
                 <span class="menu_cuantity"> </span>
             </div>
 
@@ -56,10 +61,10 @@
             <div class="menu_alergies">
                 <h1> Alergenos </h1>
                 <ul>
-                    <li><img src="media/trigo.svg" alt="Cafe">Gluten</li>
-                    <li><img src="media/leche.svg" alt="Cafe">Lactosa</li>
-                    <li><img src="media/Huevos.svg" alt="Cafe">Huevos</li>
-                    <li><img src="media/almendra.svg" alt="Cafe">Frutos secos </li>
+                    <li><img src="media/menu/trigo.svg" alt="Cafe">Gluten</li>
+                    <li><img src="media/menu/leche.svg" alt="Cafe">Lactosa</li>
+                    <li><img src="media/menu/Huevos.svg" alt="Cafe">Huevos</li>
+                    <li><img src="media/menu/almendra.svg" alt="Cafe">Frutos secos </li>
                 </ul>
             </div>
             <ul class="menu_dish col-8"></ul>
@@ -67,7 +72,7 @@
 
 
         <article class="menu_cart_open">
-            <img class="menu_cerrar_compra" src="media/eliminar.svg" alt="equis"> </img>
+            <img class="menu_cerrar_compra" src="media/menu/eliminar.svg" alt="equis"> </img>
             <ul class="menu_list_foos_select"></ul>
             <p class="menu_Total">Total 0 €</p>
             <button class="menu_button_chek"> Revisar pedido</button>
@@ -77,18 +82,67 @@
     <section class="revisar_pedido col-12">
 
         <div class="revision_go_back">
-            <p> < Menu </p>
+            <p> <img src="media/menu/flecha.svg" alt="flecha"> Menu </p>
         </div>
 
         <ul class="revision_platos col-7"></ul>
         <article class="revision_final col-4">
-            <h1 >Revión pedido</h1>
+            <h1 >Revisión pedido</h1>
             <ul class="revision_list_food_select"></ul>
             <p class="revision_Total">Total 0 €</p>
             <button class="revision_button_chek"> Pagar</button>
         </article>
-
     </section>
+
+    <section class="sitio_pago">
+        <div class="go_back">
+            <p> <img src="media/menu/flecha.svg" alt="flecha"> Revisar pedido </p>
+        </div>
+        <div class="seleccion">
+            <article >
+                <button class="sitio_pago_tienda">Recoger en tienda </button>
+            </article>
+            <article >
+                <button class="sitio_pago_domicilio">Envio a  domicilio</button>
+                <p>*EL envio no tiene sobre coste</p>
+            </article>
+        </div>
+    </section>
+    <section class="forma_pago">
+        <div class="go_back">
+            <p> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
+        </div>
+        <div class="seleccion">
+            <article>
+                <button class="forma_pago_efectivo">Pago en efectivo </button>
+            </article>
+            <article>
+                <button class="forma_pago_tarjeta">Pago con tarjeta</button>
+            </article>
+        </div>
+    </section>
+
+
+    <section class="direccion">
+        <div class="go_back">
+            <p> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
+        </div>
+        <article class="direccion_selccion col-5" >
+            <form >
+                <label> Introduzca su direción</label>
+                <input type="text" placeholder="Direccion">
+            </form>
+            <p>Su pedido puede tardar entre 15 y 30 minutos</p>
+            <button> Realizar pago </button>
+            <p>*Campo Obligatorio</p>
+        </article>
+    </section>
+    <!--
+    <section class="pago_tarjeta">
+    </section>
+    <section class="espera_pedido">
+    </section>
+    -->
 
 
 
