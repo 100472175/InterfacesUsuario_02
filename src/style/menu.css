@@ -168,8 +168,9 @@
     height: 25px;
     background-color: #7E4D29;
     border-radius: 50px;
-    color: white;
+    color: black;
     text-align: center;
+    z-index: 2;
 }
 .menu_cart_open{
     position: absolute;
@@ -232,7 +233,7 @@
     margin-top: 15%;
     margin-bottom: 20%;
 }
-.menu_go_back{
+.go_back{
     position: absolute;
     left: 3vw;
 }
@@ -274,14 +275,9 @@
     height: 5vh;
 
 }
-.revision_go_back{
-    position: absolute;
-    left: 3vw;
-}
+
 .revision_final{
     position: absolute;
-    z-index: 3;
-
     height: 60%;
     background-color: #F6EDE6;
     top: 20%;
@@ -316,4 +312,54 @@
 .revision_list_food_select li{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
+}
+
+.seleccion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+}
+.seleccion article{
+    background-color:  #F6EDE6;
+    margin: 10%;
+    border-radius: 15px ;
+    height: 40vh ;
+    display: grid;
+    place-content: center;
+
+}
+.seleccion article button{
+    background-color: #7E4D29;
+    border-radius: 10px;
+    padding: 3%;
+    color: white;
+    border: none;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.direccion_selccion{
+    display: grid;
+    place-content: center;
+    background-color:  #F6EDE6;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    margin: auto;
+    padding: 2%;
+    gap: 3%;
+    border-radius: 15px;
+    margin-top: 5%;
+}
+.direccion_selccion button{
+    background-color: #7E4D29;
+    border-radius: 10px;
+    padding: 3%;
+    color: white;
+    border: none;
+    margin: auto;
+
+}
+.direccion_selccion form{
+    display: grid;
+    place-content: center;
+    grid-template-rows: 1fr 1fr;
 }
