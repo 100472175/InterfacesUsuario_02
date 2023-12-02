@@ -1,31 +1,18 @@
 
+mobiscroll.setOptions({
+locale: mobiscroll.localeEs,  // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+theme: 'ios',                 // Specify theme like: theme: 'ios' or omit setting to use default
+themeVariant: 'light'         // More info about themeVariant: https://docs.mobiscroll.com/5-28-0/javascript/calendar#opt-themeVariant
+});
 
-calendar = new CalendarYvv("#calendar", moment().format("Y-M-D"), "Monday");
-calendar.createCalendar();
+mobiscroll.datepicker('#demo-one-input', {
+controls: ['calendar'],       // More info about controls: https://docs.mobiscroll.com/5-28-0/javascript/calendar#opt-controls
+showRangeLabels: true,
+display: 'anchored'           // Specify display mode like: display: 'bottom' or omit setting to use default
+});
 
-// preselected dates
-calendar.diasResal = [1,2,3]
-
-// background color of preselected dates
-calendar.colorResal = "#28a7454d"
-
-// text color of preselected dates
-calendar.textResalt = "#28a745"
-
-// background class
-calendar.bg = "bg-dark";
-
-// text color class
-calendar.textColor = "text-white";
-
-// class for normal buttons
-calendar.btnH = "btn-outline-light";
-
-// button class when hovering over
-calendar.btnD = "btn-rounded-success";
-
-calendar.funcPer = function(ev){
-    console.log(ev)
-};
-
-
+mobiscroll.datepicker('#demo-init-inline', {
+controls: ['calendar'],       // More info about controls: https://docs.mobiscroll.com/5-28-0/javascript/calendar#opt-controls
+showRangeLabels: true,
+display: 'inline'             // Specify display mode like: display: 'bottom' or omit setting to use default
+});

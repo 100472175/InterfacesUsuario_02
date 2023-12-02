@@ -1,48 +1,76 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Reservas - Café Florencia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>
+        Reserva - Café Florencia
+    </title>
+
+    <!-- Mobiscroll JS and CSS Includes -->
     <link rel="stylesheet" href="style/base.css">
-    <link rel="stylesheet" href="style/reservas.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/darkly/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
-    <script src="./script/reservas.js"></script>
+    <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+    <script src="js/mobiscroll.javascript.min.js"></script>
+
+
 </head>
+
 <body>
 <header class="main_header">
     <nav>
-        <a>Café Florencia</a>
+        <button>H</button>
+        <a id="logo">Café Florencia</a>
         <a>Especialidades</a>
+        <p>|</p>
         <a>Menu</a>
-        <a>Registro</a>
-        <a>Reserva</a>
+        <p>|</p>
         <a>Sobre Nosotros</a>
+        <p>|</p>
+        <a>Reserva</a>
+        <p>|</p>
+        <a>Registro</a>
     </nav>
 </header>
-<div id="calendar"></div>
+<aside id="menu_h">
+    <button>Cerrar</button>
+    <a>Café Florencia<br></a>
+    <a>Especialidades<br></a>
+    <a>Menu<br></a>
+    <a>Sobre Nosotros<br></a>
+    <a>Reserva<br></a>
+    <a>Registro</a>
+</aside>
 
-</body>
+<section>
+    <div style="height:60vh; width: 60vw; margin: auto; margin-top: 15vh; border: none">
+        <div id="demo-init-inline"></div>
+    </div>
+</section>
 
 <script>
-    // Your JavaScript code here
-    calendar = new CalendarYvv("#calendar", moment().format("Y-M-D"), "Monday");
-    calendar.createCalendar();
 
-    // Customize the calendar settings
-    calendar.diasResal = [1, 2, 3];
-    calendar.colorResal = "#28a7454d";
-    calendar.textResalt = "#28a745";
-    calendar.bg = "bg-dark";
-    calendar.textColor = "text-white";
-    calendar.btnH = "btn-outline-light";
-    calendar.btnD = "btn-rounded-success";
+    mobiscroll.setOptions({
+        locale: mobiscroll.localeEs,  // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+        theme: 'ios',                 // Specify theme like: theme: 'ios' or omit setting to use default
+        themeVariant: 'light'         // More info about themeVariant: https://docs.mobiscroll.com/5-28-0/javascript/calendar#opt-themeVariant
+    });
 
-    calendar.funcPer = function(ev) {
-        console.log(ev);
-    };
+    mobiscroll.datepicker('#demo-one-input', {
+        controls: ['calendar'],       // More info about controls: https://docs.mobiscroll.com/5-28-0/javascript/calendar#opt-controls
+        showRangeLabels: true,
+        display: 'anchored'           // Specify display mode like: display: 'bottom' or omit setting to use default
+    });
+
+    mobiscroll.datepicker('#demo-init-inline', {
+        controls: ['calendar'],       // More info about controls: https://docs.mobiscroll.com/5-28-0/javascript/calendar#opt-controls
+        showRangeLabels: true,
+        display: 'inline'             // Specify display mode like: display: 'bottom' or omit setting to use default
+    });
 </script>
+
+</body>
 
 </html>

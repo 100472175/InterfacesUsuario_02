@@ -1,11 +1,11 @@
 /*Codigo de estilo base*/
 * {
-    margin: 0;
-    padding: 0;
-    font-size: 25px;
-    font-family: "Perpetua", serif;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	font-size: 25px;
+	font-family: "Perpetua", serif;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 
 }
 
@@ -20,16 +20,46 @@
 
 .main_header nav {
 	display: grid;
-	grid-template-columns: 4fr 0.8fr 1fr 0.5fr 1fr 1fr;
+	grid-template-columns: 1fr 4fr 1fr 0.1fr 0.4fr 0.1fr 1.1fr 0.1fr 0.5fr 0.1fr 0.75fr;
 	padding-right: 2vw;
 }
 
 .main_header a {
 	color: white;
-	margin-top: 0.8vh; 
+	margin-top: 0.8vh;
 	font-size: 0.75rem;
 	text-align: center
 }
+
+.main_header p {
+	color: white;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.main_header button {
+	border:none;
+	height: 5vh;
+	background: none;
+	color: white;
+
+}
+
+#logo {
+	text-align: left;
+}
+
+#menu_h {
+	display: none;
+	width: 40vw;
+	height: 100vh;
+	position: absolute;
+}
+
+#menu_h a {
+	text-align: center;
+}
+
 
 body{
 	background-color: #FFFBF8
@@ -37,6 +67,11 @@ body{
 section {
 	height: 95vh;
 	width: 100vw;
+	margin-top: 5vh;
+}
+
+button, a{
+	cursor: pointer;
 }
 
 /*FORMATO PARA PC*/
@@ -45,7 +80,7 @@ section {
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
-.col-6 {width: 50%;} 
+.col-6 {width: 50%;}
 .col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
 .col-9 {width: 75%;}
@@ -56,17 +91,17 @@ section {
 /*FORMATO PARA TABLET*/
 @media screen and (max-width: 768px) {
 	.col-t-1 {width: 8.33%;}
-    .col-t-2 {width: 16.66%;}
-    .col-t-3 {width: 25%;}
-    .col-t-4 {width: 33.33%;}
-    .col-t-5 {width: 41.66%;}
-    .col-t-6 {width: 50%;}
-    .col-t-7 {width: 58.33%;}
-    .col-t-8 {width: 66.66%;}
-    .col-t-9 {width: 75%;}
-    .col-t-10 {width: 83.33%;}
-    .col-t-11 {width: 91.66%;}
-    .col-t-12 {width: 100%;}
+	.col-t-2 {width: 16.66%;}
+	.col-t-3 {width: 25%;}
+	.col-t-4 {width: 33.33%;}
+	.col-t-5 {width: 41.66%;}
+	.col-t-6 {width: 50%;}
+	.col-t-7 {width: 58.33%;}
+	.col-t-8 {width: 66.66%;}
+	.col-t-9 {width: 75%;}
+	.col-t-10 {width: 83.33%;}
+	.col-t-11 {width: 91.66%;}
+	.col-t-12 {width: 100%;}
 }
 
 /*FORMMATO PARA MÓVIL*/
@@ -75,5 +110,4 @@ section {
 		width: 100%;
 	}
 }
-
 
