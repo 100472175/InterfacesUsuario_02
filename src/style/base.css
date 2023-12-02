@@ -42,7 +42,6 @@
 	height: 5vh;
 	background: none;
 	color: white;
-
 }
 
 #logo {
@@ -60,14 +59,12 @@
 	text-align: center;
 }
 
-
 body{
 	background-color: #FFFBF8
 }
 section {
 	height: 95vh;
 	width: 100vw;
-	margin-top: 5vh;
 }
 
 button, a{
@@ -110,4 +107,3 @@ button, a{
 		width: 100%;
 	}
 }
-

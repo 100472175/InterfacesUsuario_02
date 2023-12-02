@@ -72,7 +72,7 @@ p {
 
 h2{
 	text-align: center;
-	margin-top: 5%; 
+	margin-top: 5%;
 }
 
 label {
@@ -125,4 +125,29 @@ button {
 #register_form_signup form {
 	display: grid;
 	grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr
+}
+
+#register_error_div {
+	display: none;
+	position: absolute;
+	top: 30%;
+	margin-left: 17vw;
+	height: 30vh;
+	width: 40vw;
+	border-radius: 15px;
+	color: white;
+	background-color: #7E4D29;
+	grid-template-rows: 2fr 2fr;
+}
+
+#register_error_div p {
+	text-align: center;
+	margin-top: 8%;
+}
+
+#register_error_div button {
+	margin: auto;
+	color: black;
+	background-color: #F6EDE6;
+	border: none;
 }
