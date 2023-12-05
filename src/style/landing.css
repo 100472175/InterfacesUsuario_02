@@ -1,0 +1,173 @@
+*{
+    overflow-x: hidden;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+}
+
+.front_page{
+    background-image: url("../media/landing/portada.jpg");
+    background-size: cover;
+}
+
+.front_page nav{
+    background-color: #7E4D29;
+    text-align: center;
+    margin-left: 42vw;
+    margin-top: 5vh;
+    height: 6vh;
+    width: 16vw;
+}
+.front_page nav a{
+    text-decoration: None;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.front_page img{
+    margin-top: 40vh;
+    margin-left: 25vw;
+    height: auto;
+    width: 50vw;
+}
+
+.coffee{
+    background-image: url("../media/landing/coffee_fondo.png");
+    background-size: cover;
+}
+
+.beverages{
+    background-color: #FFFBF8;
+}
+
+.delicatessen{
+    background-image: url("../media/landing/delicatessen.jpg");
+    background-size: cover;
+}
+
+.reposteria{
+    background-image: url("../media/landing/donuts.jpg");
+    background-size: cover;
+}
+
+.history{
+    background-image: url("../media/landing/historia_fondo.png");
+    background-size: cover;
+}
+
+.intro{
+    background-color: #F6EDE6;
+    border-radius: 3vh;
+    height: 60vh;
+    width: 50vw;
+    margin-top: 20vh;
+    margin-left: 25vw;
+}
+
+.intro h3{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.intro p{
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 6vh;
+}
+
+.intro nav{
+    background-color: #7E4D29;
+    text-align: center;
+    margin-left: 17vw;
+    margin-top: 7vh;
+    height: 6vh;
+    width: 16vw;
+    border-radius: 5vh;
+}
+
+.intro nav a{
+    text-decoration: None;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.intro.bebidas{
+    position: absolute;
+    z-index: 1;
+    height: 50vh;
+    width: 40vw;
+    margin-top: 25vh;
+    margin-left: 30vw;
+    box-shadow: 0 4px 4px #7E4D29;
+}
+
+.intro.bebidas h3{
+    font-size: 2rem;
+}
+
+.intro.bebidas p{
+    font-size: 1.5rem;
+}
+
+.intro.bebidas nav{
+    margin-left: 12vw;
+}
+
+#batido1{
+    position: absolute;
+    z-index: 0;
+    height: 50vh;
+    width: 15vw;
+    border-radius: 5vh;
+    margin-left: 17vw;
+    margin-top: 5vh;
+    background-image: url("../media/landing/batido2.png");
+    background-size: cover;
+    border: black 1px solid;
+}
+
+#batido2{
+    position: absolute;
+    z-index: 0;
+    height: 50vh;
+    width: 18vw;
+    border-radius: 5vh;
+    margin-left: 65vw;
+    margin-top: 40vh;
+    background-image: url("../media/landing/batido_choco.jpg");
+    background-size: cover;
+    border: black 1px solid;
+}
+
+.intro.tartas{
+    position: absolute;
+    z-index: 1;
+    height: 80vh;
+    width: 40vw;
+    margin-top: 5vh;
+    margin-left: 15vw;
+    border-radius: 50vh;
+}
+
+.intro.tartas h3{
+    margin-top: 14vh;
+}
+
+.intro.tartas nav{
+    margin-left: 12vw;
+}
+
+#tarta{
+    position: absolute;
+    z-index: 0;
+    height: 70vh;
+    width: 35vw;
+    border-radius: 50%;
+    margin-left: 45vw;
+    margin-top: 23vh;
+    background-image: url("../media/landing/tarta_choco.png");
+    background-size: cover;
+}
