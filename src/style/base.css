@@ -43,12 +43,10 @@
 	height: 5vh;
 	background: none;
 	color: white;
-	margin-top: 0;
+	margin-left: 2vw;
 }
 
 .main_header img{
-	text-align: left;
-	margin-top: 0.5vh;
 	width: auto;
 	height: 4vh;
 }
@@ -57,6 +55,11 @@
 	text-align: left;
 }
 
+#logo_h img{
+	width: auto;
+	height: 6vh;
+	margin-top: 5vh;
+}
 #menu_h {
 	display: none;
 	width: 23.5vw;
@@ -177,6 +180,10 @@ button, a{
     #unfolding_about_us {
     	width: 20vw;
     }
+    
+    #logo_h img {
+    	height: 4vh;
+    }
    
 }
 
@@ -188,6 +195,10 @@ button, a{
 	
 	.main_header nav {
 		grid-template-columns: 1fr 4fr;
+	}
+	
+	#logo_h img {
+		height: 3vh;
 	}
 }
 

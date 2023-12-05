@@ -18,7 +18,7 @@ function close_menu (){
 function display_unfolding_s (){
 	unfold_specialities = document.getElementById('unfolding_specialities');
 	document.getElementById('unfolding_about_us').style.display = "none";
-	if (window.innerWidth > 768) {unfold_specialities.style.marginLeft = "52.5vw"}
+	if (window.innerWidth > 768) {unfold_specialities.style.marginLeft = "45vw"}
 	else {unfold_specialities.style.marginLeft = "32.5vw"}	
 	if (unfold_specialities.style.top != "5%"){
 		unfold_specialities.style.top = "5%";
@@ -64,7 +64,7 @@ function display_unfolding_s_h (){
 function display_unfolding_a (){
 	unfold_about_us = document.getElementById('unfolding_about_us');
 	document.getElementById('unfolding_specialities').style.display = "none";
-	if (window.innerWidth > 768) {unfold_about_us.style.marginLeft = "70vw"}
+	if (window.innerWidth > 768) {unfold_about_us.style.marginLeft = "67vw"}
 	else {unfold_about_us.style.marginLeft = "58vw"}
 	if (unfold_about_us.style.top != "5%") {
 		unfold_about_us.style.top = "5%";
