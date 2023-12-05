@@ -10,80 +10,101 @@ function display_menu (){
 
 function close_menu (){
 	document.getElementById('menu_h').style.display = "none";
+	document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
+	document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
+	fold();
 }
 
 function display_unfolding_s (){
-	document.getElementById('unfolding_about_us').style.display = "none";	
-	if (document.getElementById('unfolding_specialities').style.top != "5%"){
-		document.getElementById('unfolding_specialities').style.marginLeft = "52.5vw";
-		document.getElementById('unfolding_specialities').style.top = "5%";
-		document.getElementById('unfolding_specialities').style.display="grid";
+	unfold_specialities = document.getElementById('unfolding_specialities');
+	document.getElementById('unfolding_about_us').style.display = "none";
+	if (window.innerWidth > 768) {unfold_specialities.style.marginLeft = "52.5vw"}
+	else {unfold_specialities.style.marginLeft = "30vw"}	
+	if (unfold_specialities.style.top != "5%"){
+		unfold_specialities.style.top = "5%";
+		unfold_specialities.style.display="grid";
+		document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
+		document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 	}
 	else{	
-		if (document.getElementById('unfolding_specialities').style.display == "grid") {
-			document.getElementById('unfolding_specialities').style.display = "none";
+		if (unfold_specialities.style.display == "grid") {
+			unfold_specialities.style.display = "none";
 		}
 		else {
-			document.getElementById('unfolding_specialities').style.display = "grid";
+			unfold_specialities.style.display = "grid";
+			document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
+			document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 		}
 	}
 }
 
 function display_unfolding_s_h (){
+	unfold_specialities = document.getElementById('unfolding_specialities');
 	document.getElementById('unfolding_about_us').style.display = "none";	
-	if (document.getElementById('unfolding_specialities').style.top != "20%"){
-		document.getElementById('unfolding_specialities').style.marginLeft = "23.5vw";
-		document.getElementById('unfolding_specialities').style.top = "20%";
-		document.getElementById('unfolding_specialities').style.display="grid";
+	if (unfold_specialities.style.top != "19%"){
+		unfold_specialities.style.marginLeft = "23.5vw";
+		unfold_specialities.style.top = "19%";
+		unfold_specialities.style.display="grid";
+		document.getElementById('menu_h_specialities').style.backgroundColor = "#C48152";
+		document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 	}
 	else{	
-		if (document.getElementById('unfolding_specialities').style.display == "grid") {
-			document.getElementById('unfolding_specialities').style.display = "none";
+		if (unfold_specialities.style.display == "grid") {
+			unfold_specialities.style.display = "none";
+			document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
 		}
 		else {
-			document.getElementById('unfolding_specialities').style.display = "grid";
+			unfold_specialities.style.display = "grid";
+			document.getElementById('menu_h_specialities').style.backgroundColor = "#C48152";
+			document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 		}
 	}
 }
 
 function display_unfolding_a (){
+	unfold_about_us = document.getElementById('unfolding_about_us');
 	document.getElementById('unfolding_specialities').style.display = "none";
-	if (document.getElementById('unfolding_about_us').style.top != "5%") {
-		document.getElementById('unfolding_about_us').style.marginLeft = "70vw";
-		document.getElementById('unfolding_about_us').style.top = "5%";
-		document.getElementById('unfolding_about_us').style.display="grid";
+	if (window.innerWidth > 768) {unfold_about_us.style.marginLeft = "70vw"}
+	else {unfold_about_us.style.marginLeft = "57.5vw"}
+	if (unfold_about_us.style.top != "5%") {
+		unfold_about_us.style.top = "5%";
+		unfold_about_us.style.display="grid";
+		document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
+		document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 		}
 	else {
-		if (document.getElementById('unfolding_about_us').style.display == "grid") {
-			document.getElementById('unfolding_about_us').style.display = "none";
+		if (unfold_about_us.style.display == "grid") {
+			unfold_about_us.style.display = "none";
 		}
 		else {
-			document.getElementById('unfolding_about_us').style.display = "grid";
+			unfold_about_us.style.display = "grid";
+			document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
+			document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 		}
 	}
 }
 
 function display_unfolding_a_h (){
+	unfold_about_us = document.getElementById('unfolding_about_us');
 	document.getElementById('unfolding_specialities').style.display = "none";
-	if (document.getElementById('unfolding_about_us').style.top != "33%") {
-		document.getElementById('unfolding_about_us').style.marginLeft = "23.5vw";
-		document.getElementById('unfolding_about_us').style.top = "33%";
-		document.getElementById('unfolding_about_us').style.display="grid";
+	if (unfold_about_us.style.top != "32.5%") {
+		unfold_about_us.style.marginLeft = "23.5vw";
+		unfold_about_us.style.top = "32.5%";
+		unfold_about_us.style.display="grid";
+		document.getElementById('menu_h_about_us').style.backgroundColor = "#C48152";
+		document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
 		}
 	else {
-		if (document.getElementById('unfolding_about_us').style.display == "grid") {
-			document.getElementById('unfolding_about_us').style.display = "none";
+		if (unfold_about_us.style.display == "grid") {
+			unfold_about_us.style.display = "none";
+			document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 		}
 		else {
-			document.getElementById('unfolding_about_us').style.display = "grid";
+			unfold_about_us.style.display = "grid";
+			document.getElementById('menu_h_about_us').style.backgroundColor = "#C48152";
+			document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
 		}
 	}
-}
-
-function close_menus (){
-	document.getElementById('menu_h').style.display= "none";
-	document.getElementById('unfolding_about_us').style.display = "none";
-	document.getElementById('unfolding_specialities').style.display = "none";
 }
 
 function fold (){
@@ -98,9 +119,10 @@ function load() {
 	document.getElementById('menu_h_about_us').addEventListener("click", display_unfolding_a_h);
 	document.getElementById('open_menu_h').addEventListener("click", menu_h);
 	var labels = document.getElementsByTagName('input');
-	for (i = 0; i < labels.length; i++) {labels[i].addEventListener("click", close_menus);}
+	for (i = 0; i < labels.length; i++) {labels[i].addEventListener("click", close_menu);}
 	var buttons = document.getElementsByTagName('button');
-	for (i = 0; i < buttons.length; i++) {if (buttons[i].id != "open_menu_h") {buttons[i].addEventListener("click", close_menus);}}
+	for (i = 0; i < buttons.length; i++) {if (buttons[i].id != "open_menu_h") {buttons[i].addEventListener("click", close_menu);}}
+	window.addEventListener("resize", close_menu);
 }
 
 document.addEventListener("DOMContentLoaded", load, false);
