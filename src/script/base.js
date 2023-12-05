@@ -19,7 +19,7 @@ function display_unfolding_s (){
 	unfold_specialities = document.getElementById('unfolding_specialities');
 	document.getElementById('unfolding_about_us').style.display = "none";
 	if (window.innerWidth > 768) {unfold_specialities.style.marginLeft = "52.5vw"}
-	else {unfold_specialities.style.marginLeft = "30vw"}	
+	else {unfold_specialities.style.marginLeft = "32.5vw"}	
 	if (unfold_specialities.style.top != "5%"){
 		unfold_specialities.style.top = "5%";
 		unfold_specialities.style.display="grid";
@@ -65,7 +65,7 @@ function display_unfolding_a (){
 	unfold_about_us = document.getElementById('unfolding_about_us');
 	document.getElementById('unfolding_specialities').style.display = "none";
 	if (window.innerWidth > 768) {unfold_about_us.style.marginLeft = "70vw"}
-	else {unfold_about_us.style.marginLeft = "57.5vw"}
+	else {unfold_about_us.style.marginLeft = "58vw"}
 	if (unfold_about_us.style.top != "5%") {
 		unfold_about_us.style.top = "5%";
 		unfold_about_us.style.display="grid";

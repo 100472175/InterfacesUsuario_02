@@ -20,7 +20,7 @@
 
 .main_header nav {
 	display: grid;
-	grid-template-columns: 1fr 4fr 1fr 0.1fr 0.4fr 0.1fr 1.1fr 0.1fr 0.5fr 0.1fr 0.75fr;
+	grid-template-columns: 1fr 3.5fr 1.5fr 0.8fr 1.5fr 0.8fr 1fr;
 	padding-right: 2vw;
 }
 
@@ -46,6 +46,13 @@
 	margin-top: 0;
 }
 
+.main_header img{
+	text-align: left;
+	margin-top: 0.5vh;
+	width: auto;
+	height: 4vh;
+}
+
 #logo {
 	text-align: left;
 }
@@ -59,7 +66,6 @@
 	background-color: #7E4D29;
 	z-index: 3;
 	grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 8fr;
-	border-top: 1px white solid;
 }
 
 #menu_h a {
@@ -71,7 +77,7 @@
 #open_menu_h {
 	background-image: url("../media/btn-3lineas-horiz.png");
 	background-repeat: no-repeat;
-	background-size: 35% 70%;
+	background-size: auto 4vh;
 	border-radius: 0;
 	margin-top: 2%; 
 	filter: invert(1);
@@ -157,26 +163,31 @@ button, a{
     }
     
     .main_header nav{
-    	grid-template-columns: 1fr 2fr 1fr 0.1fr 0.4fr 0.1fr 1.75fr 0.1fr 0.5fr 0.1fr 0.75fr;
+    	grid-template-columns: 0.6fr 2fr 1fr 0.75fr 1.25fr 0.75fr 0.75fr;
+    }
+    
+    .main_header a {
+    	font-size: 0.52rem;
     }
     
     #unfolding_specialities {
-    	width: 25vw;
+    	width: 20vw;
     }
     
     #unfolding_about_us {
-    	width: 25vw;
+    	width: 20vw;
     }
-    
-    #open_menu_h {
-    	background-size: 60% 70%;
-    }
+   
 }
 
 /*FORMMATO PARA MÓVIL*/
 @media screen and (max-width: 600px) {
 	[class*="col-"]{
 		width: 100%;
+	}
+	
+	.main_header nav {
+		grid-template-columns: 1fr 4fr;
 	}
 }
 
