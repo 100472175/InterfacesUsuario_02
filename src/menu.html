@@ -7,33 +7,55 @@
     <title>Menu</title>
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/menu.css">
+    <script src="./script/base.js"></script>
 
 </head>
 <body>
 <header class="main_header">
     <nav>
-        <button>H</button>
+        <button id="open_menu_h"></button>
         <a id="logo">Café Florencia</a>
-        <a>Especialidades</a>
-        <p>|</p>
-        <a>Menu</a>
-        <p>|</p>
-        <a>Sobre Nosotros</a>
-        <p>|</p>
-        <a>Reserva</a>
-        <p>|</p>
-        <a>Registro</a>
+        <a class="main_header_link" id="menu_specialities">Especialidades</a>
+        <p class="main_header_link">|</p>
+        <a href="menu.html" class="main_header_link" id="menu_menu">Menu</a>
+        <p class="main_header_link">|</p>
+        <a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
+        <p class="main_header_link">|</p>
+        <a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
+        <p class="main_header_link">|</p>
+        <a href="login.html" class="main_header_link" id="menu_register">Registro</a>
     </nav>
+    <aside id="menu_h">
+        <a><br>Café Florencia<br></a>
+        <a id="menu_h_specialities">Especialidades<br></a>
+        <a href="menu.html">Menu<br></a>
+        <a id="menu_h_about_us">Sobre Nosotros<br></a>
+        <a href="reservas.html">Reserva<br></a>
+        <a href="login.html">Registro</a>
+    </aside>
+    <div id="unfolding_specialities">
+        <a href="bebidas_dulces.html">Bebidas dulces</a>
+        <a href="cafe.html">Café</a>
+        <a href="delicatessen.html">Delicatessen</a>
+        <a href="historia.html">Historia</a>
+        <a href="reposteria.html">Repostería</a>
+        <a href="tartas.html">Tartas</a>
+    </div>
+    <div id="unfolding_about_us">
+        <a href="historia.html">Historia</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contactos.html">Contacto</a>
+    </div>
 </header>
-    <div class="progess_bar  col-8" >
+    <div class="progess_bar  col-6" >
         <nav class="progess_bar_button ">
             <button class="step_1">Menu</button>
             <button class="step_2">Revision Pedido</button>
             <button class="step_3">Pago e inicio sesión</button>
             <button class="step_4">Confirmacion</button>
         </nav>
-        <div class="progess_bar_line col-12" ></div>
-        <div class="progess_bar_line2 col-8" ></div>
+        <div class="progess_bar_line col-6" ></div>
+        <div class="progess_bar_line2 " ></div>
     </div>
 
     <section class="menu col-12">
@@ -66,6 +88,7 @@
                     <li><img src="media/menu/Huevos.svg" alt="Cafe">Huevos</li>
                     <li><img src="media/menu/almendra.svg" alt="Cafe">Frutos secos </li>
                 </ul>
+                <button class="menu_saber_mas"> Saber más </button>
             </div>
             <ul class="menu_dish col-8"></ul>
         </article>
@@ -140,9 +163,10 @@
     <!--
     <section class="pago_tarjeta">
     </section>
+     -->
     <section class="espera_pedido">
     </section>
-    -->
+
 
 
 

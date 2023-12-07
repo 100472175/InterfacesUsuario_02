@@ -1,10 +1,12 @@
+let None;
 let platos = [
-    {id: 1,
-    nombre: 'Cafe con leche',
-    imagen: 'media/menu/bebida1.jpg',
-    precio: 2.00,
-    cantidad: 0,
-    coste: 0
+        {id: 1,
+        nombre: 'Cafe con leche',
+        imagen: 'media/menu/bebida1.jpg',
+        precio: 2.00,
+        cantidad: 0,
+        coste: 0,
+        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg','media/menu/almendra.svg']
     },
     {
         id: 2,
@@ -12,15 +14,18 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.00,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',None]
+
     },
     {
         id: 3,
         nombre: 'Capuchino',
         imagen: 'media/menu/bebida1.jpg',
-        precio: 2.30,
+        precio: 2.35,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['media/menu/trigo.svg','media/menu/Huevos.svg','media/menu/almendra.svg']
     },
     {
         id: 4,
@@ -28,7 +33,8 @@ let platos = [
         imagen:'media/menu/bebida1.jpg',
         precio: 1.80,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: []
     },
     {
         id: 5,
@@ -36,7 +42,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 1.80,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 6,
@@ -44,14 +51,16 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.3,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {id: 7,
         nombre: 'vdvdvd',
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.00,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 8,
@@ -59,7 +68,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.00,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 9,
@@ -67,7 +77,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.30,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 10,
@@ -75,7 +86,8 @@ let platos = [
         imagen:'media/menu/bebida1.jpg',
         precio: 1.80,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 11,
@@ -83,7 +95,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 1.80,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 12,
@@ -91,14 +104,16 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.3,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {id: 13,
         nombre: 'Cafe con leche',
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.00,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 14,
@@ -106,7 +121,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.00,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 15,
@@ -114,7 +130,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.30,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 16,
@@ -122,7 +139,8 @@ let platos = [
         imagen:'media/menu/bebida1.jpg',
         precio: 1.80,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 17,
@@ -130,7 +148,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 1.80,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 18,
@@ -138,14 +157,16 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.3,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {id: 19,
         nombre: 'Cafe con leche',
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.00,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 20,
@@ -153,7 +174,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.00,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 21,
@@ -161,7 +183,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.30,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 22,
@@ -169,7 +192,8 @@ let platos = [
         imagen:'media/menu/bebida1.jpg',
         precio: 1.80,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 23,
@@ -177,7 +201,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 1.80,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 25,
@@ -185,14 +210,16 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.3,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {id: 26,
         nombre: 'Cafe con leche',
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.00,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 27,
@@ -200,7 +227,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.00,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 28,
@@ -208,7 +236,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.30,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 29,
@@ -216,7 +245,8 @@ let platos = [
         imagen:'media/menu/bebida1.jpg',
         precio: 1.80,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 30,
@@ -224,7 +254,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 1.80,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
     {
         id: 31,
@@ -232,7 +263,8 @@ let platos = [
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.3,
         cantidad: 0,
-        coste: 0
+        coste: 0,
+        alergenos: ['G','L','H','F']
     },
 ];
 
@@ -244,9 +276,9 @@ let equis = document.querySelector(".menu_cerrar_compra");
 let menu_carrito = document.querySelector(".menu_cart_open");
 let lista_platos_selecionados = document.querySelector(".menu_list_foos_select");
 let totalCarrito = document.querySelector(".menu_Total");
-let menu_ir_revision = document.querySelector(".step_2");
+let step_2 = document.querySelector(".step_2");
 let menu = document.querySelector(".menu");
-let revisar_ir_menu = document.querySelector(".step_1");
+let step_1 = document.querySelector(".step_1");
 let revisar_pedido = document.querySelector(".revisar_pedido")
 let lista_revision = document.querySelector(".revision_platos")
 let totalrevision = document.querySelector(".revision_Total");
@@ -265,90 +297,12 @@ let bebidas = document.querySelector(".menu_sweet_drinks");
 let delicatessen = document.querySelector(".menu_delicatessen");
 let tartas = document.querySelector(".menu_cakes");
 let reposteria = document.querySelector(".menu_bakery");
-
-window.addEventListener('load', () => {
-    menu_carrito.style.display = 'none'
-    menu.style.display = 'block'
-    revisar_pedido.style.display = 'none'
-    sitio_pago.style.display ='none'
-    forma_pago.style.display ='none'
-    direccion.style.display ='none'
-    initApp(0);
-})
-menu_ir_revision.addEventListener('click', () => {
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'block'
-    forma_pago.style.display ='none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
-    mostarElemento()
-
-})
-revisar_ir_menu.addEventListener('click', () => {
-    menu.style.display = 'block'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display ='none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
-    initApp(0);
-})
-
-revison_button_chek.addEventListener('click',() =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'none'
-    sitio_pago.style.display ='block'
-    direccion.style.display ='none'
-})
-sitio_pago_tienda.addEventListener('click',() =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'block'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
-})
-sitio_pago_domicilio.addEventListener('click',() =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'block'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
-})
-forma_pago_tarjeta.addEventListener('click',() =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='block'
-})
-forma_pago_efectivo.addEventListener('click',() =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='block'
-})
-step_3.addEventListener('click', () =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'noce'
-    sitio_pago.style.display ='block'
-    direccion.style.display ='none'
-})
-bebidas.addEventListener('click', () =>{
-    initApp(6)
-    bebidas.style.background = 'black'
-})
-delicatessen.addEventListener('click', () =>{
-    initApp(12)
-})
-tartas.addEventListener('click', () =>{
-    initApp(18)
-})
-reposteria.addEventListener('click', () =>{
-    initApp(24)
-})
-
+let cafe = document.querySelector(".menu_coffe");
+let cantidad = document.querySelector(".menu_cuantity");
+let barra_progreso = document.querySelector(".progess_bar_line2");
+let espera_pedido = document.querySelector(".espera_pedido");
+let saber_mas = document.querySelector(".menu_saber_mas");
+let alerg = document.querySelector(".alerg");
 function initApp(st_elem) {
     while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
@@ -362,12 +316,202 @@ function initApp(st_elem) {
             <div class="menu_elemt_right">
                 <div class="titulo">${value.nombre}</div> 
                 <div class="precio">${value.precio.toLocaleString()} €</div>
+                <div class="alerg"><img src="${value.alergenos[0]}" alt=""> <img src="${value.alergenos[1]}" alt=""> <img src="${value.alergenos[2]}" alt=""> <img src="${value.alergenos[3]}" alt=""></div>
                 <div class="menu_selcion_cantidad">
                     <button class="menu_menos" onclick="cambiarCantidad_resta(${key})">-</button>
                     <div class="menu_cantidad">${value.cantidad}</div>
                     <button class="menu_mas" onclick="cambiarCantidad_suma(${key})">+</button> 
                 </div>   
-                <button class="menu_saber_mas"> Saber más </button>
+                <!--<button class="menu_saber_mas"> Saber más </button>-->
+            </div>`;
+        lista.appendChild(newDiv);
+    })
+    recargaElemento();
+}
+window.addEventListener('load', () => {
+    bebidas.style.background = 'transparent'
+    cafe.style.background = '#E6CDBA'
+    tartas.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    reposteria.style.background = 'transparent'
+    menu_carrito.style.display = 'none'
+    menu.style.display = 'block'
+    revisar_pedido.style.display = 'none'
+    sitio_pago.style.display ='none'
+    forma_pago.style.display ='none'
+    direccion.style.display ='none'
+    espera_pedido.style.display = 'none'
+    barra_progreso.style.width ='10vw'
+    initApp(0);
+})
+saber_mas.addEventListener('click', () => {
+        bebidas.style.background = 'transparent'
+        cafe.style.background = '#E6CDBA'
+        tartas.style.background = 'transparent'
+        delicatessen.style.background = 'transparent'
+        reposteria.style.background = 'transparent'
+        menu_carrito.style.display = 'none'
+        menu.style.display = 'block'
+        revisar_pedido.style.display = 'none'
+        sitio_pago.style.display ='none'
+        forma_pago.style.display ='none'
+        direccion.style.display ='none'
+        espera_pedido.style.display = 'none'
+        barra_progreso.style.width ='10vw'
+        initApp2(0);
+    })
+
+step_2.addEventListener('click', () => {
+    menu.style.display = 'none'
+    revisar_pedido.style.display = 'block'
+    forma_pago.style.display ='none'
+    sitio_pago.style.display ='none'
+    direccion.style.display ='none'
+    espera_pedido.style.display = 'none'
+    barra_progreso.style.width ='25vw'
+    mostarElemento()
+
+})
+step_1.addEventListener('click', () => {
+    menu.style.display = 'block'
+    revisar_pedido.style.display = 'none'
+    forma_pago.style.display ='none'
+    sitio_pago.style.display ='none'
+    direccion.style.display ='none'
+    espera_pedido.style.display = 'none'
+    barra_progreso.style.width ='10vw'
+    initApp(0);
+})
+
+revison_button_chek.addEventListener('click',() =>{
+    menu.style.display = 'none'
+    revisar_pedido.style.display = 'none'
+    forma_pago.style.display = 'none'
+    sitio_pago.style.display ='block'
+    direccion.style.display ='none'
+    espera_pedido.style.display = 'none'
+    barra_progreso.style.width ='25vw'
+})
+sitio_pago_tienda.addEventListener('click',() =>{
+    menu.style.display = 'none'
+    revisar_pedido.style.display = 'none'
+    forma_pago.style.display = 'block'
+    sitio_pago.style.display ='none'
+    direccion.style.display ='none'
+    espera_pedido.style.display = 'none'
+    barra_progreso.style.width ='40vw'
+})
+sitio_pago_domicilio.addEventListener('click',() =>{
+    menu.style.display = 'none'
+    revisar_pedido.style.display = 'none'
+    forma_pago.style.display = 'block'
+    sitio_pago.style.display ='none'
+    direccion.style.display ='none'
+    espera_pedido.style.display = 'none'
+    barra_progreso.style.width ='40vw'
+})
+forma_pago_tarjeta.addEventListener('click',() =>{
+    menu.style.display = 'none'
+    revisar_pedido.style.display = 'none'
+    forma_pago.style.display = 'none'
+    sitio_pago.style.display ='none'
+    direccion.style.display ='block'
+    espera_pedido.style.display = 'none'
+    barra_progreso.style.width ='40vw'
+})
+forma_pago_efectivo.addEventListener('click',() =>{
+    menu.style.display = 'none'
+    revisar_pedido.style.display = 'none'
+    forma_pago.style.display = 'none'
+    sitio_pago.style.display ='none'
+    direccion.style.display ='block'
+    espera_pedido.style.display = 'none'
+    barra_progreso.style.width ='40vw'
+})
+step_3.addEventListener('click', () =>{
+    menu.style.display = 'none'
+    revisar_pedido.style.display = 'none'
+    forma_pago.style.display = 'none'
+    sitio_pago.style.display ='block'
+    direccion.style.display ='none'
+    espera_pedido.style.display = 'none'
+    barra_progreso.style.width ='34vw'
+})
+step_4.addEventListener('click', () =>{
+        menu.style.display = 'none'
+        revisar_pedido.style.display = 'none'
+        forma_pago.style.display = 'none'
+        sitio_pago.style.display ='none'
+        direccion.style.display ='none'
+        espera_pedido.style.display = 'block'
+        barra_progreso.style.width ='50vw'
+    }
+)
+cafe.addEventListener('click', () =>{
+    bebidas.style.background = 'transparent'
+    cafe.style.background = '#E6CDBA'
+    tartas.style.background = 'transparent'
+    reposteria.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    initApp(6)
+
+})
+bebidas.addEventListener('click', () =>{
+    bebidas.style.background = '#E6CDBA'
+    cafe.style.background = 'transparent'
+    tartas.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    initApp(6)
+
+})
+delicatessen.addEventListener('click', () =>{
+    bebidas.style.background = 'transparent'
+    cafe.style.background = 'transparent'
+    tartas.style.background = 'transparent'
+    delicatessen.style.background = '#E6CDBA'
+    reposteria.style.background = 'transparent'
+    initApp(12)
+})
+tartas.addEventListener('click', () =>{
+    bebidas.style.background = 'transparent'
+    cafe.style.background = 'transparent'
+    tartas.style.background = '#E6CDBA'
+    delicatessen.style.background = 'transparent'
+    reposteria.style.background = 'transparent'
+    initApp(18)
+})
+reposteria.addEventListener('click', () =>{
+    bebidas.style.background = 'transparent'
+    cafe.style.background = 'transparent'
+    tartas.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    reposteria.style.background = '#E6CDBA'
+    initApp(24)
+})
+
+
+
+function initApp2(st_elem) {
+    while (lista.hasChildNodes()) {
+        lista.removeChild(lista.firstChild);
+    }
+    let prods = Array.from(platos).slice(st_elem, (st_elem + 6));
+    prods.forEach((value, key) => {
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('elemento');
+        newDiv.innerHTML = `
+            <img src="${value.imagen}" alt="imagen_del_producto">
+            <div class="menu_elemt_right">
+                <div class="titulo">${value.nombre}</div> 
+                <div class="precio">${value.precio.toLocaleString()} €</div>
+                <div class="alerg"><img src="${value.alergenos[0]}" alt=""> <img src="${value.alergenos[1]}" alt=""> <img src="${value.alergenos[2]}" alt=""> <img src="${value.alergenos[3]}" alt=""></div>
+                <div class="menu_selcion_cantidad">
+                    <button class="menu_menos" onclick="cambiarCantidad_resta(${key})">-</button>
+                    <div class="menu_cantidad">${value.cantidad}</div>
+                    <button class="menu_mas" onclick="cambiarCantidad_suma(${key})">+</button> 
+                </div>   
+                <!--<button class="menu_saber_mas"> Saber más </button>-->
             </div>`;
         lista.appendChild(newDiv);
     })
@@ -427,7 +571,7 @@ function mostarElemento() {
                     <div class="menu_cantidad">${value.cantidad}</div>
                     <button class="menu_mas" onclick="cambiarCantidad_suma_m(${key})">+</button> 
                 </div>
-                <img src="media/menubasura.svg" alt="imagen_del_producto">`;
+                <img src="media/menu/basura.svg" alt="imagen_del_producto">`;
             lista_revision.appendChild(newDiv);
         }
         revisfinal()

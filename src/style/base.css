@@ -71,7 +71,7 @@
 #open_menu_h {
 	background-image: url("../media/btn-3lineas-horiz.png");
 	background-repeat: no-repeat;
-	background-size: 35% 70%;
+	background-size: auto 4vh;
 	border-radius: 0;
 	margin-top: 2%; 
 	filter: invert(1);
