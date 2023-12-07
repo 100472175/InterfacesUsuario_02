@@ -368,7 +368,89 @@
     margin: auto;
 }
 .alerg img{
-
     height: auto;
     width: 1.5vw;
+}
+
+.pago_tarjeta {
+	background-image: url("../media/landing/portada.jpg");
+	background-size: cover;
+}
+
+.menu_card_div {
+	position: relative;
+	margin: auto;
+	top: 25%;
+	height: 50vh;
+	background-color: #F6EDE6;
+	border-top-left-radius: 80px;
+	border-bottom-right-radius: 80px;
+	box-shadow: 0 4px 4px black;
+}
+
+.menu_card_div h2 {
+	text-align: center;
+}
+
+.menu_card_div a {
+	margin-left: 38%;
+}
+
+#menu_card_form {
+	display: grid;
+	grid-template-rows: 1fr 0.8fr 1fr 0.8fr 1fr 0.8fr 1fr;
+}
+
+.menu_label {
+	width: 90%;
+	margin-left: 4%;
+	height: 50%;
+}
+
+#menu_card_form input {
+	background-color: #F6EDE6;
+	border: none;
+	border-bottom: 1px solid black;
+	margin-left: 4%;
+	height: 50%;
+}
+
+#menu_card_owner {
+	width: 25%;
+	margin-left: 10%
+}
+
+#menu_card_name {
+	width: 40%;
+}
+
+#menu_card_surname {
+	width: 40%;
+}
+
+#menu_card_number {
+	width: 50%;
+}
+
+#menu_card_date {
+	width: 40%;
+}
+
+#menu_card_cvv {
+	width: 40%;
+}
+
+#menu_card_price{
+	text-align: center;
+}
+
+#menu_card_confirm {
+	border: none;
+	border-radius: 25px;
+	background-color: #7E4D29;
+	color: white;
+	width: 50%;
+	height: 80%;
+	margin-left: 25%;
+	font-size: 0.95rem;	
 }

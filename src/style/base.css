@@ -201,6 +201,10 @@ button, a{
 	#logo_h img {
 		height: 3vh;
 	}
+	
+	.main_header_link {
+		display:none;
+	}
 }
 
 

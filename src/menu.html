@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Meta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/menu.css">
-<<<<<<< HEAD
-    <script src="script/menu.js"></script>
-	<script src="script/base.js"></script>
+    <script src="./script/base.js"></script>
+
 </head>
 <body>
-	<header class="main_header">
+<header class="main_header">
 		<nav>
 			<button id="open_menu_h"></button>
 			<a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
@@ -44,50 +42,7 @@
 			<a href="contactos.html">Contacto</a>			
 		</div>
 	</header>
-    <div class="progess_bar  col-8" >
-=======
-    <script src="./script/base.js"></script>
-
-</head>
-<body>
-<header class="main_header">
-    <nav>
-        <button id="open_menu_h"></button>
-        <a id="logo">Café Florencia</a>
-        <a class="main_header_link" id="menu_specialities">Especialidades</a>
-        <p class="main_header_link">|</p>
-        <a href="menu.html" class="main_header_link" id="menu_menu">Menu</a>
-        <p class="main_header_link">|</p>
-        <a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
-        <p class="main_header_link">|</p>
-        <a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
-        <p class="main_header_link">|</p>
-        <a href="login.html" class="main_header_link" id="menu_register">Registro</a>
-    </nav>
-    <aside id="menu_h">
-        <a><br>Café Florencia<br></a>
-        <a id="menu_h_specialities">Especialidades<br></a>
-        <a href="menu.html">Menu<br></a>
-        <a id="menu_h_about_us">Sobre Nosotros<br></a>
-        <a href="reservas.html">Reserva<br></a>
-        <a href="login.html">Registro</a>
-    </aside>
-    <div id="unfolding_specialities">
-        <a href="bebidas_dulces.html">Bebidas dulces</a>
-        <a href="cafe.html">Café</a>
-        <a href="delicatessen.html">Delicatessen</a>
-        <a href="historia.html">Historia</a>
-        <a href="reposteria.html">Repostería</a>
-        <a href="tartas.html">Tartas</a>
-    </div>
-    <div id="unfolding_about_us">
-        <a href="historia.html">Historia</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contactos.html">Contacto</a>
-    </div>
-</header>
-    <div class="progess_bar  col-6" >
->>>>>>> acb9b0c33e25d941c7b7b7a27910f9ee43e39125
+    <div class="progess_bar col-6" >
         <nav class="progess_bar_button ">
             <button class="step_1">Menu</button>
             <button class="step_2">Revision Pedido</button>
@@ -184,8 +139,6 @@
             </article>
         </div>
     </section>
-
-
     <section class="direccion">
         <div class="go_back">
             <p> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
@@ -200,10 +153,33 @@
             <p>*Campo Obligatorio</p>
         </article>
     </section>
-    <!--
     <section class="pago_tarjeta">
+    	<div class="col-4 col-t-12 menu_card_div">
+    		<a>&lt;Direccion</a>
+    		<h2>Pago Online</h2>
+    		<form id="menu_card_form">
+    			<label for="menu_card_owner" class="menu_label">Titular de la tarjeta</label>
+				<div id="menu_card_owner_data">	
+					<input type="text" id="menu_card_name" placeholder="Nombre">
+					<input type="text" id="menu_card_surname" placeholder="Apellido">
+    			</div>
+    			<label for="menu_card_number" class="menu_label">Número de tarjeta</label>
+    			<input type="text" id="menu_card_number" placeholder="XXXX-XXXX-XXXX-XXXX">
+				<div id="menu_card_date_cvv">	
+					<label for="menu_card_date" class="menu_label">Fecha de caducidad</label>
+					<label for="menu_card_cvv" class="menu_label">CVV</label>
+    			</div>
+				<div id="menu_card_date_cvv_datas">	
+					<input type="text" id="menu_card_date" placeholder="MM/AA">
+					<input type="text" id="menu_card_cvv" placeholder="XXX">
+    			</div>
+    			<div id="menu_card_payment">
+					<p id="menu_card_price">Total</p>
+					<button id="menu_card_confirm">Confirmar Pago</button>
+    			</div>
+    		</form>
+    	</div>
     </section>
-     -->
     <section class="espera_pedido">
     </section>
 
@@ -211,4 +187,5 @@
 
 
 </body>
+<script src="script/menu.js"></script>
 </html>
