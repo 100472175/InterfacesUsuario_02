@@ -1,19 +1,21 @@
 /* Barra de progreso */
 .progess_bar{
-    height: 15vh;
+    height: 20vh;
     display: grid;
     grid-template-rows: 1fr 1fr;
     margin: auto;
     margin-top: 6vh;
+
     background-color:#FFFBF8;
     place-content: center;
 
 }
+
 .progess_bar_button{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap: 5%;
-
+    margin-bottom: 10%;
 }
 .progess_bar button{
     background-color: transparent;
@@ -22,15 +24,18 @@
     text-align: center;
 }
 .progess_bar_line{
-    height: 30%;
+    position: absolute;
+    height: 3%;
     background: #E6CDBA;
     border-radius: 30px;
+    top: 15%;
 }
 .progess_bar_line2{
-    height: 30%;
     background: #7E4D29;
+    position: absolute;
+    height: 3%;
     border-radius: 30px;
-    z-index: 2;
+    top: 15%;
 }
 
 .menu_top{
@@ -51,17 +56,12 @@
     border-radius: 30px;
     height: 17vh;
     width: 17vh;
-    background-color: transparent;
     border: none;
     margin-top: 10%;
     font-size: 0.8em;
 
 }
 
-/* Cambiar al js*/
-.menu_choose button:first-child{
-    background-color:#E6CDBA;
-}
 
 .menu_dish{
     display: grid;
@@ -92,7 +92,7 @@
     float:right ;
     width: 50%;
     display: grid;
-    grid-template-rows: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 0.25fr 0.25fr 1fr;
 }
 
 .titulo{
@@ -105,6 +105,7 @@
 .precio{
     font-size: 0.75em;
     text-align: center;
+    margin: auto;
 }
 .menu_menos{
     background-color: transparent;
@@ -168,7 +169,7 @@
     height: 25px;
     background-color: #7E4D29;
     border-radius: 50px;
-    color: black;
+    color: white;
     text-align: center;
     z-index: 2;
 }
@@ -362,4 +363,12 @@
     display: grid;
     place-content: center;
     grid-template-rows: 1fr 1fr;
+}
+.alerg{
+    margin: auto;
+}
+.alerg img{
+
+    height: auto;
+    width: 1.5vw;
 }
