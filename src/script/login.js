@@ -131,3 +131,10 @@ function check_user(key) {
 	if (user == null) {return 0;}
 	return -1
 }
+
+function load_session() {
+	console.log(check_session());
+	if (check_session() == true) {welcome_message(1, Object.keys(sessionStorage)[0])}
+}
+
+document.addEventListener("DOMContentLoaded", load_session, false);

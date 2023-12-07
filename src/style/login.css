@@ -180,6 +180,10 @@ button {
 	#register_error_div p {
 		font-size: 1rem;
 	}
+	
+	#register_logged_in {
+		margin-left: 12.5vw;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -190,6 +194,10 @@ button {
 	
 	.main_header_link {
 		display: none;
+	}
+	
+	#register_logged_in {
+		margin-left: 0;
 	}
 }
 
