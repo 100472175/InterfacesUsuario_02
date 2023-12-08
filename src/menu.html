@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/menu.css">
     <script src="./script/base.js"></script>
-
 </head>
 <body>
-<header class="main_header">
+	<header class="main_header">
 		<nav>
 			<button id="open_menu_h"></button>
 			<a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
@@ -42,6 +41,10 @@
 			<a href="contactos.html">Contacto</a>			
 		</div>
 	</header>
+	<div id="error_div">
+		<p id="error_p"></p>
+		<button id="error_button" onclick="global_error_message(0)">Aceptar</button>
+	</div>
     <div class="progess_bar col-6" >
         <nav class="progess_bar_button ">
             <button class="step_1">Menu</button>
@@ -175,7 +178,7 @@
     			</div>
     			<div id="menu_card_payment">
 					<p id="menu_card_price">Total</p>
-					<button id="menu_card_confirm">Confirmar Pago</button>
+					<button id="menu_card_confirm" onclick="check_card_form()">Confirmar Pago</button>
     			</div>
     		</form>
     	</div>

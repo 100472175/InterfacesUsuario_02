@@ -622,3 +622,70 @@ function cambiarCantidad_resta_m(key){
         mostarElemento();
     }
 }
+
+function check_card_form() {
+	event.preventDefault();
+	var name_input = document.getElementById('menu_card_name');
+	var surname_input = document.getElementById('menu_card_surname');
+	var number_input = document.getElementById('menu_card_number');
+	var date_input = document.getElementById('menu_card_date');
+	var cvv_input = document.getElementById('menu_card_cvv');
+	
+	var menu_card = document.getElementsByClassName("pago_tarjeta")[0];
+	
+	if (check_card_name(name_input.value) == false) {
+		global_error_message(1, "Nombre del titular no válido", menu_card);
+		return false;
+	}
+	
+	if (check_card_surname(surname_input.value) == false) {
+		global_error_message(1, "Apellido del titular no válido", menu_card);
+		return false;
+	}
+	
+	if (check_card_number(number_input.value) == false) {
+		global_error_message(1, "Número de la tarjeta no válido", menu_card);
+		return false;
+	}
+	
+	if (check_card_date(date_input.value) == false) {
+		global_error_message(1, "Fecha de la tarjeta no válida", menu_card);
+		return false;
+	}
+	
+	if (check_card_cvv(cvv_input.value) == false) {
+		global_error_message(1, "CVV de la tarjeta no válido", menu_card);
+		return false;
+	}
+	
+	name_input.value = "";
+	surname_input.value = "";
+	number_input.value = "";
+	date_input.value = "";
+	cvv_input.value = "";
+	alert("Tarjeta correcta");
+	return true	
+}
+
+function check_card_name(name) {
+	return name.length != 0;
+}
+
+function check_card_surname(surname) {
+	return surname.length != 0;
+}
+
+function check_card_number(number) {
+	const re = /^[0-9]{4}\-[0-9]{4}\-[0-9]{4}\-[0-9]{4}/;
+	return re.test(number);
+}
+
+function check_card_date(date) {
+	const re = /^(0[1-9]{1})|(1[0-2]{1})\/[0-9]{2}$/;
+	return re.test(date);
+}
+
+function check_card_cvv(cvv) {
+	const re = /^[0-9]{3}$/;
+	return re.test(cvv);
+}

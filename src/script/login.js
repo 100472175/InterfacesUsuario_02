@@ -57,57 +57,66 @@ function close_session(){
 }
 
 function log_in(){
-	var name = document.getElementById('login_user_name').value;
-	var pwd = document.getElementById('login_pwd').value;
+	var name = document.getElementById('login_user_name');
+	var pwd = document.getElementById('login_pwd');
 	
-	if (check_name(name) == 0) {
+	if (check_name(name.value) == 0) {
 		error_message("Debe introducir un nombre válido", 0);
-		return -1;
+		return false;
 	}
 	
-	if (check_user(name) == 0) {
+	if (check_user(name.value) == 0) {
 		error_message("No existe ese usuario", 0);
-		return -1;
+		return false;
 	}
 	
-	var user = localStorage.getItem(name, pwd);
+	var user = localStorage.getItem(name.value, pwd.value);
 	var index = user.indexOf(";");
-	if (user.substring(index + 1) != pwd) {
+	if (user.substring(index + 1) != pwd.value) {
 		error_message("Constraseña incorrecta", 0);
-		return -1;
+		return false;
 	}
-	welcome_message(1, name);
-	sessionStorage.setItem(name, user);
+	
+	welcome_message(1, name.value);
+	sessionStorage.setItem(name.value, user);
+	
+	name.value = "";
+	pwd.value = "";
 } 
 
 function sign_up() {
-	var name = document.getElementById('signup_user_name').value;
-	var pwd = document.getElementById('signup_pwd').value;
-	var email = document.getElementById('signup_email').value;
+	var name = document.getElementById('signup_user_name');
+	var pwd = document.getElementById('signup_pwd');
+	var email = document.getElementById('signup_email');
 	
-	if (check_name(name) == 0) {
+	if (check_name(name.value) == 0) {
 		error_message("Nombre no válido", 1);
 		return -1;
 	}
 	
-	if (check_pwd(pwd) == -1) {
+	if (check_pwd(pwd.value) == -1) {
 		error_message("Contraseña no válida", 1);
 		return -1;
 	}
 	
-	if (check_email(email) == 0) {
+	if (check_email(email.value) == 0) {
 		error_message("Correo electrónico no válido", 1);
 		return -1;
 	}
 	
-	if (check_user(name) == -1) {
+	if (check_user(name.value) == -1) {
 		error_message("Ese usuario ya está registrado", 1);
 		return -1;
 	}
 	
-	localStorage.setItem(name, email + ";" + pwd);
-	sessionStorage.setItem(name, pwd);
-	welcome_message(1, name);
+	localStorage.setItem(name.value, email.value + ";" + pwd.value);
+	sessionStorage.setItem(name.value, pwd.value);
+	welcome_message(1, name.value);
+	
+	name.value = "";
+	pwd.value = "";
+	email.value = "";
+	
 	go_to_log_in()
 }
 

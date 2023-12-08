@@ -1,3 +1,4 @@
+//Funciones del menú de hamburguesa
 function menu_h() {
 	var display = document.getElementById("menu_h").style.display;
 	if (display == "none" || display.length == 0) {display_menu();}
@@ -15,6 +16,11 @@ function close_menu (){
 	document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
 	document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 	fold();
+}
+
+function fold (){
+	document.getElementById('unfolding_about_us').style.display = "none";
+	document.getElementById('unfolding_specialities').style.display = "none";	
 }
 
 function display_unfolding_s (){
@@ -115,15 +121,31 @@ function display_unfolding_a_h (){
 	}
 }
 
-function fold (){
-	document.getElementById('unfolding_about_us').style.display = "none";
-	document.getElementById('unfolding_specialities').style.display = "none";	
-}
-
+//Funciones globales
 function check_session(){
 	var session = Object.keys(sessionStorage);
 	if (session.length == 0) return false;
 	return true;
+}
+
+var page_to_hide;
+var display_of_hidden_page;
+
+function global_error_message(op, mssg="", page = "") {
+	var error_div = document.getElementById("error_div");
+	var error_p = document.getElementById("error_p");
+	if (op == 0) {
+		error_div.style.display = "none";
+		page_to_hide.style.display = display_of_hidden_page; 
+	}
+	else if (op == 1) {
+		page_to_hide = page;
+		display_of_hidden_page = window.getComputedStyle(page).getPropertyValue("display");
+		console.log(display_of_hidden_page);
+		error_p.innerHTML = mssg;
+		page.style.display = "none";
+		error_div.style.display = "block";  
+	}
 }
 
 function load() {
