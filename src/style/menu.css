@@ -266,8 +266,11 @@
 }
 .menu_alergies li{
     text-align: center;
-    text
+    list-style: none;
     text-decoration: none;
+}
+.menu_alergies img{
+    height: 20px;
 }
 
 .revision_platos li{

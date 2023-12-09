@@ -303,12 +303,59 @@ let cantidad = document.querySelector(".menu_cuantity");
 let barra_progreso = document.querySelector(".progess_bar_line2");
 let espera_pedido = document.querySelector(".espera_pedido");
 let saber_mas = document.querySelector(".menu_saber_mas");
-let alerg = document.querySelector(".alerg");
 let pago_tarjeta = document.querySelector(".pago_tarjeta");
 let direccion_seleccion = document.querySelector(".direccion_selccion button");
+let tick1 =document.querySelector("#cuadro1");
+let tick2 =document.querySelector("#cuadro2");
+let tick3 =document.querySelector("#cuadro3");
+let tick4 =document.querySelector("#cuadro4");
 let saber_mas_select = 0;
 let menu_select = 1;
+let t1 = 0;
+let t2 = 0;
+let t3 = 0;
+let t4 = 0;
 
+tick1.addEventListener('click', () =>{
+    if (t1 === 0){
+        tick1.src="media/menu/tick.png"
+        t1 = 1;
+    }
+    else{
+        tick1.src="media/menu/cuadrado.png"
+        t1 = 0;
+    }
+})
+tick2.addEventListener('click', () =>{
+    if (t2 === 0){
+        tick2.src="media/menu/tick.png"
+        t2 = 1;
+    }
+    else{
+        tick2.src="media/menu/cuadrado.png"
+        t2 = 0;
+    }
+})
+tick3.addEventListener('click', () =>{
+    if (t3 === 0){
+        tick3.src="media/menu/tick.png"
+        t3 = 1;
+    }
+    else{
+        tick3.src="media/menu/cuadrado.png"
+        t3 = 0;
+    }
+})
+tick4.addEventListener('click', () =>{
+    if (t4 === 0){
+        tick4.src="media/menu/tick.png"
+        t4 = 1;
+    }
+    else{
+        tick4.src="media/menu/cuadrado.png"
+        t4 = 0;
+    }
+})
 window.addEventListener('load', () => {
     bebidas.style.background = 'transparent'
     cafe.style.background = '#E6CDBA'
