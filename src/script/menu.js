@@ -2,7 +2,7 @@ let None;
 let platos = [
         {id: 1,
         nombre: 'Cafe con leche',
-        imagen: 'media/menu/bebida1.jpg',
+        imagen: 'media/menu/cafe1.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
@@ -11,51 +11,51 @@ let platos = [
     {
         id: 2,
         nombre: 'Latte machiato',
-        imagen: 'media/menu/bebida1.jpg',
+        imagen: 'media/menu/cafe2.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',None]
+        alergenos: [None,'media/menu/leche.svg',None,None]
 
     },
     {
         id: 3,
         nombre: 'Capuchino',
-        imagen: 'media/menu/bebida1.jpg',
+        imagen: 'media/menu/cafe3.jpg',
         precio: 2.35,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/trigo.svg','media/menu/Huevos.svg','media/menu/almendra.svg']
+        alergenos: [None,'media/menu/leche.svg',None,None]
     },
     {
         id: 4,
         nombre: 'Cafe con hielo',
-        imagen:'media/menu/bebida1.jpg',
+        imagen:'media/menu/cafe4.jpg',
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: []
+        alergenos: [None,'media/menu/leche.svg',None,None]
     },
     {
         id: 5,
         nombre: 'Cafe solo',
-        imagen: 'media/menu/bebida1.jpg',
+        imagen: 'media/menu/cafe5.jpg',
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: [null,null,null,null]
     },
     {
         id: 6,
         nombre: 'Chocolate',
-        imagen: 'media/menu/bebida1.jpg',
+        imagen: 'media/menu/cafe6.jpg',
         precio: 2.3,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: [None,'media/menu/leche.svg',None,None]
     },
     {id: 7,
-        nombre: 'vdvdvd',
+        nombre: 'Batido de chocolate negro',
         imagen: 'media/menu/bebida1.jpg',
         precio: 2.00,
         cantidad: 0,
@@ -64,8 +64,8 @@ let platos = [
     },
     {
         id: 8,
-        nombre: 'Lvvd',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Batido de chocolate',
+        imagen: 'media/menu/bebida2.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
@@ -73,8 +73,8 @@ let platos = [
     },
     {
         id: 9,
-        nombre: 'Capuchino',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Batido de strachatela',
+        imagen: 'media/menu/bebida3.jpg',
         precio: 2.30,
         cantidad: 0,
         coste: 0,
@@ -82,8 +82,8 @@ let platos = [
     },
     {
         id: 10,
-        nombre: 'Cafe con hielo',
-        imagen:'media/menu/bebida1.jpg',
+        nombre: 'Batido de vainilla',
+        imagen:'media/menu/bebida4.jpg',
         precio: 1.80,
         cantidad: 0,
         coste: 0,
@@ -91,8 +91,8 @@ let platos = [
     },
     {
         id: 11,
-        nombre: 'Cafe solo',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Batido de strachatela',
+        imagen: 'media/menu/bebida5.jpg',
         precio: 1.80,
         cantidad: 0,
         coste: 0,
@@ -100,16 +100,16 @@ let platos = [
     },
     {
         id: 12,
-        nombre: 'Chocolate',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Batido de nubes',
+        imagen: 'media/menu/bebida6.jpg',
         precio: 2.3,
         cantidad: 0,
         coste: 0,
         alergenos: ['G','L','H','F']
     },
     {id: 13,
-        nombre: 'Cafe con leche',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Macarons de chocolate',
+        imagen: 'media/menu/delicatessen1.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
@@ -117,8 +117,8 @@ let platos = [
     },
     {
         id: 14,
-        nombre: 'Latte machiato',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Mini delicias',
+        imagen: 'media/menu/delicatessen2.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
@@ -126,8 +126,8 @@ let platos = [
     },
     {
         id: 15,
-        nombre: 'Capuchino',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Bombones',
+        imagen: 'media/menu/delicatessen3.jpg',
         precio: 2.30,
         cantidad: 0,
         coste: 0,
@@ -135,8 +135,8 @@ let platos = [
     },
     {
         id: 16,
-        nombre: 'Cafe con hielo',
-        imagen:'media/menu/bebida1.jpg',
+        nombre: 'Macarons de oreo',
+        imagen:'media/menu/delicatessen4.jpg',
         precio: 1.80,
         cantidad: 0,
         coste: 0,
@@ -144,8 +144,8 @@ let platos = [
     },
     {
         id: 17,
-        nombre: 'Cafe solo',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Mini tartitas',
+        imagen: 'media/menu/delicatessen5.jpg',
         precio: 1.80,
         cantidad: 0,
         coste: 0,
@@ -153,16 +153,16 @@ let platos = [
     },
     {
         id: 18,
-        nombre: 'Chocolate',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Macarons de fresa',
+        imagen: 'media/menu/delicatessen6.jpg',
         precio: 2.3,
         cantidad: 0,
         coste: 0,
         alergenos: ['G','L','H','F']
     },
     {id: 19,
-        nombre: 'Cafe con leche',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Tarta mixta',
+        imagen: 'media/menu/tartas1.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
@@ -170,8 +170,8 @@ let platos = [
     },
     {
         id: 20,
-        nombre: 'Latte machiato',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Tarta de nata',
+        imagen: 'media/menu/tartas2.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
@@ -179,8 +179,8 @@ let platos = [
     },
     {
         id: 21,
-        nombre: 'Capuchino',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Tarta de fresa',
+        imagen: 'media/menu/tartas3.jpg',
         precio: 2.30,
         cantidad: 0,
         coste: 0,
@@ -188,8 +188,8 @@ let platos = [
     },
     {
         id: 22,
-        nombre: 'Cafe con hielo',
-        imagen:'media/menu/bebida1.jpg',
+        nombre: 'Tarta de oreo',
+        imagen:'media/menu/tartas4.jpg',
         precio: 1.80,
         cantidad: 0,
         coste: 0,
@@ -197,25 +197,35 @@ let platos = [
     },
     {
         id: 23,
-        nombre: 'Cafe solo',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Tarta de vainilla',
+        imagen: 'media/menu/tartas5.jpg',
         precio: 1.80,
         cantidad: 0,
         coste: 0,
         alergenos: ['G','L','H','F']
     },
     {
-        id: 25,
-        nombre: 'Chocolate',
-        imagen: 'media/menu/bebida1.jpg',
+        id: 24,
+        nombre: 'Tarta de chocolate',
+        imagen: 'media/menu/tartas6.jpg',
         precio: 2.3,
         cantidad: 0,
         coste: 0,
         alergenos: ['G','L','H','F']
     },
-    {id: 26,
-        nombre: 'Cafe con leche',
-        imagen: 'media/menu/bebida1.jpg',
+    {
+        id: 25,
+        nombre: 'Donas glaseadas',
+        imagen: 'media/menu/Reposteria1.jpg',
+        precio: 2.00,
+        cantidad: 0,
+        coste: 0,
+        alergenos: ['G','L','H','F']
+    },
+    {
+        id: 26,
+        nombre: 'Tortitas especiales',
+        imagen: 'media/menu/Reposteria2.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
@@ -223,26 +233,26 @@ let platos = [
     },
     {
         id: 27,
-        nombre: 'Latte machiato',
-        imagen: 'media/menu/bebida1.jpg',
-        precio: 2.00,
-        cantidad: 0,
-        coste: 0,
-        alergenos: ['G','L','H','F']
-    },
-    {
-        id: 28,
-        nombre: 'Capuchino',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Tortitas con fresas',
+        imagen: 'media/menu/Reposteria3.jpg',
         precio: 2.30,
         cantidad: 0,
         coste: 0,
         alergenos: ['G','L','H','F']
     },
     {
+        id: 28,
+        nombre: 'Gofres',
+        imagen:'media/menu/Reposteria4.jpg',
+        precio: 1.80,
+        cantidad: 0,
+        coste: 0,
+        alergenos: ['G','L','H','F']
+    },
+    {
         id: 29,
-        nombre: 'Cafe con hielo',
-        imagen:'media/menu/bebida1.jpg',
+        nombre: 'Totitas con chocolate',
+        imagen: 'media/menu/Reposteria5.jpg',
         precio: 1.80,
         cantidad: 0,
         coste: 0,
@@ -250,17 +260,8 @@ let platos = [
     },
     {
         id: 30,
-        nombre: 'Cafe solo',
-        imagen: 'media/menu/bebida1.jpg',
-        precio: 1.80,
-        cantidad: 0,
-        coste: 0,
-        alergenos: ['G','L','H','F']
-    },
-    {
-        id: 31,
-        nombre: 'Chocolate',
-        imagen: 'media/menu/bebida1.jpg',
+        nombre: 'Crepes',
+        imagen: 'media/menu/Reposteria6.jpg',
         precio: 2.3,
         cantidad: 0,
         coste: 0,
@@ -269,7 +270,7 @@ let platos = [
 ];
 
 // Lista de los productos disponibles
-
+let body =document.querySelector("body")
 let lista = document.querySelector(".menu_dish");
 let cesta = document.querySelector(".cesta");
 let equis = document.querySelector(".menu_cerrar_compra");
@@ -303,31 +304,11 @@ let barra_progreso = document.querySelector(".progess_bar_line2");
 let espera_pedido = document.querySelector(".espera_pedido");
 let saber_mas = document.querySelector(".menu_saber_mas");
 let alerg = document.querySelector(".alerg");
-function initApp(st_elem) {
-    while (lista.hasChildNodes()) {
-        lista.removeChild(lista.firstChild);
-    }
-    let prods = Array.from(platos).slice(st_elem, (st_elem + 6));
-    prods.forEach((value, key) => {
-        let newDiv = document.createElement('div');
-        newDiv.classList.add('elemento');
-        newDiv.innerHTML = `
-            <img src="${value.imagen}" alt="imagen_del_producto">
-            <div class="menu_elemt_right">
-                <div class="titulo">${value.nombre}</div> 
-                <div class="precio">${value.precio.toLocaleString()} €</div>
-                <div class="alerg"><img src="${value.alergenos[0]}" alt=""> <img src="${value.alergenos[1]}" alt=""> <img src="${value.alergenos[2]}" alt=""> <img src="${value.alergenos[3]}" alt=""></div>
-                <div class="menu_selcion_cantidad">
-                    <button class="menu_menos" onclick="cambiarCantidad_resta(${key})">-</button>
-                    <div class="menu_cantidad">${value.cantidad}</div>
-                    <button class="menu_mas" onclick="cambiarCantidad_suma(${key})">+</button> 
-                </div>   
-                <!--<button class="menu_saber_mas"> Saber más </button>-->
-            </div>`;
-        lista.appendChild(newDiv);
-    })
-    recargaElemento();
-}
+let pago_tarjeta = document.querySelector(".pago_tarjeta");
+let direccion_seleccion = document.querySelector(".direccion_selccion button");
+let saber_mas_select = 0;
+let menu_select = 1;
+
 window.addEventListener('load', () => {
     bebidas.style.background = 'transparent'
     cafe.style.background = '#E6CDBA'
@@ -342,35 +323,90 @@ window.addEventListener('load', () => {
     direccion.style.display ='none'
     espera_pedido.style.display = 'none'
     barra_progreso.style.width ='10vw'
+    pago_tarjeta.style.display = 'none'
     initApp(0);
 })
+cafe.addEventListener('click', () =>{
+    cafe.style.background = '#E6CDBA'
+    bebidas.style.background = 'transparent'
+    tartas.style.background = 'transparent'
+    reposteria.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    menu_select = 1;
+    initApp(0)
+
+})
+bebidas.addEventListener('click', () =>{
+    cafe.style.background = 'transparent'
+    bebidas.style.background = '#E6CDBA'
+    tartas.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    menu_select = 2;
+    initApp(6)
+
+})
+delicatessen.addEventListener('click', () =>{
+    cafe.style.background = 'transparent'
+    bebidas.style.background = 'transparent'
+    tartas.style.background = 'transparent'
+    delicatessen.style.background = '#E6CDBA'
+    reposteria.style.background = 'transparent'
+    menu_select = 3;
+    initApp(12)
+})
+tartas.addEventListener('click', () =>{
+    bebidas.style.background = 'transparent'
+    cafe.style.background = 'transparent'
+    tartas.style.background = '#E6CDBA'
+    delicatessen.style.background = 'transparent'
+    reposteria.style.background = 'transparent'
+    menu_select = 4;
+    initApp(18)
+})
+reposteria.addEventListener('click', () =>{
+    bebidas.style.background = 'transparent'
+    cafe.style.background = 'transparent'
+    tartas.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    reposteria.style.background = '#E6CDBA'
+    menu_select = 5;
+    initApp(24)
+})
 saber_mas.addEventListener('click', () => {
-        bebidas.style.background = 'transparent'
-        cafe.style.background = '#E6CDBA'
-        tartas.style.background = 'transparent'
-        delicatessen.style.background = 'transparent'
-        reposteria.style.background = 'transparent'
-        menu_carrito.style.display = 'none'
-        menu.style.display = 'block'
-        revisar_pedido.style.display = 'none'
-        sitio_pago.style.display ='none'
-        forma_pago.style.display ='none'
-        direccion.style.display ='none'
-        espera_pedido.style.display = 'none'
-        barra_progreso.style.width ='10vw'
-        initApp2(0);
-    })
-
-step_2.addEventListener('click', () => {
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'block'
-    forma_pago.style.display ='none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
-    espera_pedido.style.display = 'none'
-    barra_progreso.style.width ='25vw'
-    mostarElemento()
-
+    if (saber_mas_select === 0) {
+        if (menu_select === 1) {
+            initApp2(0);
+        } else if (menu_select === 2) {
+            initApp2(6);
+        } else if (menu_select === 3) {
+            initApp2(12);
+        } else if (menu_select === 4) {
+            initApp2(18);
+        } else if (menu_select === 5) {
+            initApp2(24);
+        }
+        saber_mas_select = 1;
+    } else {
+        if (menu_select === 1) {
+            initApp(0);
+        } else if (menu_select === 2) {
+            initApp(6);
+        } else if (menu_select === 3) {
+            initApp(12);
+        } else if (menu_select === 4) {
+            initApp(18);
+        } else if (menu_select === 5) {
+            initApp(24);
+        }
+        saber_mas_select = 0;
+    }
+})
+cesta.addEventListener('click', () => {
+    menu_carrito.style.display = 'block'
+})
+equis.addEventListener('click', () => {
+    menu_carrito.style.display = 'none'
 })
 step_1.addEventListener('click', () => {
     menu.style.display = 'block'
@@ -379,8 +415,23 @@ step_1.addEventListener('click', () => {
     sitio_pago.style.display ='none'
     direccion.style.display ='none'
     espera_pedido.style.display = 'none'
+    pago_tarjeta.style.display = 'none'
     barra_progreso.style.width ='10vw'
+    menu_select = 1;
     initApp(0);
+})
+
+step_2.addEventListener('click', () => {
+    menu.style.display = 'none'
+    revisar_pedido.style.display = 'block'
+    forma_pago.style.display ='none'
+    sitio_pago.style.display ='none'
+    direccion.style.display ='none'
+    espera_pedido.style.display = 'none'
+    pago_tarjeta.style.display = 'none'
+    barra_progreso.style.width ='25vw'
+    mostarElemento()
+
 })
 
 revison_button_chek.addEventListener('click',() =>{
@@ -390,6 +441,7 @@ revison_button_chek.addEventListener('click',() =>{
     sitio_pago.style.display ='block'
     direccion.style.display ='none'
     espera_pedido.style.display = 'none'
+    pago_tarjeta.style.display = 'none'
     barra_progreso.style.width ='25vw'
 })
 sitio_pago_tienda.addEventListener('click',() =>{
@@ -399,6 +451,7 @@ sitio_pago_tienda.addEventListener('click',() =>{
     sitio_pago.style.display ='none'
     direccion.style.display ='none'
     espera_pedido.style.display = 'none'
+    pago_tarjeta.style.display = 'none'
     barra_progreso.style.width ='40vw'
 })
 sitio_pago_domicilio.addEventListener('click',() =>{
@@ -408,6 +461,7 @@ sitio_pago_domicilio.addEventListener('click',() =>{
     sitio_pago.style.display ='none'
     direccion.style.display ='none'
     espera_pedido.style.display = 'none'
+    pago_tarjeta.style.display = 'none'
     barra_progreso.style.width ='40vw'
 })
 forma_pago_tarjeta.addEventListener('click',() =>{
@@ -417,6 +471,7 @@ forma_pago_tarjeta.addEventListener('click',() =>{
     sitio_pago.style.display ='none'
     direccion.style.display ='block'
     espera_pedido.style.display = 'none'
+    pago_tarjeta.style.display = 'none'
     barra_progreso.style.width ='40vw'
 })
 forma_pago_efectivo.addEventListener('click',() =>{
@@ -426,6 +481,7 @@ forma_pago_efectivo.addEventListener('click',() =>{
     sitio_pago.style.display ='none'
     direccion.style.display ='block'
     espera_pedido.style.display = 'none'
+    pago_tarjeta.style.display = 'none'
     barra_progreso.style.width ='40vw'
 })
 step_3.addEventListener('click', () =>{
@@ -435,7 +491,20 @@ step_3.addEventListener('click', () =>{
     sitio_pago.style.display ='block'
     direccion.style.display ='none'
     espera_pedido.style.display = 'none'
+    pago_tarjeta.style.display = 'none'
     barra_progreso.style.width ='34vw'
+})
+direccion_seleccion.addEventListener('click',() =>{
+    menu.style.display = 'none'
+    revisar_pedido.style.display = 'none'
+    forma_pago.style.display = 'none'
+    sitio_pago.style.display ='none'
+    direccion.style.display ='none'
+    espera_pedido.style.display = 'none'
+    pago_tarjeta.style.display = 'block'
+    body.style.backgroundImage= "url('media/landing/portada.jpg')"
+    body.style.backgroundSize ='cover'
+    barra_progreso.style.width ='40vw'
 })
 step_4.addEventListener('click', () =>{
         menu.style.display = 'none'
@@ -443,89 +512,61 @@ step_4.addEventListener('click', () =>{
         forma_pago.style.display = 'none'
         sitio_pago.style.display ='none'
         direccion.style.display ='none'
+        pago_tarjeta.style.display = 'none'
         espera_pedido.style.display = 'block'
         barra_progreso.style.width ='50vw'
-    }
-)
-cafe.addEventListener('click', () =>{
-    bebidas.style.background = 'transparent'
-    cafe.style.background = '#E6CDBA'
-    tartas.style.background = 'transparent'
-    reposteria.style.background = 'transparent'
-    delicatessen.style.background = 'transparent'
-    initApp(6)
-
-})
-bebidas.addEventListener('click', () =>{
-    bebidas.style.background = '#E6CDBA'
-    cafe.style.background = 'transparent'
-    tartas.style.background = 'transparent'
-    delicatessen.style.background = 'transparent'
-    delicatessen.style.background = 'transparent'
-    initApp(6)
-
-})
-delicatessen.addEventListener('click', () =>{
-    bebidas.style.background = 'transparent'
-    cafe.style.background = 'transparent'
-    tartas.style.background = 'transparent'
-    delicatessen.style.background = '#E6CDBA'
-    reposteria.style.background = 'transparent'
-    initApp(12)
-})
-tartas.addEventListener('click', () =>{
-    bebidas.style.background = 'transparent'
-    cafe.style.background = 'transparent'
-    tartas.style.background = '#E6CDBA'
-    delicatessen.style.background = 'transparent'
-    reposteria.style.background = 'transparent'
-    initApp(18)
-})
-reposteria.addEventListener('click', () =>{
-    bebidas.style.background = 'transparent'
-    cafe.style.background = 'transparent'
-    tartas.style.background = 'transparent'
-    delicatessen.style.background = 'transparent'
-    reposteria.style.background = '#E6CDBA'
-    initApp(24)
 })
 
-
-
-function initApp2(st_elem) {
+function initApp(st_elem) {
     while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
     }
     let prods = Array.from(platos).slice(st_elem, (st_elem + 6));
-    prods.forEach((value, key) => {
+    prods.forEach((value) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('elemento');
         newDiv.innerHTML = `
-            <img src="${value.imagen}" alt="imagen_del_producto">
+            <img class="elem_img"  src="${value.imagen}" alt="imagen_del_producto">
             <div class="menu_elemt_right">
                 <div class="titulo">${value.nombre}</div> 
                 <div class="precio">${value.precio.toLocaleString()} €</div>
-                <div class="alerg"><img src="${value.alergenos[0]}" alt=""> <img src="${value.alergenos[1]}" alt=""> <img src="${value.alergenos[2]}" alt=""> <img src="${value.alergenos[3]}" alt=""></div>
                 <div class="menu_selcion_cantidad">
-                    <button class="menu_menos" onclick="cambiarCantidad_resta(${key})">-</button>
+                    <button class="menu_menos" onclick="cambiarCantidad_resta(${value.id})">-</button>
                     <div class="menu_cantidad">${value.cantidad}</div>
-                    <button class="menu_mas" onclick="cambiarCantidad_suma(${key})">+</button> 
+                    <button class="menu_mas" onclick="cambiarCantidad_suma(${value.id})">+</button> 
                 </div>   
-                <!--<button class="menu_saber_mas"> Saber más </button>-->
             </div>`;
         lista.appendChild(newDiv);
     })
     recargaElemento();
 }
 
-cesta.addEventListener('click', () => {
-    menu_carrito.style.display = 'block'
-})
-equis.addEventListener('click', () => {
-    menu_carrito.style.display = 'none'
-
-})
-
+function initApp2(st_elem) {
+    while (lista.hasChildNodes()) {
+        lista.removeChild(lista.firstChild);
+    }
+    let prods = Array.from(platos).slice(st_elem, (st_elem + 6));
+    prods.forEach((value) => {
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('elemento');
+        newDiv.innerHTML = `
+            <img class="elem_img" src="${value.imagen}" alt="imagen_del_producto">
+            <div class="menu_elemt_right_2">
+                <div class="titulo">${value.nombre}</div> 
+                <div class="precio">${value.precio.toLocaleString()} €</div>
+                <div>Alergenos:</div>
+                <div class="alerg"> <img src="${value.alergenos[0]}" alt=""> <img src="${value.alergenos[1]}" alt=""> <img src="${value.alergenos[2]}" alt=""> <img src="${value.alergenos[3]}" alt=""></div>
+                <div class="menu_selcion_cantidad">
+                    <button class="menu_menos" onclick="cambiarCantidad_resta(${value.id})">-</button>
+                    <div class="menu_cantidad">${value.cantidad}</div>
+                    <button class="menu_mas" onclick="cambiarCantidad_suma(${value.id})">+</button> 
+                </div>   
+              
+            </div>`;
+        lista.appendChild(newDiv);
+    })
+    recargaElemento();
+}
 
 
 // Función para recargar el carrito
@@ -544,9 +585,9 @@ function recargaElemento() {
                 <div>${value.nombre}</div>
                 <div class="precio"> ${value.coste} €</div>
                 <div>
-                    <button class="menu_menos" onclick="cambiarCantidad_resta(${key})">-</button>
+                    <button class="menu_menos" onclick="cambiarCantidad_resta(${value.id})">-</button>
                     <div class="menu_cantidad">${value.cantidad}</div>
-                    <button class="menu_mas" onclick="cambiarCantidad_suma(${key})">+</button> 
+                    <button class="menu_mas" onclick="cambiarCantidad_suma(${value.id})">+</button> 
                 </div>`;
         lista_platos_selecionados.appendChild(newDiv);
         }
@@ -558,7 +599,7 @@ function recargaElemento() {
 function mostarElemento() {
     lista_revision.innerHTML ='';
     let prods = Array.from(platos);
-    prods.forEach((value, key) => {
+    prods.forEach((value) => {
         if (value.cantidad > 0) {
             value.coste = value.precio * value.cantidad
             let newDiv = document.createElement('li');
@@ -567,9 +608,9 @@ function mostarElemento() {
                 <div>${value.nombre}</div>
                 <div class="precio"> ${value.coste} €</div>
                 <div>
-                    <button class="menu_menos" onclick="cambiarCantidad_resta_m(${key})">-</button>
+                    <button class="menu_menos" onclick="cambiarCantidad_resta_m(${value.id})">-</button>
                     <div class="menu_cantidad">${value.cantidad}</div>
-                    <button class="menu_mas" onclick="cambiarCantidad_suma_m(${key})">+</button> 
+                    <button class="menu_mas" onclick="cambiarCantidad_suma_m(${value.id})">+</button> 
                 </div>
                 <img src="media/menu/basura.svg" alt="imagen_del_producto">`;
             lista_revision.appendChild(newDiv);
@@ -597,31 +638,102 @@ function revisfinal() {
     totalrevision.innerText = "Total ".concat(precioTotal.toLocaleString()).concat(' €');
 }
 
-function cambiarCantidad_suma(key){
-    platos[key].cantidad = platos[key].cantidad + 1 ;
-    platos[key].coste = platos[key].precio * platos[key].cantidad
-    initApp(0);
-}
-function cambiarCantidad_resta(key){
-    if (platos[key].cantidad > 0) {
-        platos[key].cantidad = platos[key].cantidad - 1;
-        platos[key].coste = platos[key].precio * platos[key].cantidad
-        initApp(0);
+function saber_menu() {
+    if (saber_mas_select === 1) {
+        if (menu_select === 1) {
+            console.log("1")
+            initApp2(0);
+        } else if (menu_select === 2) {
+            console.log("a")
+            initApp2(6);
+        } else if (menu_select === 3) {
+            initApp2(12);
+        } else if (menu_select === 4) {
+            initApp2(18);
+        } else if (menu_select === 5) {
+            initApp2(24);
+        }
+    } else {
+        if (menu_select === 1) {
+            console.log("2")
+            initApp(0);
+        } else if (menu_select === 2) {
+            console.log("b")
+            initApp(6);
+        } else if (menu_select === 3) {
+            initApp(12);
+        } else if (menu_select === 4) {
+            initApp(18);
+        } else if (menu_select === 5) {
+            initApp(24);
+        }
     }
+
 }
 
+function cambiarCantidad_suma(key){
+    let encontrado = 0;
+    let i = 0;
+    while(encontrado === 0 ){
+        if (platos[i].id === key){
+            encontrado = 1;
+        }
+        else {
+            i ++
+        }
+    }
+    platos[i].cantidad = platos[i].cantidad + 1 ;
+    platos[i].coste = platos[i].precio * platos[i].cantidad
+    saber_menu()
+
+}
+function cambiarCantidad_resta(key){
+    let encontrado = 0;
+    let i = 0;
+    while(encontrado === 0 ){
+        if (platos[i].id === key){
+            encontrado = 1;
+        }
+        else {
+            i ++
+        }
+    }
+    platos[i].cantidad = platos[i].cantidad - 1 ;
+    platos[i].coste = platos[i].precio * platos[i].cantidad
+    saber_menu()
+}
 function cambiarCantidad_suma_m(key){
-    platos[key].cantidad = platos[key].cantidad + 1 ;
-    platos[key].coste = platos[key].precio * platos[key].cantidad
-    mostarElemento();
+    let encontrado = 0;
+    let i = 0;
+    while(encontrado === 0 ){
+        if (platos[i].id === key){
+            encontrado = 1;
+        }
+        else {
+            i ++
+        }
+    }
+    platos[i].cantidad = platos[i].cantidad + 1 ;
+    platos[i].coste = platos[i].precio * platos[i].cantidad
+    mostarElemento()
+
 }
 function cambiarCantidad_resta_m(key){
-    if (platos[key].cantidad > 0) {
-        platos[key].cantidad = platos[key].cantidad - 1;
-        platos[key].coste = platos[key].precio * platos[key].cantidad
-        mostarElemento();
+    let encontrado = 0;
+    let i = 0;
+    while(encontrado === 0 ){
+        if (platos[i].id === key){
+            encontrado = 1;
+        }
+        else {
+            i ++
+        }
     }
+    platos[i].cantidad = platos[i].cantidad - 1 ;
+    platos[i].coste = platos[i].precio * platos[i].cantidad
+    mostarElemento()
 }
+
 
 function check_card_form() {
 	event.preventDefault();

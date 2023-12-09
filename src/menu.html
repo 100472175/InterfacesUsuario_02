@@ -45,7 +45,7 @@
 		<p id="error_p"></p>
 		<button id="error_button" onclick="global_error_message(0)">Aceptar</button>
 	</div>
-    <div class="progess_bar col-6" >
+    <div class="progess_bar col-7" >
         <nav class="progess_bar_button ">
             <button class="step_1">Menu</button>
             <button class="step_2">Revision Pedido</button>
@@ -65,10 +65,10 @@
 
             <nav class="menu_choose col-6">
                 <button class="menu_coffe"><img src="media/menu/taza-de-cafe.svg" alt="Cafe"><br>Cafe</button>
-                <button class="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Cafe"><br>Bebidas</button>
-                <button class="menu_delicatessen"><img src="media/menu/macarron.svg" alt="Cafe"><br>Delicatessen</button>
-                <button class="menu_cakes"><img src="media/menu/porcion-de-tarta.svg" alt="Cafe"><br>Tartas</button>
-                <button class="menu_bakery"><img src="media/menu/tortitas.svg" alt="Cafe"><br>Reposteria</button>
+                <button class="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Bebidas"><br>Bebidas</button>
+                <button class="menu_delicatessen"><img src="media/menu/macarron.svg" alt="macarrons"><br>Delicatessen</button>
+                <button class="menu_cakes"><img src="media/menu/porcion-de-tarta.svg" alt="tarta"><br>Tartas</button>
+                <button class="menu_bakery"><img src="media/menu/tortitas.svg" alt="reposteri"><br>Reposteria</button>
             </nav>
 
             <div class="menu_car col-1">
@@ -157,8 +157,10 @@
         </article>
     </section>
     <section class="pago_tarjeta">
+        <div class="go_back">
+            <p> <img src="media/menu/flecha.svg" alt="flecha"> Dirección </p>
+        </div>
     	<div class="col-4 col-t-12 menu_card_div">
-    		<a>&lt;Direccion</a>
     		<h2>Pago Online</h2>
     		<form id="menu_card_form">
     			<label for="menu_card_owner" class="menu_label">Titular de la tarjeta</label>
@@ -185,9 +187,6 @@
     </section>
     <section class="espera_pedido">
     </section>
-
-
-
 
 </body>
 <script src="script/menu.js"></script>
