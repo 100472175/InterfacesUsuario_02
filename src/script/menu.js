@@ -6,7 +6,8 @@ let platos = [
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg','media/menu/almendra.svg']
+        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg','media/menu/almendra.svg'],
+        alerg: ['L']
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ let platos = [
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: [None,'media/menu/leche.svg',None,None]
+        alergenos: ['media/menu/leche.svg',null,null,null],
+        alerg: ['L']
 
     },
     {
@@ -25,7 +27,8 @@ let platos = [
         precio: 2.35,
         cantidad: 0,
         coste: 0,
-        alergenos: [None,'media/menu/leche.svg',None,None]
+        alergenos:  ['media/menu/leche.svg',null,null,null],
+        alerg: ['L']
     },
     {
         id: 4,
@@ -34,7 +37,8 @@ let platos = [
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: [None,'media/menu/leche.svg',None,None]
+        alergenos:  ['media/menu/leche.svg',null,null,null],
+        alerg: ['L']
     },
     {
         id: 5,
@@ -43,7 +47,8 @@ let platos = [
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: [null,null,null,null]
+        alergenos: [null,null,null,null],
+        alerg: []
     },
     {
         id: 6,
@@ -52,7 +57,8 @@ let platos = [
         precio: 2.3,
         cantidad: 0,
         coste: 0,
-        alergenos: [None,'media/menu/leche.svg',None,None]
+        alergenos: ['media/menu/leche.svg',null,null,null],
+        alerg: ['L']
     },
     {id: 7,
         nombre: 'Batido de chocolate negro',
@@ -60,7 +66,8 @@ let platos = [
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/leche.svg',null,null,null],
+        alerg: ['L']
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ let platos = [
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/leche.svg',null,null,null],
+        alerg: ['L']
     },
     {
         id: 9,
@@ -78,7 +86,8 @@ let platos = [
         precio: 2.30,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/leche.svg',null,null,null],
+        alerg: ['L']
     },
     {
         id: 10,
@@ -87,7 +96,7 @@ let platos = [
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/leche.svg',null,null,null],
     },
     {
         id: 11,
@@ -96,7 +105,8 @@ let platos = [
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/leche.svg',null,null,null],
+        alerg: ['L']
     },
     {
         id: 12,
@@ -105,7 +115,8 @@ let platos = [
         precio: 2.3,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/leche.svg',null,null,null],
+        alerg: ['L']
     },
     {id: 13,
         nombre: 'Macarons de chocolate',
@@ -113,7 +124,8 @@ let platos = [
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/trigo.svg','media/menu/Huevos.svg','media/menu/almendra.svg',null],
+        alerg: ['G','H','F']
     },
     {
         id: 14,
@@ -122,7 +134,8 @@ let platos = [
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 15,
@@ -131,7 +144,8 @@ let platos = [
         precio: 2.30,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/trigo.svg','media/menu/Huevos.svg','media/menu/leche.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 16,
@@ -140,7 +154,8 @@ let platos = [
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/trigo.svg','media/menu/Huevos.svg','media/menu/almendra.svg',null],
+        alerg: ['G','F','H']
     },
     {
         id: 17,
@@ -149,7 +164,9 @@ let platos = [
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
+
     },
     {
         id: 18,
@@ -158,7 +175,8 @@ let platos = [
         precio: 2.3,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:['media/menu/trigo.svg','media/menu/Huevos.svg','media/menu/almendra.svg',null],
+        alerg: ['G','F','H']
     },
     {id: 19,
         nombre: 'Tarta mixta',
@@ -166,7 +184,8 @@ let platos = [
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 20,
@@ -175,7 +194,8 @@ let platos = [
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 21,
@@ -184,7 +204,8 @@ let platos = [
         precio: 2.30,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 22,
@@ -193,7 +214,8 @@ let platos = [
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 23,
@@ -202,7 +224,8 @@ let platos = [
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 24,
@@ -211,7 +234,8 @@ let platos = [
         precio: 2.3,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 25,
@@ -220,7 +244,8 @@ let platos = [
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 26,
@@ -229,7 +254,8 @@ let platos = [
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 27,
@@ -238,7 +264,8 @@ let platos = [
         precio: 2.30,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 28,
@@ -247,7 +274,8 @@ let platos = [
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 29,
@@ -256,7 +284,8 @@ let platos = [
         precio: 1.80,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
     {
         id: 30,
@@ -265,7 +294,8 @@ let platos = [
         precio: 2.3,
         cantidad: 0,
         coste: 0,
-        alergenos: ['G','L','H','F']
+        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alerg: ['G','L','H']
     },
 ];
 
@@ -315,46 +345,59 @@ let t1 = 0;
 let t2 = 0;
 let t3 = 0;
 let t4 = 0;
+let lista_alergenos  = [];
 
 tick1.addEventListener('click', () =>{
     if (t1 === 0){
         tick1.src="media/menu/tick.png"
         t1 = 1;
+        lista_alergenos.push('G')
     }
     else{
         tick1.src="media/menu/cuadrado.png"
         t1 = 0;
+        lista_alergenos = lista_alergenos.filter(alergia => alergia !== 'G')
     }
+    saber_menu()
 })
 tick2.addEventListener('click', () =>{
     if (t2 === 0){
         tick2.src="media/menu/tick.png"
         t2 = 1;
+        lista_alergenos.push('L')
     }
     else{
         tick2.src="media/menu/cuadrado.png"
         t2 = 0;
+        lista_alergenos = lista_alergenos.filter(alergia => alergia !== 'L')
     }
+    saber_menu()
 })
 tick3.addEventListener('click', () =>{
     if (t3 === 0){
         tick3.src="media/menu/tick.png"
         t3 = 1;
+        lista_alergenos.push('H')
     }
     else{
         tick3.src="media/menu/cuadrado.png"
         t3 = 0;
+        lista_alergenos = lista_alergenos.filter(alergia => alergia !== 'H')
     }
+    saber_menu()
 })
 tick4.addEventListener('click', () =>{
     if (t4 === 0){
         tick4.src="media/menu/tick.png"
         t4 = 1;
+        lista_alergenos.push('F')
     }
     else{
         tick4.src="media/menu/cuadrado.png"
         t4 = 0;
+        lista_alergenos = lista_alergenos.filter(alergia => alergia !== 'F')
     }
+    saber_menu()
 })
 window.addEventListener('load', () => {
     bebidas.style.background = 'transparent'
@@ -570,9 +613,16 @@ function initApp(st_elem) {
     }
     let prods = Array.from(platos).slice(st_elem, (st_elem + 6));
     prods.forEach((value) => {
-        let newDiv = document.createElement('div');
-        newDiv.classList.add('elemento');
-        newDiv.innerHTML = `
+        let elem_in = 0;
+        for (let i = 0; i < lista_alergenos.length; i ++){
+            if (value.alerg.includes(lista_alergenos[i])){
+                elem_in = 1;
+            }
+        }
+        if (elem_in === 0){
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('elemento');
+            newDiv.innerHTML = `
             <img class="elem_img"  src="${value.imagen}" alt="imagen_del_producto">
             <div class="menu_elemt_right">
                 <div class="titulo">${value.nombre}</div> 
@@ -583,7 +633,8 @@ function initApp(st_elem) {
                     <button class="menu_mas" onclick="cambiarCantidad_suma(${value.id})">+</button> 
                 </div>   
             </div>`;
-        lista.appendChild(newDiv);
+            lista.appendChild(newDiv);
+        }
     })
     recargaElemento();
 }
@@ -594,23 +645,31 @@ function initApp2(st_elem) {
     }
     let prods = Array.from(platos).slice(st_elem, (st_elem + 6));
     prods.forEach((value) => {
-        let newDiv = document.createElement('div');
-        newDiv.classList.add('elemento');
-        newDiv.innerHTML = `
-            <img class="elem_img" src="${value.imagen}" alt="imagen_del_producto">
-            <div class="menu_elemt_right_2">
-                <div class="titulo">${value.nombre}</div> 
-                <div class="precio">${value.precio.toLocaleString()} €</div>
-                <div>Alergenos:</div>
-                <div class="alerg"> <img src="${value.alergenos[0]}" alt=""> <img src="${value.alergenos[1]}" alt=""> <img src="${value.alergenos[2]}" alt=""> <img src="${value.alergenos[3]}" alt=""></div>
-                <div class="menu_selcion_cantidad">
-                    <button class="menu_menos" onclick="cambiarCantidad_resta(${value.id})">-</button>
-                    <div class="menu_cantidad">${value.cantidad}</div>
-                    <button class="menu_mas" onclick="cambiarCantidad_suma(${value.id})">+</button> 
-                </div>   
-              
-            </div>`;
-        lista.appendChild(newDiv);
+        let elem_in = 0;
+        for (let i = 0; i < lista_alergenos.length; i ++){
+            if (value.alerg.includes(lista_alergenos[i])){
+                elem_in = 1;
+            }
+        }
+        if (elem_in === 0) {
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('elemento');
+            newDiv.innerHTML = `
+                <img class="elem_img" src="${value.imagen}" alt="imagen_del_producto">
+                <div class="menu_elemt_right_2">
+                    <div class="titulo">${value.nombre}</div> 
+                    <div class="precio">${value.precio.toLocaleString()} €</div>
+                    <div>Alergenos:</div>
+                    <div class="alerg"> <img src="${value.alergenos[0]}" alt=""> <img src="${value.alergenos[1]}" alt=""> <img src="${value.alergenos[2]}" alt=""> <img src="${value.alergenos[3]}" alt=""></div>
+                    <div class="menu_selcion_cantidad">
+                        <button class="menu_menos" onclick="cambiarCantidad_resta(${value.id})">-</button>
+                        <div class="menu_cantidad">${value.cantidad}</div>
+                        <button class="menu_mas" onclick="cambiarCantidad_suma(${value.id})">+</button> 
+                    </div>   
+                  
+                </div>`;
+            lista.appendChild(newDiv);
+        }
     })
     recargaElemento();
 }
