@@ -1,80 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Login - Café Florencia</title>
-	<link rel="stylesheet" href="style/base.css">
-	<link rel="stylesheet" href="style/login.css">
-	<script src="./script/login.js"></script>
+    <meta charset="UTF-8">
+    <title>Login - Café Florencia</title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/login.css">
+    <script src="./script/login.js"></script>
+    <script src="./script/base.js"></script>
 </head>
 <body>
-<header class="main_header">
-	<nav>
-		<button>H</button>
-		<a id="logo">Café Florencia</a>
-		<a>Especialidades</a>
-		<p>|</p>
-		<a>Menu</a>
-		<p>|</p>
-		<a>Sobre Nosotros</a>
-		<p>|</p>
-		<a>Reserva</a>
-		<p>|</p>
-		<a>Registro</a>
-	</nav>
-</header>
-<aside id="menu_h">
-	<button>Cerrar</button>
-	<a>Café Florencia<br></a>
-	<a>Especialidades<br></a>
-	<a>Menu<br></a>
-	<a>Sobre Nosotros<br></a>
-	<a>Reserva<br></a>
-	<a>Registro</a>
-</aside>
-<div id="register_error_div"><p id="register_error_p"></p><button onclick="hide_error()">Aceptar</button></div>
-<section id="log-in">
-	<article class="register_text col-7 col-t-12">
-		<div class="register_form col-5 col-t-12" id="register_form_login">
-			<a>&lt;Ir atrás</a>
-			<h2>LOG-IN</h2>
-			<form>
-				<label for="login_user_name" class="register_label">Nombre de usuario*</label>
-				<input type="text" id="login_user_name" placeholder="Nombre">
-				<label for="login_pwd" class="register_label">Contraseña*</label>
-				<input type="text" id="login_pwd" placeholder="Contraseña">
-			</form>
-			<button type="submit" id="try_to_log_in" onclick="log_in()">Inicio Sesión</button>
-			<button type="submit" id="go_to_sign_up" onclick="go_to_sign_up()">Registro</button>
-			<p class="register_form_subtext">* Campo obligatorio</p>
+	<header class="main_header">
+		<nav>
+			<button id="open_menu_h"></button>
+			<a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
+			<a class="main_header_link" id="menu_specialities">Especialidades</a>
+			<a href="menu.html" class="main_header_link" id="menu_menu">Menu</a>
+			<a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
+			<a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
+			<a href="login.html" class="main_header_link" id="menu_register">Registro</a>
+		</nav>
+		<aside id="menu_h">
+			<a id="logo_h" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
+			<a id="menu_h_specialities">Especialidades<br></a>
+			<a href="menu.html">Menu<br></a>
+			<a id="menu_h_about_us">Sobre Nosotros<br></a>
+			<a href="reservas.html">Reserva<br></a>
+			<a href="login.html">Registro</a>
+		</aside>
+		<div id="unfolding_specialities">
+			<a href="bebidas_dulces.html">Bebidas dulces</a>
+			<a href="cafe.html">Café</a>
+			<a href="delicatessen.html">Delicatessen</a>
+			<a href="historia.html">Historia</a>
+			<a href="reposteria.html">Repostería</a>
+			<a href="tartas.html">Tartas</a>
 		</div>
-		<div class = "col-5 col-t-12" id="register_logged_in">
-			<h2>Sesión iniciada</h2>
-			<p id="register_welcome_mssg"></p>
-			<button id="close_session" type="submit" onclick="close_session()">Cerrar Sesión</button>
+		<div id="unfolding_about_us">
+			<a href="historia.html">Historia</a>
+			<a href="galeria.html">Galería</a>
+			<a href="contactos.html">Contacto</a>			
 		</div>
-	</article>
-	<article class="col-t-12 register_image" id="login_image"> </article>
-</section>
-<section id="sign-up">
-	<article class="col-t-12 register_image" id="signup_image"></article>
-	<article class="register_text col-7 col-t-12">
-		<div class="register_form col-5 col-t-12" id="register_form_signup">
-			<a onclick="go_to_log_in()">&lt;Log-In</a>
-			<h2>SIGN-UP</h2>
-			<form>
-				<label for="signup_user_name" class="register_label">Nombre de usuario*</label>
-				<input type="text" id="signup_user_name" placeholder="Nombre">
-				<label for="signup_pwd" class="register_label">Contraseña*</label>
-				<input type="text" id="signup_pwd" placeholder="Contraseña">
-				<label for="signup_email" class="register_label">Correo electrónico*</label>
-				<input type="text" id="signup_email" placeholder="Correo">
-			</form>
-			<button type="submit" onclick="sign_up()">Regístrate</button>
-			<p class="register_form_subtext">* Campo obligatorio</p>
-		</div>
-	</article>
-
-</section>
+	</header>
+	<div id="register_error_div"><p id="register_error_p"></p><button onclick="hide_error()">Aceptar</button></div>
+	<section id="log-in">
+		<article class="register_text col-7 col-t-12">
+			<div class="register_form col-5 col-t-9" id="register_form_login">	
+				<a>&lt;Ir atrás</a>
+				<h2>LOG-IN</h2>
+				<form>
+					<label for="login_user_name" class="register_label">Nombre de usuario*</label>
+					<input type="text" id="login_user_name" placeholder="Nombre">
+					<label for="login_pwd" class="register_label">Contraseña*</label>
+					<input type="password" id="login_pwd" placeholder="Contraseña">
+				</form>
+				<button type="submit" id="try_to_log_in" onclick="log_in()">Inicio Sesión</button>
+				<button type="submit" id="go_to_sign_up" onclick="go_to_sign_up()">Registro</button>
+				<p class="register_form_subtext">* Campo obligatorio</p>
+			</div>
+			<div class = "col-5 col-t-9" id="register_logged_in">
+				<h2>Sesión iniciada</h2>
+				<p id="register_welcome_mssg"></p>
+				<button id="close_session" type="submit" onclick="close_session()">Cerrar Sesión</button>
+			</div>
+		</article>
+		<article class="col-t-12 register_image" id="login_image"> </article>
+	</section>
+	<section id="sign-up">
+		<article class="col-t-12 register_image" id="signup_image"></article>
+		<article class="register_text col-7 col-t-12">
+			<div class="register_form col-5 col-t-9" id="register_form_signup">
+				<a onclick="go_to_log_in()">&lt;Log-In</a>
+				<h2>SIGN-UP</h2>
+				<form>
+					<label for="signup_user_name" class="register_label">Nombre de usuario*</label>
+					<input type="text" id="signup_user_name" placeholder="Nombre">
+					<label for="signup_pwd" class="register_label">Contraseña*</label>
+					<input type="password" id="signup_pwd" placeholder="Contraseña">
+					<label for="signup_email" class="register_label">Correo electrónico*</label>
+					<input type="text" id="signup_email" placeholder="Correo">
+				</form>
+				<button type="submit" onclick="sign_up()">Regístrate</button>
+				<p class="register_form_subtext">* Campo obligatorio</p>
+			</div>
+		</article>
+		
+	</section>
 </body>
 </html>

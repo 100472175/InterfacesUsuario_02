@@ -1,11 +1,11 @@
 /*Codigo de estilo base*/
 * {
-	margin: 0;
-	padding: 0;
-	font-size: 25px;
-	font-family: "Perpetua", serif;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    font-family: "Perpetua", serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 
 }
 
@@ -14,26 +14,27 @@
 	height: 5vh;
 	position: fixed;
 	top: 0;
-	z-index: 3;
+	z-index: 2;
 	background-color: #7E4D29
 }
 
 .main_header nav {
 	display: grid;
-	grid-template-columns: 1fr 4fr 1fr 0.1fr 0.4fr 0.1fr 1.1fr 0.1fr 0.5fr 0.1fr 0.75fr;
+	grid-template-columns: 1fr 3.5fr 1.5fr 0.8fr 1.5fr 0.8fr 1fr;
 	padding-right: 2vw;
 }
 
 .main_header a {
 	color: white;
-	margin-top: 0.8vh;
-	font-size: 0.75rem;
-	text-align: center
+	margin-top: 0.8vh; 
+	font-size: 0.65rem;
+	text-align: center;
+	text-decoration: none;
 }
 
 .main_header p {
 	color: white;
-	font-size: 0.9rem;
+	font-size: 0.85rem;
 	text-align: center;
 }
 
@@ -42,26 +43,87 @@
 	height: 5vh;
 	background: none;
 	color: white;
+	margin-left: 2vw;
+	margin-right: 0;
+}
+
+.main_header img{
+	width: auto;
+	height: 4vh;
 }
 
 #logo {
 	text-align: left;
 }
 
+#logo_h img{
+	width: auto;
+	height: 6vh;
+	margin-top: 5vh;
+}
 #menu_h {
 	display: none;
-	width: 40vw;
+	width: 23.5vw;
 	height: 100vh;
-	position: absolute;
+	top: 5%;
+	position: fixed;
+	background-color: #7E4D29;
+	z-index: 3;
+	grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 8fr;
 }
 
 #menu_h a {
 	text-align: center;
+	color: white;
+	text-decoration: none;
+}
+
+#open_menu_h {
+	background-image: url("../media/btn-3lineas-horiz.png");
+	background-repeat: no-repeat;
+	background-size: auto 4vh;
+	border-radius: 0;
+	margin-top: 2%; 
+	filter: invert(1);
+}
+
+#unfolding_specialities {
+	display: none;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	position: fixed;
+	z-index: 3;
+	background-color: #7E4D28;
+	color: white;
+	top: 5%;
+	margin-left: 52.5vw;
+	width: 12vw;
+	
+}
+
+#unfolding_specialities a:hover {
+	background-color: #C48152;
+}
+
+#unfolding_about_us{
+	display: none;
+	grid-template-rows: 1fr 1fr 1fr;
+	position: fixed;
+	z-index: 3;
+	background-color: #7E4D29;
+	color: white;
+	top: 5%;
+	margin-left: 70vw;
+	width: 13vw;
+}
+
+#unfolding_about_us a:hover {
+	background-color: #C48152;
 }
 
 body{
 	background-color: #FFFBF8
 }
+
 section {
 	height: 95vh;
 	width: 100vw;
@@ -71,13 +133,44 @@ button, a{
 	cursor: pointer;
 }
 
+#error_div {
+	display: none;
+	position: absolute;
+	z-index: 3;
+	background-color: #7E4D28;
+	width: 50vw;
+	height: 40vh;
+	top: 30%;
+	left: 25%;
+	border-radius: 25px;
+	box-shadow: 0 4px 4px black; 
+}
+
+#error_p {
+	text-align: center;
+	color: white;
+	margin-top: 5%;
+	font-size: 1rem;
+}
+
+#error_button {
+	width: 40%;
+	height: 20%;
+	border-radius: 25px;
+	border: none;
+	margin-left: 30%;
+	margin-top: 10%;
+	background-color: #FFFBF8;
+	color: black;
+}
+
 /*FORMATO PARA PC*/
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
+.col-6 {width: 50%;} 
 .col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
 .col-9 {width: 75%;}
@@ -88,22 +181,59 @@ button, a{
 /*FORMATO PARA TABLET*/
 @media screen and (max-width: 768px) {
 	.col-t-1 {width: 8.33%;}
-	.col-t-2 {width: 16.66%;}
-	.col-t-3 {width: 25%;}
-	.col-t-4 {width: 33.33%;}
-	.col-t-5 {width: 41.66%;}
-	.col-t-6 {width: 50%;}
-	.col-t-7 {width: 58.33%;}
-	.col-t-8 {width: 66.66%;}
-	.col-t-9 {width: 75%;}
-	.col-t-10 {width: 83.33%;}
-	.col-t-11 {width: 91.66%;}
-	.col-t-12 {width: 100%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+    
+    .main_header a, p {
+    	font-size: 0.6rem;
+    }
+    
+    .main_header nav{
+    	grid-template-columns: 0.6fr 2fr 1fr 0.75fr 1.25fr 0.75fr 0.75fr;
+    }
+    
+    .main_header a {
+    	font-size: 0.52rem;
+    }
+    
+    #unfolding_specialities {
+    	width: 20vw;
+    }
+    
+    #unfolding_about_us {
+    	width: 20vw;
+    }
+    
+    #logo_h img {
+    	height: 4vh;
+    }
+   
 }
 
 /*FORMMATO PARA MÓVIL*/
 @media screen and (max-width: 600px) {
 	[class*="col-"]{
 		width: 100%;
+	}
+	
+	.main_header nav {
+		grid-template-columns: 1fr 4fr;
+	}
+	
+	#logo_h img {
+		height: 3vh;
+	}
+	
+	.main_header_link {
+		display:none;
 	}
 }
