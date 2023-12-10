@@ -151,18 +151,6 @@
     margin: auto;
 }
 
-.menu_saber_mas{
-    background-color: #E6CDBA;
-    border: none;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    cursor: pointer;
-    font-size: 0.75em;
-    margin: auto;
-    padding:5%;
-    height: auto;
-}
-
 
 .menu_selcion_cantidad{
     display: grid;
@@ -259,6 +247,10 @@
     width: 15%;
     height: 50%;
     left: 1%;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 10px 10px #757676;
 }
 .menu_alergies h1{
     text-align: center;
@@ -268,11 +260,29 @@
     text-align: center;
     list-style: none;
     text-decoration: none;
+    margin-top: 5%;
 }
 .menu_alergies img{
     height: 20px;
 }
+.menu_saber_mas{
+    background-color: #E6CDBA;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    cursor: pointer;
+    font-size: 0.75em;
+    margin: auto;
+    padding:5%;
+    height: auto;
+    margin-left: 25%;
+    margin-top: 10%;
+}
 
+.revision_platos{
+    height: 60vh;
+    overflow-y: scroll;
+}
 .revision_platos li{
     display: grid;
     place-items: center;
@@ -281,9 +291,13 @@
     margin-left: 10vw;
     border-radius: 15px;
     margin-bottom: 2%;
+
 }
 .revision_platos li img{
     height: 15vh;
+    border-radius:15px ;
+    margin:10%;
+
 
 }
 .revision_platos li div:nth-child(4){
@@ -292,10 +306,17 @@
 }
 .revision_platos li img:last-child{
     height: 5vh;
+    border-radius: 0;
 
+}
+.basura{
+
+    background-color: transparent;
+    border: none;
 }
 
 .revision_final{
+
     position: absolute;
     height: 60%;
     background-color: #F6EDE6;
@@ -316,6 +337,7 @@
     bottom: 5%;
 }
 .revision_Total{
+
     position: absolute;
     left: 41%;
     bottom: 20%;
@@ -327,6 +349,10 @@
 .revision_final ul{
     height: 50%;
     margin: 5%;
+}
+.revision_list_food_select{
+    height: 40vh;
+    overflow-y: scroll;
 }
 .revision_list_food_select li{
     display: grid;
@@ -381,6 +407,17 @@
     display: grid;
     place-content: center;
     grid-template-rows: 1fr 1fr;
+}
+.direccion_selccion form input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px black solid ;
+    margin-left: 4%;
+    height: 50%;
+    font-size: 0.8rem;
+}
+.direccion_selccion p{
+    text-align: center;
 }
 
 
