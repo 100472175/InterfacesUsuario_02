@@ -655,3 +655,31 @@ html, body {
 }
 
 
+
+.dropdown-position{
+  position: relative;
+  display: inline-block;
+  height: 100vh;
+  margin-top: 44%;
+  margin-left: 40%;
+}
+
+.dropdown-container {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  right: 50%;
+  width: 20%;
+}
+
+.rounded-dropdown {
+  width: 200px;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+}

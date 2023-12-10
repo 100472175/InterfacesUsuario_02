@@ -578,3 +578,9 @@ document.querySelectorAll('.options button').forEach((element) => {
     });
 });
 
+
+document.getElementById('reservationSelector').addEventListener('change', function() {
+    console.log("Selected option: " + this.value);
+    // alert("Reservation for " + this.value + " people.");
+});
+
