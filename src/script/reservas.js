@@ -1,6 +1,6 @@
 const app = angular.module('dateTimeApp', []);
 let app2 = "21";
-app.controller('dateTimeCtrl', function ($scope) {
+app.controller('dateTimeCtrl', function () {
     const ctrl = this;
 
     ctrl.selected_date = new Date();
@@ -10,7 +10,7 @@ app.controller('dateTimeCtrl', function ($scope) {
 	ctrl.updateDate = function (newdate) {
 		
 		// Do something with the returned date here.
-		
+		// Aqui es donde lo tienes que guardar en el webstore o cookie.
 		console.log(newdate);
 	};
 });
@@ -32,7 +32,7 @@ app.directive('datePicker', function ($timeout, $window) {
         },
 		transclude: true,
         link: function (scope, element, attrs, ctrl, transclude) {
-			transclude(scope, function(clone, scope) {
+			transclude(scope, function(clone) {
 				element.append(clone);
 			});
 			
@@ -127,11 +127,7 @@ app.directive('datePicker', function ($timeout, $window) {
                 return new Date(localdate.getFullYear(), localdate.getMonth(), localdate.getDate(), time[0], time[1]);                
             }
 
-            // Convert to UTC to account for different time zones
-            function convertToUTC(localdate) {
-                const date_obj = getDateAndTime(localdate);
-                return new Date(date_obj.getUTCFullYear(), date_obj.getUTCMonth(), date_obj.getUTCDate(), date_obj.getUTCHours(), date_obj.getUTCMinutes());
-            }
+
             // Convert from UTC to account for different time zones
             function convertFromUTC(utcdate) {
                 return new Date(utcdate);
@@ -359,7 +355,7 @@ app.directive('datePicker', function ($timeout, $window) {
 					scope.checkWidth(true);
                 });
            
-                scope.setTimeBar = function (date) {
+                scope.setTimeBar = function () {
 					currenttime = $('.current-time');
                     const timeline_width = $('.timeline')[0].offsetWidth;
                     let hours = scope.time.split(':')[0];
@@ -409,7 +405,6 @@ app.directive('datePicker', function ($timeout, $window) {
                 scope.timeSelectStart = function (event) {
                     scope.initializeTimepicker();
                     const timepicker_container = element.find('.timepicker-container-inner');
-                    const timepicker_offset = timepicker_container.offset().left;
                     if (event.type === 'mousedown') {
                         scope.xinitial = event.clientX;
                     } else if (event.type === 'touchstart') {
@@ -462,7 +457,7 @@ app.directive('datePicker', function ($timeout, $window) {
                     }
                 });
            
-                angular.element($window).on('mouseup touchend', function (event) {
+                angular.element($window).on('mouseup touchend', function () {
                     if (scope.moving) {
                         // var roundsection = Math.round(scope.currentoffset / sectionlength);
                         // var newoffset = roundsection * sectionlength;
@@ -536,12 +531,12 @@ selectNumber = (index, isDragging) => {
         currTransformX = 3+(index * 78);
         TweenMax.to(selectedBg, 0.5, { x: currTransformX, force3D: true, ease: Back.easeOut });
     }
-    if (index == currentIndex) {
+    if (index === currentIndex) {
         return;
     }
     TweenMax.to(people, 0.5, { x: (index * 74), force3D: true, ease: Quint.easeInOut });
     document.querySelectorAll('.options button').forEach((element, id) => {
-        if (id == index) {
+        if (id === index) {
             element.classList.add('selected');
             TweenMax.killTweensOf(element);
             TweenMax.fromTo(element, 1, { y: 10, opacity: 0 }, { y: 0, opacity: 1, ease: Elastic.easeOut });
@@ -577,6 +572,7 @@ document.querySelectorAll('.options button').forEach((element) => {
         selectNumber(evt.currentTarget.index);
     });
 });
+
 
 
 document.getElementById('reservationSelector').addEventListener('change', function() {
