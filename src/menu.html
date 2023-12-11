@@ -45,7 +45,7 @@
 		<p id="error_p"></p>
 		<button id="error_button" onclick="global_error_message(0)">Aceptar</button>
 	</div>
-    <div class="progess_bar col-6" >
+    <div class="progess_bar col-7" >
         <nav class="progess_bar_button ">
             <button class="step_1">Menu</button>
             <button class="step_2">Revision Pedido</button>
@@ -65,10 +65,10 @@
 
             <nav class="menu_choose col-6">
                 <button class="menu_coffe"><img src="media/menu/taza-de-cafe.svg" alt="Cafe"><br>Cafe</button>
-                <button class="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Cafe"><br>Bebidas</button>
-                <button class="menu_delicatessen"><img src="media/menu/macarron.svg" alt="Cafe"><br>Delicatessen</button>
-                <button class="menu_cakes"><img src="media/menu/porcion-de-tarta.svg" alt="Cafe"><br>Tartas</button>
-                <button class="menu_bakery"><img src="media/menu/tortitas.svg" alt="Cafe"><br>Reposteria</button>
+                <button class="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Bebidas"><br>Bebidas</button>
+                <button class="menu_delicatessen"><img src="media/menu/macarron.svg" alt="macarrons"><br>Delicatessen</button>
+                <button class="menu_cakes"><img src="media/menu/porcion-de-tarta.svg" alt="tarta"><br>Tartas</button>
+                <button class="menu_bakery"><img src="media/menu/tortitas.svg" alt="reposteri"><br>Reposteria</button>
             </nav>
 
             <div class="menu_car col-1">
@@ -81,10 +81,11 @@
             <div class="menu_alergies">
                 <h1> Alergenos </h1>
                 <ul>
-                    <li><img src="media/menu/trigo.svg" alt="Cafe">Gluten</li>
-                    <li><img src="media/menu/leche.svg" alt="Cafe">Lactosa</li>
-                    <li><img src="media/menu/Huevos.svg" alt="Cafe">Huevos</li>
-                    <li><img src="media/menu/almendra.svg" alt="Cafe">Frutos secos </li>
+                    <li><img id="cuadro1" src="media/menu/cuadrado.png" alt="cuadro">
+                        <img src="media/menu/trigo.svg" alt="Trigo"> Gluten</li>
+                    <li><img id="cuadro2" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/leche.svg" alt="Leche"> Lactosa</li>
+                    <li><img id="cuadro3" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/Huevos.svg" alt="Huevos"> Huevos</li>
+                    <li><img id="cuadro4" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/almendra.svg" alt="Almendra"> Frutos secos </li>
                 </ul>
                 <button class="menu_saber_mas"> Saber más </button>
             </div>
@@ -102,7 +103,7 @@
     </section>
     <section class="revisar_pedido col-12">
 
-        <div class="revision_go_back">
+        <div class="go_back">
             <p> <img src="media/menu/flecha.svg" alt="flecha"> Menu </p>
         </div>
 
@@ -111,7 +112,7 @@
             <h1 >Revisión pedido</h1>
             <ul class="revision_list_food_select"></ul>
             <p class="revision_Total">Total 0 €</p>
-            <button class="revision_button_chek"> Pagar</button>
+            <button class="revision_button_chek">Pagar</button>
         </article>
     </section>
 
@@ -157,8 +158,10 @@
         </article>
     </section>
     <section class="pago_tarjeta">
+        <div class="go_back">
+            <p> <img src="media/menu/flecha.svg" alt="flecha"> Dirección </p>
+        </div>
     	<div class="col-4 col-t-12 menu_card_div">
-    		<a>&lt;Direccion</a>
     		<h2>Pago Online</h2>
     		<form id="menu_card_form">
     			<label for="menu_card_owner" class="menu_label">Titular de la tarjeta</label>
@@ -178,16 +181,16 @@
     			</div>
     			<div id="menu_card_payment">
 					<p id="menu_card_price">Total</p>
-					<button id="menu_card_confirm" onclick="check_card_form()">Confirmar Pago</button>
+					<button id="menu_card_confirm"">Confirmar Pago</button>
     			</div>
     		</form>
     	</div>
     </section>
     <section class="espera_pedido">
+        <h2>Tu pedido esta hecho</h2>
+        <h2>Tiempo hasta la entrega:</h2>
+        <p id="timer"></p>
     </section>
-
-
-
 
 </body>
 <script src="script/menu.js"></script>

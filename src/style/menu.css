@@ -5,9 +5,9 @@
     grid-template-rows: 1fr 1fr;
     margin: auto;
     margin-top: 6vh;
-
     background-color:#FFFBF8;
     place-content: center;
+    border-radius: 15px;
 
 }
 
@@ -29,6 +29,7 @@
     background: #E6CDBA;
     border-radius: 30px;
     top: 15%;
+    margin-left: 4%;
 }
 .progess_bar_line2{
     background: #7E4D29;
@@ -36,6 +37,7 @@
     height: 3%;
     border-radius: 30px;
     top: 15%;
+    margin-left: 4%;
 }
 
 .menu_top{
@@ -59,16 +61,15 @@
     border: none;
     margin-top: 10%;
     font-size: 0.8em;
-
 }
 
 
 .menu_dish{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 5vw;
+    column-gap: 5vh;
     row-gap: 5vh;
-    margin: 1vh auto;
+    margin: 0.5vh auto;
 }
 
 /*Formato de cada plato*/
@@ -76,23 +77,32 @@
     text-align: center;
     background-color: #F6EDE6;
     padding: 5%;
-    box-shadow: 0 50px 50px #757676;
-    letter-spacing: 1px;
+    box-shadow: 0 10px 10px #757676;
     border-radius: 30px;
     height: auto;
 }
-.elemento img {
+
+.elem_img {
     float: left;
     width: 45%;
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 15px;
-    margin-top: 4vh;
+    margin-top: 5%;
 }
 .menu_elemt_right{
     float:right ;
     width: 50%;
     display: grid;
-    grid-template-rows: 1fr 0.25fr 0.25fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    place-content: center;
+}
+.menu_elemt_right_2{
+    float:right ;
+    width: 50%;
+    display: grid;
+    grid-template-rows:auto 0.5fr 0.5fr 1fr 1fr ;
+    place-content: center;
 }
 
 .titulo{
@@ -106,6 +116,17 @@
     font-size: 0.75em;
     text-align: center;
     margin: auto;
+}
+
+.alerg{
+    margin: auto;
+    font-size: 0.75em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.alerg img{
+    margin-top: 10%;
+    height: 70%;
 }
 .menu_menos{
     background-color: transparent;
@@ -130,23 +151,6 @@
     margin: auto;
 }
 
-.menu_saber_mas{
-    background-color: #E6CDBA;
-    border: none;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    cursor: pointer;
-    font-size: 0.75em;
-    margin: auto;
-    padding:5%;
-    height: auto;
-}
-
-.elemento button:hover{
-    color:black;
-    border: #E6CDBA solid 2px;
-    background-color: transparent;
-}
 
 .menu_selcion_cantidad{
     display: grid;
@@ -171,11 +175,11 @@
     border-radius: 50px;
     color: white;
     text-align: center;
-    z-index: 2;
+    z-index: 1;
 }
 .menu_cart_open{
     position: absolute;
-    z-index: 3;
+    z-index: 1;
     width: 30%;
     height: 80%;
     background-color: #F6EDE6;
@@ -213,7 +217,6 @@
     margin: 2%;
     background-color: #FFFBF8 ;
     border-radius: 15px;
-
     gap: 5% ;
 
 }
@@ -244,8 +247,10 @@
     width: 15%;
     height: 50%;
     left: 1%;
-    z-index: 2;
-
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 10px 10px #757676;
 }
 .menu_alergies h1{
     text-align: center;
@@ -253,8 +258,31 @@
 }
 .menu_alergies li{
     text-align: center;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 5%;
+}
+.menu_alergies img{
+    height: 20px;
+}
+.menu_saber_mas{
+    background-color: #E6CDBA;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    cursor: pointer;
+    font-size: 0.75em;
+    margin: auto;
+    padding:5%;
+    height: auto;
+    margin-left: 25%;
+    margin-top: 10%;
 }
 
+.revision_platos{
+    height: 60vh;
+    overflow-y: scroll;
+}
 .revision_platos li{
     display: grid;
     place-items: center;
@@ -263,9 +291,13 @@
     margin-left: 10vw;
     border-radius: 15px;
     margin-bottom: 2%;
+
 }
 .revision_platos li img{
     height: 15vh;
+    border-radius:15px ;
+    margin:10%;
+
 
 }
 .revision_platos li div:nth-child(4){
@@ -274,10 +306,17 @@
 }
 .revision_platos li img:last-child{
     height: 5vh;
+    border-radius: 0;
 
+}
+.basura{
+
+    background-color: transparent;
+    border: none;
 }
 
 .revision_final{
+
     position: absolute;
     height: 60%;
     background-color: #F6EDE6;
@@ -298,6 +337,7 @@
     bottom: 5%;
 }
 .revision_Total{
+
     position: absolute;
     left: 41%;
     bottom: 20%;
@@ -309,6 +349,10 @@
 .revision_final ul{
     height: 50%;
     margin: 5%;
+}
+.revision_list_food_select{
+    height: 40vh;
+    overflow-y: scroll;
 }
 .revision_list_food_select li{
     display: grid;
@@ -364,18 +408,19 @@
     place-content: center;
     grid-template-rows: 1fr 1fr;
 }
-.alerg{
-    margin: auto;
+.direccion_selccion form input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px black solid ;
+    margin-left: 4%;
+    height: 50%;
+    font-size: 0.8rem;
 }
-.alerg img{
-    height: auto;
-    width: 1.5vw;
+.direccion_selccion p{
+    text-align: center;
 }
 
-.pago_tarjeta {
-	background-image: url("../media/landing/portada.jpg");
-	background-size: cover;
-}
+
 
 .menu_card_div {
 	display: block;
