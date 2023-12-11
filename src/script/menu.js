@@ -517,8 +517,8 @@ step_1.addEventListener('click', () => {
 })
 
 step_2.addEventListener('click', () => {
-    if (cantidad === 0){
-        global_error_message(1, "No ha selcionado ningun elemento", menu);
+    if (cantidad.srt === 0){
+        global_error_message(1, "No ha seleccionado ningún elemento", menu);
     }
     else{
         menu.style.display = 'none'
@@ -531,7 +531,6 @@ step_2.addEventListener('click', () => {
         barra_progreso.style.width ='25vw'
         body.style.backgroundImage = ''
         mostarElemento()
-
     }
 
 
@@ -643,7 +642,7 @@ step_4.addEventListener('click', () =>{
 menu_card_confirm.addEventListener('click', () =>{
     if(check_card_form() === true) {
 
-        global_error_message(1, "¿Desea confirmar pago?", menu_card);
+        global_error_message(1, "¿Desea confirmar pago?", document.getElementById("menu_card"));
         global_error_message(1, "Su pago a sifo reaizado con exito", menu_card);
         menu.style.display = 'none'
         revisar_pedido.style.display = 'none'
