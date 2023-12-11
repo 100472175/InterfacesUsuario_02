@@ -67,13 +67,13 @@ section {
 }
 
 .intro h3{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-top: 2vh;
 }
 
 .intro p{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center;
     margin: 6vh;
 }
@@ -142,6 +142,10 @@ section {
     border: black 1px solid;
 }
 
+.cakes{
+    background-color: #FFFBF8;
+}
+
 .intro.tartas{
     position: absolute;
     z-index: 1;
@@ -170,4 +174,157 @@ section {
     margin-top: 23vh;
     background-image: url("../media/landing/tarta_choco.png");
     background-size: cover;
+}
+
+.intro.historia{
+    border-radius: 0;
+    border: black solid 1px;
+    rotate: -10deg;
+    height: 70vh;
+    width: 33vw;
+    margin-left: 15vw;
+    margin-top: 14vh;
+    background-color: white;
+    position: absolute;
+}
+
+.intro.historia img{
+    height: auto;
+    width: 30vw;
+    margin-top: 2.5vh;
+    margin-left: 1.5vw;
+    border: black solid 1px;
+}
+
+.intro.historia nav {
+    margin-left: 8.5vw;
+    margin-top: 2.5vh;
+}
+
+.history h3{
+    font-size: 2.5rem;
+    left: 67vw;
+    top: 40vh;
+    width: 15vw;
+    position: relative;
+}
+
+.galery{
+    background-color: #FFFBF8;
+}
+
+.galery h3{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.galery nav{
+    background-color: #7E4D29;
+    text-align: center;
+    margin-left: 42vw;
+    margin-top: 7vh;
+    height: 6vh;
+    width: 16vw;
+    border-radius: 0 10px 0 10px;
+}
+
+.galery nav a{
+    text-decoration: None;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.contact{
+    background-color: #FFFBF8;
+}
+
+.contact h3{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.contactos{
+    margin-top: 15vh;
+    margin-left: 15vw;
+    display:inline-block;
+}
+
+.contactos p{
+    display: inline;
+}
+
+.contactos img{
+    width: 1.5vw;
+    height: auto;
+    margin-top: 1vh;
+}
+
+.subscribe{
+    display:inline-block;
+    margin-left: 10vw;
+    height: 18vh;
+}
+
+.subscribe label{
+    margin-left: 5vw;
+}
+
+.subscribe input{
+    background-color: #F2EAE3;
+    font-size: 1.2rem;
+    width: 22vw;
+    height: 8vh;
+    margin-top: 5vh;
+    border: None;
+    text-align: center;
+    box-shadow: 0 4px 4px rgb(170,170,170);
+}
+
+.subscribe button{
+    border: None;
+    background-color: #E6CDBA;
+    margin-top: 5vh;
+    font-size: 1.1rem;
+    height: 8vh;
+    width: 10vw;
+    box-shadow: 0 4px 4px rgb(170,170,170);
+}
+
+footer{
+    margin-top: 16.3vh;
+    background-color: #7E4D29;
+    height: 34vh;
+}
+
+footer img{
+    width: auto;
+    height: 4vh;
+    margin-bottom: 18vh;
+    padding-left: 5vw;
+}
+
+footer div{
+    color: white;
+    display: inline-block;
+    margin-top: 5vh;
+    margin-left: 3vw;
+}
+
+.nosotros{
+    padding-bottom: 12vh;
+}
+
+footer div a{
+    display: block;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.a_externo{
+    padding-bottom: 19.5vh;
 }
