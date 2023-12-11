@@ -1,18 +1,18 @@
 //Funciones del menú de hamburguesa
 function menu_h() {
-	var display = document.getElementById("menu_h").style.display;
-	if (display == "none" || display.length == 0) {display_menu();}
+	var transform = document.getElementById("menu_h").style.transform;
+	if (transform == "scaleY(0)" || transform == "") {display_menu();}
 	else {close_menu();}
 }
 
 function display_menu (){
-	document.getElementById('menu_h').style.display = "grid";
+	document.getElementById('menu_h').style.transform = "scaleY(1)";
 	if (window.innerWidth <= 768) {document.getElementById('menu_h').style.width = "35vw";}
 	else {document.getElementById('menu_h').style.width = "23.5vw"}
 }
 
 function close_menu (){
-	document.getElementById('menu_h').style.display = "none";
+	document.getElementById('menu_h').style.transform = "scaleY(0)";
 	document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
 	document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 	fold();
