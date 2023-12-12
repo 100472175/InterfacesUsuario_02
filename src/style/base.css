@@ -62,13 +62,16 @@
 	margin-top: 5vh;
 }
 #menu_h {
-	display: none;
+	display: grid;
+	transform: scaleY(0);
 	width: 23.5vw;
 	height: 100vh;
 	top: 5%;
 	position: fixed;
 	background-color: #7E4D29;
 	z-index: 3;
+	transition: transform .1s ease-in-out;
+	transform-origin: top;
 	grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 8fr;
 }
 
