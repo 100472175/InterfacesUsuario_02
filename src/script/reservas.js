@@ -1,3 +1,5 @@
+//import { global_error_message } from './base.js';
+let fecha_seleccionada = "";
 const app = angular.module('dateTimeApp', []);
 let app2 = "21";
 app.controller('dateTimeCtrl', function () {
@@ -8,10 +10,10 @@ app.controller('dateTimeCtrl', function () {
 	ctrl.selected_date.setMinutes(0);
 	
 	ctrl.updateDate = function (newdate) {
-		
+        fecha_seleccionada = newdate;
 		// Do something with the returned date here.
 		// Aqui es donde lo tienes que guardar en el webstore o cookie.
-		console.log(newdate);
+		//console.log(newdate);
 	};
 });
 
@@ -298,7 +300,7 @@ app.directive('datePicker', function ($timeout, $window) {
 						time = "-" + scope.edittime.digits[0] + ':' + scope.edittime.digits[1] + scope.edittime.digits[2];
 					} else if (scope.edittime.digits.length === 4) {
 						time = scope.edittime.digits[0] + scope.edittime.digits[1].toString() + ':' + scope.edittime.digits[2] + scope.edittime.digits[3];
-						console.log(time);
+						//console.log(time);
 					}
 					return time + ' ' + scope.timeframe;
 				}
@@ -308,7 +310,7 @@ app.directive('datePicker', function ($timeout, $window) {
                     if (numbers[event.which] !== undefined) {
 						if (checkValidTime(numbers[event.which])) {
 							scope.edittime.digits.push(numbers[event.which]);
-							console.log(scope.edittime.digits);
+							//console.log(scope.edittime.digits);
 							scope.time_input = formatTime();
 							scope.time = numbers[event.which] + ':00';
 							scope.updateDate();
@@ -323,7 +325,7 @@ app.directive('datePicker', function ($timeout, $window) {
 					} else if (event.which === 8) {
 						scope.edittime.digits.pop();
 						scope.time_input = formatTime();
-						console.log(scope.edittime.digits);
+						//console.log(scope.edittime.digits);
 					}
 					scope.edittime.formatted = scope.time_input;
 					// scope.edittime.input = formatted;
@@ -413,7 +415,7 @@ app.directive('datePicker', function ($timeout, $window) {
                     scope.moving = true;
                     scope.currentoffset = scope.xinitial - timepicker_container.offset().left;
                     scope.totaloffset = scope.xinitial - timepicker_container.offset().left;
-					console.log(timepicker_container.width());
+					//console.log(timepicker_container.width());
 					if (scope.currentoffset < 0) {
 						scope.currentoffset = 0;
 					} else if (scope.currentoffset > timepicker_container.width()) {
@@ -560,7 +562,7 @@ selectNumber = (index, isDragging) => {
     }
 
     currentIndex = index;
-    console.log(currentIndex+1);
+    //console.log(currentIndex+1);
 }
 
 
@@ -578,5 +580,55 @@ document.querySelectorAll('.options button').forEach((element) => {
 document.getElementById('reservationSelector').addEventListener('change', function() {
     console.log("Selected option: " + this.value);
     // alert("Reservation for " + this.value + " people.");
+});
+
+$(document).ready(function() {
+    $(".cancel-button").click(function() {
+        var destinarion = "landing.html";
+        window.location.href = destinarion;
+        console.log("Cancel button clicked");
+    });
+});
+
+
+function formatDateToSpanish(inputDateStr) {
+    // Define los nombres de los meses y días en español
+    const months = [
+        'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+    ];
+
+    const daysOfWeek = [
+        'Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'
+    ];
+
+    // Crea un objeto Date con la fecha que se le pasa
+    const inputDate = new Date(inputDateStr);
+
+    // Obtiene los componentes de la fecha
+    const dayOfWeek = daysOfWeek[inputDate.getDay()];
+    const day = inputDate.getDate();
+    const month = months[inputDate.getMonth()];
+    const year = inputDate.getFullYear();
+    const hours = inputDate.getHours().toString().padStart(2, '0');
+    const minutes = inputDate.getMinutes().toString().padStart(2, '0');
+    const seconds = inputDate.getSeconds().toString().padStart(2, '0');
+
+    // Formatea la fecha y la hora
+    return `${day} de ${month} de ${year} a las ${hours}:${minutes}:${seconds}`;
+}
+
+$(document).ready(function() {
+    $(".save-button").click(function () {
+        let fecha_string = formatDateToSpanish(fecha_seleccionada.toString().substring(0, 25));
+        console.log(fecha_string);
+        let string_msg = "Reserva realizada correctamente para el " + fecha_string + " para " + document.getElementById('reservationSelector').value + " persona(s)";
+        if (check_session()){
+            global_error_message(1, string_msg, "");
+            localStorage.setItem("reserva", fecha_string+";pax:"+document.getElementById('reservationSelector').value);
+        } else {
+            global_error_message(1, "Debe de iniciar sesión antes de reservar", "");
+        }
+    })
 });
 

@@ -46,10 +46,9 @@
 </header>
 
 
-
+<section id="calendario">
 <!-- partial:index.partial.html -->
 <div class="app-container" ng-app="dateTimeApp" ng-controller="dateTimeCtrl as ctrl" ng-cloak>
-		
 	<div date-picker
 		 datepicker-title="Selecciona una fecha:"
 		 picktime="true"
@@ -147,8 +146,16 @@
 		</div>
 	</div>
 </div>
+<div style="height: 500px;"></div>
+</section>
 <!-- partial -->
+<!-- Haz un hueco -->
 
+
+<div id="error_div">
+	<p id="error_p"></p>
+	<button id="error_button" onclick="global_error_message(0)">Aceptar</button>
+</div>
 
 <section class="dropdown-position">
 	<div class="dropdown-container">
@@ -163,11 +170,10 @@
 		</select>
 	</div>
 </section>
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js'></script>
 <script  src="script/reservas.js"></script>
-
-
 
 </body>
 </html>
