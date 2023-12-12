@@ -14,7 +14,7 @@
 			<button id="open_menu_h"></button>
 			<a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
 			<a class="main_header_link" id="menu_specialities">Especialidades</a>
-			<a href="menu.html" class="main_header_link" id="menu_menu">Menu</a>
+			<a href="menu.html" class="main_header_link" id="menu_menu" onclick="check_login()">Menu</a>
 			<a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
 			<a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
 			<a href="login.html" class="main_header_link" id="menu_register">Registro</a>
@@ -22,16 +22,15 @@
 		<aside id="menu_h">
 			<a id="logo_h" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
 			<a id="menu_h_specialities">Especialidades<br></a>
-			<a href="menu.html">Menu<br></a>
+			<a id="menu_h_menu" href="menu.html" onclick="check_login()">Menu<br></a>
 			<a id="menu_h_about_us">Sobre Nosotros<br></a>
 			<a href="reservas.html">Reserva<br></a>
 			<a href="login.html">Registro</a>
 		</aside>
 		<div id="unfolding_specialities">
-			<a href="bebidas_dulces.html">Bebidas dulces</a>
 			<a href="cafe.html">Café</a>
+			<a href="bebidas_dulces.html">Bebidas dulces</a>
 			<a href="delicatessen.html">Delicatessen</a>
-			<a href="historia.html">Historia</a>
 			<a href="reposteria.html">Repostería</a>
 			<a href="tartas.html">Tartas</a>
 		</div>
@@ -47,42 +46,36 @@
 	</div>
     <div class="progess_bar col-7" >
         <nav class="progess_bar_button ">
-            <button class="step_1">Menu</button>
-            <button class="step_2">Revision Pedido</button>
-            <button class="step_3">Pago e inicio sesión</button>
-            <button class="step_4">Confirmacion</button>
+            <button id="step_1">Menu</button>
+            <button id="step_2">Revision Pedido</button>
+            <button id="step_3">Pago e inicio sesión</button>
+            <button id="step_4">Confirmacion</button>
         </nav>
         <div class="progess_bar_line col-6" ></div>
         <div class="progess_bar_line2 " ></div>
     </div>
 
-    <section class="menu col-12">
+    <section id="menu" class="col-12">
         <article class="menu_top">
-            <div class="go_back">
-                <p> <img src="media/menu/flecha.svg" alt="flecha"> Inicio</p>
-            </div>
-            <div class="menu_bar_line col-12" ></div>
-
+            <p id="go_back_inicio" class="go_back"><img src="media/menu/flecha.svg" alt="flecha"> Inicio</p>
             <nav class="menu_choose col-6">
-                <button class="menu_coffe"><img src="media/menu/taza-de-cafe.svg" alt="Cafe"><br>Cafe</button>
-                <button class="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Bebidas"><br>Bebidas</button>
-                <button class="menu_delicatessen"><img src="media/menu/macarron.svg" alt="macarrons"><br>Delicatessen</button>
-                <button class="menu_cakes"><img src="media/menu/porcion-de-tarta.svg" alt="tarta"><br>Tartas</button>
-                <button class="menu_bakery"><img src="media/menu/tortitas.svg" alt="reposteri"><br>Reposteria</button>
+                <button id="menu_coffe"><img src="media/menu/taza-de-cafe.svg" alt="Cafe"><br>Cafe</button>
+                <button id="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Bebidas"><br>Bebidas</button>
+                <button id="menu_delicatessen"><img src="media/menu/macarron.svg" alt="macarrons"><br>Delicatessen</button>
+                <button id="menu_cakes"><img src="media/menu/porcion-de-tarta.svg" alt="tarta"><br>Tartas</button>
+                <button id="menu_bakery"><img src="media/menu/tortitas.svg" alt="reposteri"><br>Reposteria</button>
             </nav>
 
             <div class="menu_car col-1">
                 <img class="cesta" src="media/menu/carrito-de-compra.svg" alt="Cesta">
                 <span class="menu_cuantity"> </span>
             </div>
-
         </article>
         <article class="menu_button">
             <div class="menu_alergies">
                 <h1> Alergenos </h1>
                 <ul>
-                    <li><img id="cuadro1" src="media/menu/cuadrado.png" alt="cuadro">
-                        <img src="media/menu/trigo.svg" alt="Trigo"> Gluten</li>
+                    <li><img id="cuadro1" src="media/menu/cuadrado.png" alt="cuadro"><img src="media/menu/trigo.svg" alt="Trigo"> Gluten</li>
                     <li><img id="cuadro2" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/leche.svg" alt="Leche"> Lactosa</li>
                     <li><img id="cuadro3" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/Huevos.svg" alt="Huevos"> Huevos</li>
                     <li><img id="cuadro4" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/almendra.svg" alt="Almendra"> Frutos secos </li>
@@ -91,7 +84,6 @@
             </div>
             <ul class="menu_dish col-8"></ul>
         </article>
-
 
         <article class="menu_cart_open">
             <img class="menu_cerrar_compra" src="media/menu/eliminar.svg" alt="equis"> </img>
@@ -102,11 +94,7 @@
 
     </section>
     <section class="revisar_pedido col-12">
-
-        <div class="go_back">
-            <p> <img src="media/menu/flecha.svg" alt="flecha"> Menu </p>
-        </div>
-
+        <p id="go_back_menu" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Menu </p>
         <ul class="revision_platos col-7"></ul>
         <article class="revision_final col-4">
             <h1 >Revisión pedido</h1>
@@ -117,9 +105,7 @@
     </section>
 
     <section class="sitio_pago">
-        <div class="go_back">
-            <p> <img src="media/menu/flecha.svg" alt="flecha"> Revisar pedido </p>
-        </div>
+        <p id="go_back_revisar" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Revisar pedido </p>
         <div class="seleccion">
             <article >
                 <button class="sitio_pago_tienda">Recoger en tienda </button>
@@ -131,9 +117,7 @@
         </div>
     </section>
     <section class="forma_pago">
-        <div class="go_back">
-            <p> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
-        </div>
+        <p id="go_back_sitio" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
         <div class="seleccion">
             <article>
                 <button class="forma_pago_efectivo">Pago en efectivo </button>
@@ -144,9 +128,7 @@
         </div>
     </section>
     <section class="direccion">
-        <div class="go_back">
-            <p> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
-        </div>
+        <p id="go_back_f_pago" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
         <article class="direccion_selccion col-5" >
             <form >
                 <label> Introduzca su direción</label>
@@ -158,10 +140,8 @@
         </article>
     </section>
     <section class="pago_tarjeta">
-        <div class="go_back">
-            <p> <img src="media/menu/flecha.svg" alt="flecha"> Dirección </p>
-        </div>
-    	<div class="col-4 col-t-12 menu_card_div">
+        <p id="go_back_direcion" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Dirección </p>
+    	<article class="col-4 col-t-12 menu_card_div">
     		<h2>Pago Online</h2>
     		<form id="menu_card_form">
     			<label for="menu_card_name" class="menu_label">Titular de la tarjeta</label>
@@ -183,8 +163,9 @@
 					<p id="menu_card_price">Total</p>
 					<button id="menu_card_confirm">Confirmar Pago</button>
     			</div>
+                <div class =></div>
     		</form>
-    	</div>
+    	</article>
     </section>
     <section class="espera_pedido">
         <h2>Tu pedido esta hecho</h2>

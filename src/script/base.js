@@ -1,6 +1,6 @@
 //Funciones del menú de hamburguesa
 function menu_h() {
-	var display = document.getElementById("menu_h").style.display;
+	let display = document.getElementById("menu_h").style.display;
 	if (display == "none" || display.length == 0) {display_menu();}
 	else {close_menu();}
 }
@@ -123,28 +123,45 @@ function display_unfolding_a_h (){
 
 //Funciones globales
 function check_session(){
-	var session = Object.keys(sessionStorage);
+	let session = Object.keys(sessionStorage);
 	if (session.length == 0) return false;
 	return true;
 }
 
-var page_to_hide;
-var display_of_hidden_page;
+function check_login(localizacion) {
+	if (!check_session()) {
+		alert("Debe de iniciar sesión antes de pedir online");
+		window.location.href = "login.html";
+	}
+	else{
+		window.location.href = "menu.html";
+	}
+}
+
+let page_to_hide;
+let display_of_hidden_page;
 
 function global_error_message(op, mssg="", page = "") {
-	var error_div = document.getElementById("error_div");
-	var error_p = document.getElementById("error_p");
-	if (op == 0) {
+	let error_div = document.getElementById("error_div");
+	let error_p = document.getElementById("error_p");
+	if (op === 0) {
+		if (page_to_hide != "") {
+			page_to_hide.style.display = display_of_hidden_page;
+		}
 		error_div.style.display = "none";
-		page_to_hide.style.display = display_of_hidden_page; 
 	}
 	else if (op == 1) {
-		page_to_hide = page;
-		display_of_hidden_page = window.getComputedStyle(page).getPropertyValue("display");
-		console.log(display_of_hidden_page);
+		if (page != "") {
+			page_to_hide = page;
+			display_of_hidden_page = window.getComputedStyle(page).getPropertyValue("display");
+			page.style.display = "none";
+		}
+		else {
+			page_to_hide = "";
+			display_of_hidden_page = "";
+		}
+		error_div.style.display = "block";
 		error_p.innerHTML = mssg;
-		page.style.display = "none";
-		error_div.style.display = "block";  
 	}
 }
 
@@ -154,9 +171,9 @@ function load() {
 	document.getElementById('menu_h_specialities').addEventListener("click", display_unfolding_s_h);
 	document.getElementById('menu_h_about_us').addEventListener("click", display_unfolding_a_h);
 	document.getElementById('open_menu_h').addEventListener("click", menu_h);
-	var labels = document.getElementsByTagName('input');
+	let labels = document.getElementsByTagName('input');
 	for (i = 0; i < labels.length; i++) {labels[i].addEventListener("click", close_menu);}
-	var buttons = document.getElementsByTagName('button');
+	let buttons = document.getElementsByTagName('button');
 	for (i = 0; i < buttons.length; i++) {if (buttons[i].id != "open_menu_h") {buttons[i].addEventListener("click", close_menu);}}
 	window.addEventListener("resize", close_menu);
 }

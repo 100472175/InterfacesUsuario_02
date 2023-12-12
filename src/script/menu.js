@@ -1,4 +1,3 @@
-let None;
 let platos = [
         {id: 1,
         nombre: 'Cafe con leche',
@@ -97,6 +96,7 @@ let platos = [
         cantidad: 0,
         coste: 0,
         alergenos: ['media/menu/leche.svg',null,null,null],
+        alerg: ['L']
     },
     {
         id: 11,
@@ -300,16 +300,34 @@ let platos = [
 ];
 
 // Lista de los productos disponibles
-let body =document.querySelector("body")
+let body =document.querySelector("body");
+let step_1 = document.querySelector("#step_1");
+let step_2 = document.querySelector("#step_2");
+let step_3 = document.querySelector("#step_3");
+let step_4 = document.querySelector("#step_4");
+let barra_progreso = document.querySelector(".progess_bar_line2");
+
+let menu = document.querySelector("#menu");
+let cafe = document.querySelector("#menu_coffe");
+let bebidas = document.querySelector("#menu_sweet_drinks");
+let delicatessen = document.querySelector("#menu_delicatessen");
+let tartas = document.querySelector("#menu_cakes");
+let reposteria = document.querySelector("#menu_bakery");
+let go_back_inicio = document.querySelector("#go_back_inicio");
+
+
+let go_back_menu = document.querySelector("#go_back_menu");
+let go_back_revisar = document.querySelector("#go_back_revisar");
+let go_back_sitio = document.querySelector("#go_back_sitio");
+let go_back_f_pago = document.querySelector("#go_back_f_pago");
+let go_back_direccion = document.querySelector("#go_back_direcion");
 let lista = document.querySelector(".menu_dish");
 let cesta = document.querySelector(".cesta");
 let equis = document.querySelector(".menu_cerrar_compra");
 let menu_carrito = document.querySelector(".menu_cart_open");
 let lista_platos_selecionados = document.querySelector(".menu_list_foos_select");
 let totalCarrito = document.querySelector(".menu_Total");
-let step_2 = document.querySelector(".step_2");
-let menu = document.querySelector(".menu");
-let step_1 = document.querySelector(".step_1");
+
 let revisar_pedido = document.querySelector(".revisar_pedido")
 let lista_revision = document.querySelector(".revision_platos")
 let totalrevision = document.querySelector(".revision_Total");
@@ -322,22 +340,15 @@ let sitio_pago_domicilio = document.querySelector(".sitio_pago_domicilio");
 let direccion = document.querySelector(".direccion");
 let forma_pago_tarjeta = document.querySelector(".forma_pago_tarjeta");
 let forma_pago_efectivo = document.querySelector(".forma_pago_efectivo");
-let step_3 = document.querySelector(".step_3");
-let step_4 = document.querySelector(".step_4");
-let bebidas = document.querySelector(".menu_sweet_drinks");
-let delicatessen = document.querySelector(".menu_delicatessen");
-let tartas = document.querySelector(".menu_cakes");
-let reposteria = document.querySelector(".menu_bakery");
-let cafe = document.querySelector(".menu_coffe");
 let cantidad = document.querySelector(".menu_cuantity");
-let barra_progreso = document.querySelector(".progess_bar_line2");
 let espera_pedido = document.querySelector(".espera_pedido");
 let saber_mas = document.querySelector(".menu_saber_mas");
 let pago_tarjeta = document.querySelector(".pago_tarjeta");
 let direccion_seleccion = document.querySelector(".direccion_selccion button");
-let  menu_button_chek= document.querySelector(".menu_button_chek");
-let  menu_card_confirm= document.querySelector("#menu_card_confirm");
-let  basura= document.querySelector(".basura");
+let menu_button_chek= document.querySelector(".menu_button_chek");
+let menu_card_confirm= document.querySelector("#menu_card_confirm");
+let revision_total = document.querySelector(".revision_Total");
+let confirmar_pedido_c = document.querySelector(".revision_Total");
 let tick1 =document.querySelector("#cuadro1");
 let tick2 =document.querySelector("#cuadro2");
 let tick3 =document.querySelector("#cuadro3");
@@ -349,66 +360,17 @@ let t2 = 0;
 let t3 = 0;
 let t4 = 0;
 let lista_alergenos  = [];
-
-tick1.addEventListener('click', () =>{
-    if (t1 === 0){
-        tick1.src="media/menu/tick.png"
-        t1 = 1;
-        lista_alergenos.push('G')
-    }
-    else{
-        tick1.src="media/menu/cuadrado.png"
-        t1 = 0;
-        lista_alergenos = lista_alergenos.filter(alergia => alergia !== 'G')
-    }
-    saber_menu()
-})
-tick2.addEventListener('click', () =>{
-    if (t2 === 0){
-        tick2.src="media/menu/tick.png"
-        t2 = 1;
-        lista_alergenos.push('L')
-    }
-    else{
-        tick2.src="media/menu/cuadrado.png"
-        t2 = 0;
-        lista_alergenos = lista_alergenos.filter(alergia => alergia !== 'L')
-    }
-    saber_menu()
-})
-tick3.addEventListener('click', () =>{
-    if (t3 === 0){
-        tick3.src="media/menu/tick.png"
-        t3 = 1;
-        lista_alergenos.push('H')
-    }
-    else{
-        tick3.src="media/menu/cuadrado.png"
-        t3 = 0;
-        lista_alergenos = lista_alergenos.filter(alergia => alergia !== 'H')
-    }
-    saber_menu()
-})
-tick4.addEventListener('click', () =>{
-    if (t4 === 0){
-        tick4.src="media/menu/tick.png"
-        t4 = 1;
-        lista_alergenos.push('F')
-    }
-    else{
-        tick4.src="media/menu/cuadrado.png"
-        t4 = 0;
-        lista_alergenos = lista_alergenos.filter(alergia => alergia !== 'F')
-    }
-    saber_menu()
-})
+let posicion_bar_progreso= 0;
+let confirmar = 0;
 
 window.addEventListener('load', () => {
+    /*Seleccion menu de cafes*/
     bebidas.style.background = 'transparent'
     cafe.style.background = '#E6CDBA'
     tartas.style.background = 'transparent'
     delicatessen.style.background = 'transparent'
     reposteria.style.background = 'transparent'
+    /*A parece solo el primer paso*/
     menu_carrito.style.display = 'none'
     menu.style.display = 'block'
     revisar_pedido.style.display = 'none'
@@ -420,6 +382,60 @@ window.addEventListener('load', () => {
     pago_tarjeta.style.display = 'none'
     initApp(0);
 })
+
+/*Selección del alergeno que no quieres que aparezca*/
+tick1.addEventListener('click', () =>{
+    if (t1 === 0) {
+        tick1.src = "media/menu/tick.png"
+        t1 = 1;
+        lista_alergenos.push('G')
+    } else {
+        tick1.src = "media/menu/cuadrado.png"
+        t1 = 0;
+        lista_alergenos = lista_alergenos.filter(alergia => alergia != 'G')
+    }
+    saber_menu()
+})
+tick2.addEventListener('click', () =>{
+    if (t2 === 0) {
+        tick2.src = "media/menu/tick.png"
+        t2 = 1;
+        lista_alergenos.push('L')
+    } else {
+        tick2.src = "media/menu/cuadrado.png"
+        t2 = 0;
+        lista_alergenos = lista_alergenos.filter(alergia => alergia != 'L')
+    }
+    saber_menu()
+})
+
+tick3.addEventListener('click', () =>{
+    if (t3 === 0) {
+        tick3.src = "media/menu/tick.png"
+        t3 = 1;
+        lista_alergenos.push('H')
+    } else {
+        tick3.src = "media/menu/cuadrado.png"
+        t3 = 0;
+        lista_alergenos = lista_alergenos.filter(alergia => alergia != 'H')
+    }
+    saber_menu()
+})
+tick4.addEventListener('click', () =>{
+    if (t4 === 0) {
+        tick4.src = "media/menu/tick.png"
+        t4 = 1;
+        lista_alergenos.push('F')
+    } else {
+        tick4.src = "media/menu/cuadrado.png"
+        t4 = 0;
+        lista_alergenos = lista_alergenos.filter(alergia => alergia != 'F')
+    }
+    saber_menu()
+
+})
+
+/*Seleccion de distintos menus*/
 cafe.addEventListener('click', () =>{
     cafe.style.background = '#E6CDBA'
     bebidas.style.background = 'transparent'
@@ -458,6 +474,7 @@ tartas.addEventListener('click', () =>{
     menu_select = 4;
     initApp(18)
 })
+
 reposteria.addEventListener('click', () =>{
     bebidas.style.background = 'transparent'
     cafe.style.background = 'transparent'
@@ -502,148 +519,195 @@ cesta.addEventListener('click', () => {
 equis.addEventListener('click', () => {
     menu_carrito.style.display = 'none'
 })
-step_1.addEventListener('click', () => {
-    menu.style.display = 'block'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display ='none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
-    espera_pedido.style.display = 'none'
-    pago_tarjeta.style.display = 'none'
-    barra_progreso.style.width ='10vw'
-    menu_select = 1;
-    body.style.backgroundImage = ''
-    initApp(0);
-})
 
-step_2.addEventListener('click', () => {
-    if (cantidad.srt === 0){
-        global_error_message(1, "No ha seleccionado ningún elemento", menu);
+step_1.addEventListener('click', () => {
+    if (posicion_bar_progreso !== 6){
+        cambiar_a_select_menu();
     }
     else{
-        menu.style.display = 'none'
-        revisar_pedido.style.display = 'block'
-        forma_pago.style.display ='none'
-        sitio_pago.style.display ='none'
-        direccion.style.display ='none'
-        espera_pedido.style.display = 'none'
-        pago_tarjeta.style.display = 'none'
-        barra_progreso.style.width ='25vw'
-        body.style.backgroundImage = ''
-        mostarElemento()
+        global_error_message(1, "Ya he hecho el pedido no puedo volver atras", menu);
     }
-
-
-
 })
 menu_button_chek.addEventListener('click',() =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'block'
-    forma_pago.style.display ='none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
-    espera_pedido.style.display = 'none'
-    pago_tarjeta.style.display = 'none'
-    barra_progreso.style.width ='25vw'
-    body.style.backgroundImage = ''
-    mostarElemento()
+    if (cantidad.textContent === "0") {
+        global_error_message(1, "No ha seleccionado ningún elemento", menu);
+    }
+    else {
+        cambiar_a_revision_pedido();
+    }
+})
+step_2.addEventListener('click', () => {
+    if (posicion_bar_progreso === 6) {
+        global_error_message(1, "Ya he hecho el pedido no puedo volver atras", menu);
+    }
+    else if (cantidad.textContent === "0") {
+        global_error_message(1, "No ha seleccionado ningún elemento", menu);
+    }
+    else {
+        cambiar_a_revision_pedido();
+    }
+
+})
+revison_button_chek.addEventListener('click',() =>{
+    if (revision_total.textContent === "Total 0 €") {
+        global_error_message(1, "No ha seleccionado ningún elemento", revisar_pedido);
+    } else {
+        cambiar_a_sitio_pago();
+    }
+})
+step_3.addEventListener('click', () =>{
+    if (posicion_bar_progreso === 6) {
+        global_error_message(1, "Ya he hecho el pedido no puedo volver atras", menu);
+    }
+    else if (posicion_bar_progreso === 0) {
+        global_error_message(1, "Primero hay que revisar el pedido", menu);
+    }
+    else if (posicion_bar_progreso === 1  && revision_total.textContent === "Total 0 €"){
+        global_error_message(1, "Hay que seleccionar un plato", revisar_pedido);
+    }
+    else{
+        cambiar_a_sitio_pago();
+    }
 })
 
-revison_button_chek.addEventListener('click',() =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'none'
-    sitio_pago.style.display ='block'
-    direccion.style.display ='none'
-    espera_pedido.style.display = 'none'
-    pago_tarjeta.style.display = 'none'
-    barra_progreso.style.width ='25vw'
-    body.style.backgroundImage = ''
+step_4.addEventListener('click', () =>{
+    if (posicion_bar_progreso === 0 ) {
+        global_error_message(1, "Primero hay que revisar el pedido", menu);
+    }
+    else{
+        global_error_message(1, "Primero hay que pagar el pedido", menu);
+    }
 })
 
 sitio_pago_tienda.addEventListener('click',() =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'block'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
-    espera_pedido.style.display = 'none'
-    pago_tarjeta.style.display = 'none'
-    barra_progreso.style.width ='40vw'
-    body.style.backgroundImage = ''
+    cambiar_a_forma_pago()
 })
 sitio_pago_domicilio.addEventListener('click',() =>{
+    cambiar_a_forma_pago();
+})
+
+forma_pago_tarjeta.addEventListener('click',() =>{
+    cambiar_a_direccion();
+})
+forma_pago_efectivo.addEventListener('click',() =>{
+    cambiar_a_espera_pedido();
+})
+direccion_seleccion.addEventListener('click',() =>{
+    cambiar_a_tarjeta();
+})
+menu_card_confirm.addEventListener('click', () =>{
+    if (check_card_form() === true) {
+        console.log("a")
+        confirmar = 0;
+        confirmar_pedido()
+        console.log("a")
+        if (confirmar === 1 ){
+            global_error_message(1, "Su pago a sifo reaizado con exito", pago_tarjeta);
+            cambiar_a_espera_pedido();
+        }
+        else if( confirmar ===2){
+            cambiar_a_tarjeta()
+        }
+    }
+})
+go_back_inicio.addEventListener('click' ,() =>{
+    window.location.href= "landing.html"
+})
+go_back_menu.addEventListener('click' ,() =>{
+    cambiar_a_select_menu()
+})
+go_back_revisar.addEventListener('click' ,() =>{
+    cambiar_a_revision_pedido()
+})
+go_back_sitio.addEventListener('click' ,() =>{
+    cambiar_a_sitio_pago()
+})
+go_back_f_pago.addEventListener('click' ,() =>{
+    cambiar_a_forma_pago()
+})
+go_back_direccion.addEventListener('click' ,() =>{
+    cambiar_a_direccion()
+})
+
+function cambiar_a_select_menu() {
+    menu.style.display = 'block'
+    revisar_pedido.style.display = 'none'
+    forma_pago.style.display = 'none'
+    sitio_pago.style.display = 'none'
+    direccion.style.display = 'none'
+    espera_pedido.style.display = 'none'
+    pago_tarjeta.style.display = 'none'
+    barra_progreso.style.width = '10vw'
+    menu_select = 1;
+    body.style.backgroundImage = ''
+    posicion_bar_progreso = 0;
+    initApp(0);
+}
+function cambiar_a_revision_pedido() {
+        menu.style.display = 'none'
+        revisar_pedido.style.display = 'block'
+        forma_pago.style.display = 'none'
+        sitio_pago.style.display = 'none'
+        direccion.style.display = 'none'
+        espera_pedido.style.display = 'none'
+        pago_tarjeta.style.display = 'none'
+        barra_progreso.style.width = '25vw'
+        body.style.backgroundImage = ''
+        posicion_bar_progreso = 1;
+        mostarElemento()
+}
+
+function cambiar_a_sitio_pago() {
+        menu.style.display = 'none'
+        revisar_pedido.style.display = 'none'
+        forma_pago.style.display = 'none'
+        sitio_pago.style.display = 'block'
+        direccion.style.display = 'none'
+        espera_pedido.style.display = 'none'
+        pago_tarjeta.style.display = 'none'
+        barra_progreso.style.width = '38vw'
+        body.style.backgroundImage = "url('media/menu/fondo_sitio.png')"
+        body.style.backgroundSize = 'cover'
+        posicion_bar_progreso = 2;
+}
+function cambiar_a_forma_pago() {
     menu.style.display = 'none'
     revisar_pedido.style.display = 'none'
     forma_pago.style.display = 'block'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
+    sitio_pago.style.display = 'none'
+    direccion.style.display = 'none'
     espera_pedido.style.display = 'none'
     pago_tarjeta.style.display = 'none'
-    barra_progreso.style.width ='40vw'
+    barra_progreso.style.width = '38vw'
     body.style.backgroundImage = ''
-})
-forma_pago_tarjeta.addEventListener('click',() =>{
+    posicion_bar_progreso = 3;
+}
+function cambiar_a_direccion() {
     menu.style.display = 'none'
     revisar_pedido.style.display = 'none'
     forma_pago.style.display = 'none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='block'
+    sitio_pago.style.display = 'none'
+    direccion.style.display = 'block'
     espera_pedido.style.display = 'none'
     pago_tarjeta.style.display = 'none'
-    barra_progreso.style.width ='40vw'
-})
-forma_pago_efectivo.addEventListener('click',() =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='block'
-    espera_pedido.style.display = 'none'
-    pago_tarjeta.style.display = 'none'
-    barra_progreso.style.width ='40vw'
+    barra_progreso.style.width = '38vw'
     body.style.backgroundImage = ''
-})
-step_3.addEventListener('click', () =>{
+    posicion_bar_progreso = 4;
+}
+function cambiar_a_tarjeta() {
     menu.style.display = 'none'
     revisar_pedido.style.display = 'none'
     forma_pago.style.display = 'none'
-    sitio_pago.style.display ='block'
-    direccion.style.display ='none'
-    espera_pedido.style.display = 'none'
-    pago_tarjeta.style.display = 'none'
-    barra_progreso.style.width ='34vw'
-    body.style.backgroundImage = ''
-})
-direccion_seleccion.addEventListener('click',() =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
+    sitio_pago.style.display = 'none'
+    direccion.style.display = 'none'
     espera_pedido.style.display = 'none'
     pago_tarjeta.style.display = 'block'
-    body.style.backgroundImage= "url('media/landing/portada.jpg')"
-    body.style.backgroundSize ='cover'
-    barra_progreso.style.width ='40vw'
-})
-step_4.addEventListener('click', () =>{
-    menu.style.display = 'none'
-    revisar_pedido.style.display = 'none'
-    forma_pago.style.display = 'none'
-    sitio_pago.style.display ='none'
-    direccion.style.display ='none'
-    pago_tarjeta.style.display = 'none'
-    espera_pedido.style.display = 'block'
-    barra_progreso.style.width ='50vw'
-    body.style.backgroundImage = ''
-    setInterval(startTimer, 1000);
-})
-menu_card_confirm.addEventListener('click', () =>{
-    if(check_card_form() === true) {
-
-        global_error_message(1, "¿Desea confirmar pago?", document.getElementById("menu_card"));
-        global_error_message(1, "Su pago a sifo reaizado con exito", menu_card);
+    body.style.backgroundImage = "url('media/menu/fondo_tarjeta.png')"
+    body.style.backgroundSize = 'cover'
+    barra_progreso.style.width = '38vw'
+    posicion_bar_progreso = 5;
+}
+function cambiar_a_espera_pedido() {
         menu.style.display = 'none'
         revisar_pedido.style.display = 'none'
         forma_pago.style.display = 'none'
@@ -653,10 +717,9 @@ menu_card_confirm.addEventListener('click', () =>{
         espera_pedido.style.display = 'block'
         barra_progreso.style.width = '50vw'
         body.style.backgroundImage = ''
+        posicion_bar_progreso = 6;
         setInterval(startTimer, 1000);
-    }
-})
-
+}
 function initApp(st_elem) {
     while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
@@ -667,8 +730,7 @@ function initApp(st_elem) {
         for (let i = 0; i < lista_alergenos.length; i ++){
             if (value.alerg.includes(lista_alergenos[i])){
                 elem_in = 1;
-            }
-        }
+            }}
         if (elem_in === 0){
             let newDiv = document.createElement('div');
             newDiv.classList.add('elemento');
@@ -699,8 +761,7 @@ function initApp2(st_elem) {
         for (let i = 0; i < lista_alergenos.length; i ++){
             if (value.alerg.includes(lista_alergenos[i])){
                 elem_in = 1;
-            }
-        }
+            }}
         if (elem_in === 0) {
             let newDiv = document.createElement('div');
             newDiv.classList.add('elemento');
@@ -715,8 +776,7 @@ function initApp2(st_elem) {
                         <button class="menu_menos" onclick="cambiarCantidad_resta(${value.id})">-</button>
                         <div class="menu_cantidad">${value.cantidad}</div>
                         <button class="menu_mas" onclick="cambiarCantidad_suma(${value.id})">+</button> 
-                    </div>   
-                  
+                    </div>    
                 </div>`;
             lista.appendChild(newDiv);
         }
@@ -999,3 +1059,29 @@ function startTimer() {
 
     timerElement.textContent = minutos + ':' + segundos;
 }
+
+
+function confirmar_pedido(){
+    if (confirmar == 0){
+        pago_tarjeta.style.display = 'none'
+        body.style.backgroundImage = ''
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('confirmar_pedido_c');
+        newDiv.innerHTML = ` 
+            <p>Desea confirmar el pago</p>
+            <div>
+                <button onclick="confirmar_pago_si()"> Si </button> 
+                <button onclick="confirmar_pago_no()"> No </button>
+            </div>`;
+        pago_tarjeta.appendChild(newDiv)
+    }
+
+}
+function confirmar_pago_si(){
+    confirmar = 1;
+}
+function confirmar_pago_no(){
+    confirmar = 2;
+}
+
+
