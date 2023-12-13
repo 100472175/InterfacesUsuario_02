@@ -39,6 +39,12 @@ section h1 {
 	left: 40%;
 }
 
+@media screen and (max-width: 768px) {
+	#galery_arrow {
+		left: 25%;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	.galery_image {
 		width: 60vmin;
@@ -48,4 +54,9 @@ section h1 {
 	#galery_track {
 		transform: translate(0%, -45%);
 	}
+	
+	#galery_arrow {
+		left: 20%;
+	}
+	 
 }
