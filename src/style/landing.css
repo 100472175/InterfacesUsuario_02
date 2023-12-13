@@ -213,6 +213,28 @@ section {
     background-color: #FFFBF8;
 }
 
+.siema{
+    margin-top: 20vh;
+    margin-left: 10vw;
+    height: auto;
+    width: 80vw;
+}
+
+.prev, .next{
+    background-color: #7E4D29;
+    color: white;
+    font-size: 2rem;
+    border: None;
+    border-radius: 50%;
+    height: 5vh;
+    width: 5vh;
+    margin-left: 10%;
+}
+
+.next {
+    margin-left: 70%;
+}
+
 .galery h3{
     font-size: 2.5rem;
     text-align: center;
