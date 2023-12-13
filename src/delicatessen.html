@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Delicatessen - Café Florencia</title>
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="./style/delicatessen.css">
+    <meta name="viewport" content="width=device-width">
+    <script src="./script/base.js"></script>
 </head>
 <body>
-
+	<header class="main_header">
+        <nav>
+            <button id="open_menu_h"></button>
+            <a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
+            <a class="main_header_link" id="menu_specialities">Especialidades</a>
+            <a class="main_header_link" id="menu_menu" onclick="check_login()">Menu</a>
+            <a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
+            <a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
+            <a href="login.html" class="main_header_link" id="menu_register">Registro</a>
+        </nav>
+        <aside id="menu_h">
+            <a id="logo_h" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
+            <a id="menu_h_specialities">Especialidades<br></a>
+            <a id="menu_h_menu" href="menu.html" onclick="check_login()">Menu<br></a>
+            <a id="menu_h_about_us">Sobre Nosotros<br></a>
+            <a href="reservas.html">Reserva<br></a>
+            <a href="login.html">Registro</a>
+        </aside>
+        <div id="unfolding_specialities">
+            <a href="cafe.html">Café</a>
+            <a href="bebidas_dulces.html">Bebidas dulces</a>
+            <a href="delicatessen.html">Delicatessen</a>
+            <a href="tartas.html">Tartas</a>
+            <a href="reposteria.html">Repostería</a>
+        </div>
+        <div id="unfolding_about_us">
+            <a href="historia.html">Historia</a>
+            <a href="galeria.html">Galería</a>
+        </div>
+    </header>
+    <div class="elipse" id="top_image">
+    </div>
+    <div class="elipse" id="text">
+    	<h1>Delicattessen</h1>
+    	<p>Hemos querido reinvenar la repostería, acercando los postres tradicionales a nuestra gastronomía. De nuestros productos, destacamos los macarons, croissants y profiteroles; todos ellos elaborados con ingredientes de la más alta calidad. Además, contamos con una amplia variedad de sabores, como: chocolate, playano, naranja, frambuesa, galleta,... ¡Y muchos más!</p>
+    </div>
+    <div class="elipse" id="bottom_image">
+    </div>
 </body>
 </html>

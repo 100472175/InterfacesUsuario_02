@@ -1,0 +1,84 @@
+* {
+    overflow: hidden
+}
+
+.elipse {
+	border-radius: 60%;
+	height: 100vh;
+	width: 100vw;
+}
+
+#text {
+	position: absolute;
+	bottom: -50%;
+	background-color: #F6EDE6;
+	z-index: 1;
+}
+
+#text h1 {
+	text-align: center;
+	padding-top: 6%;
+	font-size: 1.65rem;
+}
+
+#text p {
+	text-align:center;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#top_image {
+	z-index: 0;
+	position: absolute;
+	top: -50%;
+	background-image: url("../media/subpags/trufas.jpeg");
+	background-size: cover;	
+}
+
+#bottom_image {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	background-image: url("../media/subpags/bonbon.jpg");
+}
+
+@media screen and (max-width: 768px) {
+	.elipse {
+		height: 60vh;
+	}
+	
+	#top_image {
+		top: -33%;
+	}
+	
+	#text {
+		top: 20%;
+	}
+
+	h1 {
+		font-size: 1.25rem;
+		padding-top: 12%;
+	}	
+	
+	p {
+		font-size: 0.8rem;
+		padding-top: 2%;
+	}
+	
+	#bottom_image {
+		bottom: -33%;
+		displaY: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	#text h1 {
+		font-size: 0.9rem;
+		padding-top: 15%;
+	}
+	
+	p {
+		font-size: 0.7rem;
+	}
+}
