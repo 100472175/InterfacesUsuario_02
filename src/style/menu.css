@@ -5,7 +5,7 @@
     grid-template-rows: 1fr 1fr;
     margin: auto;
     margin-top: 6vh;
-    background-color:#FFFBF8;
+
     place-content: center;
     border-radius: 15px;
 }
@@ -15,11 +15,12 @@
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap: 5%;
     margin-bottom: 10%;
+
 }
 .progess_bar button{
     background-color: transparent;
     border: none;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-align: center;
 }
 .progess_bar_line{
@@ -28,7 +29,7 @@
     background: #E6CDBA;
     border-radius: 30px;
     top: 15%;
-    margin-left: 4%;
+    margin-left: 5%;
 }
 .progess_bar_line2{
     background: #7E4D29;
@@ -36,11 +37,11 @@
     height: 3%;
     border-radius: 30px;
     top: 15%;
-    margin-left: 4%;
+    margin-left: 5%;
 }
 
 .menu_top{
-    height: 25vh;
+    height: 20vh;
 }
 .menu_button{
     height: 70vh;
@@ -55,13 +56,15 @@
 }
 .menu_choose button{
     border-radius: 30px;
-    height: 17vh;
-    width: 17vh;
+    height: 15vh;
+    width: 15vh;
     border: none;
-    margin-top: 10%;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
+.menu_choose button img{
+    height: 40%;
+}
 
 .menu_dish{
     display: grid;
@@ -81,7 +84,7 @@
     height: auto;
 }
 
-.elem_img {
+.elem_img{
     float: left;
     width: 45%;
     aspect-ratio: 1;
@@ -239,12 +242,13 @@
 .go_back{
     position: absolute;
     left: 3vw;
+    top: 19vh
 }
 .menu_alergies{
     background-color: #FFF8F4;
     position: absolute;
-    width: 15%;
-    height: 50%;
+    width: 14vw;
+    height: auto;
     left: 1%;
     border: none;
     border-top-right-radius: 15px;
@@ -256,10 +260,10 @@
     margin-top: 10%;
 }
 .menu_alergies li{
-    text-align: center;
     list-style: none;
     text-decoration: none;
     margin-top: 5%;
+    margin-left: 5%;
 }
 .menu_alergies img{
     height: 20px;
@@ -271,7 +275,7 @@
     border-bottom-left-radius: 15px;
     cursor: pointer;
     font-size: 0.75em;
-    margin: auto;
+    margin: 5%;
     padding:5%;
     height: auto;
     margin-left: 25%;
@@ -290,18 +294,17 @@
     margin-left: 10vw;
     border-radius: 15px;
     margin-bottom: 2%;
-
+    text-align: center;
 }
 .revision_platos li img{
     height: 15vh;
     border-radius:15px ;
     margin:10%;
-
-
+    margin-left: 20%;
 }
 .revision_platos li div:nth-child(4){
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .revision_platos li img:last-child{
     height: 5vh;
@@ -361,7 +364,7 @@
     grid-template-columns: 1fr 1fr;
     place-content: center;
 }
-.seleccion article{
+.seleccion div{
     background-color:  #F6EDE6;
     margin: 10%;
     border-radius: 15px ;
@@ -370,7 +373,7 @@
     place-content: center;
 
 }
-.seleccion article button{
+.seleccion div button{
     background-color: #7E4D29;
     border-radius: 10px;
     padding: 3%;
@@ -378,6 +381,11 @@
     border: none;
     margin: auto;
     margin-bottom: 5%;
+    font-size: 0.9em;
+    height: 10vh;
+}
+.seleccion div button p{
+    font-size: 0.8em;
 }
 
 .direccion_selccion{
@@ -427,14 +435,15 @@
 	width: 50vw;
 	height: 60vh;
 	background-color: #F6EDE6;
-	border-top-left-radius: 80px;
-	border-bottom-right-radius: 80px;
+	border-bottom-left-radius: 80px;
+	border-top-right-radius: 80px;
 	box-shadow: 0 4px 4px black;
 }
 
 .menu_card_div h2 {
 	text-align: center;
 	font-size: 0.8rem;
+    padding-top: 2%;
 }
 
 .menu_card_div a {
@@ -520,12 +529,14 @@
 	background-color: #7E4D29;
 	color: white;
 	width: 40%;
-	height: 80%;
+	height: 70%;
 	margin-left: 30%;
 	margin-top: 0.5%;
-	font-size: 0.95rem;	
+	font-size: 0.95rem;
+
 }
 .confirmar_pedido_c{
+    display: none;
     position: absolute;
     z-index: 3;
     background-color: #7E4D28;
@@ -535,4 +546,127 @@
     left: 25%;
     border-radius: 25px;
     box-shadow: 0 4px 4px black;
+}
+
+@media screen and (max-width: 768px) {
+    .progess_bar{
+        width: 80vw;
+    }
+    .menu_alergies{
+        display: none;
+        position: absolute;
+        width: 80%;
+        height: 20%;
+        left: 20%;
+    }
+
+    .menu_choose button{
+        font-size: 0.7em;
+
+    }
+    .menu_choose button img{
+        height: 40%;
+    }
+    .menu_dish{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .revision_platos{
+        height: auto;
+
+    }
+    .revision_final{
+        position: relative;
+        place-items: center;
+        margin: auto;
+        top: 0;
+
+    }
+    .revision_platos li img{
+        height: 13vh;
+    }
+    .seleccion{
+        display: inline;
+        grid-template-rows: 1fr 1fr;
+    }
+    .seleccion div{
+        height: 20vh;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .progess_bar {
+        width: 90vw;
+    }
+    .progess_bar_button{
+        font-size: 0.8em;
+    }
+    .progess_bar_line{
+        width: 60%;
+    }
+    .menu_alergies{
+        display: none;
+        position: absolute;
+        width: 80%;
+        height: 20%;
+        left: 20%;
+    }
+    .menu_choose{
+        width: 70vw;
+    }
+    .menu_choose button{
+
+        height: 14vh;
+        width: 14vh;
+        border-radius: 25px;
+    }
+    .menu_choose button img{
+        height: 35%;
+
+    }
+    .menu_dish{
+        grid-template-columns: repeat(1, 1fr);
+        width: 70%;
+    }
+    .revision_platos{
+        height: auto;
+        width: 80%;
+
+    }
+    .revision_platos li img{
+        height: 10vh;
+    }
+    .revision_platos li  div:nth-child(2){
+        font-size: 0.8em;
+    }
+    .revision_platos li  div:nth-child(3){
+        font-size: 0.8em;
+    }
+    .revision_platos li  div:nth-child(4){
+        font-size: 0.8em;
+        grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    }
+    .revision_final{
+        position: relative;
+        place-items: center;
+        margin: auto;
+        top: 0;
+        width: 80%;
+    }
+    .seleccion{
+
+        grid-template-rows: 1fr 1fr;
+    }
+    .seleccion div{
+        height: 20vh;
+    }
+    .direccion_selccion{
+        padding: 5%;
+        width: 80vw;
+    }
+    .menu_card_div{
+        width: 90vw;
+    }
+
+
 }

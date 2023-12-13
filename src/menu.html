@@ -44,21 +44,21 @@
 		<p id="error_p"></p>
 		<button id="error_button" onclick="global_error_message(0)">Aceptar</button>
 	</div>
-    <div class="progess_bar col-7" >
-        <nav class="progess_bar_button ">
+    <div class="progess_bar col-7 col-t-8" >
+        <nav class="progess_bar_button  ">
             <button id="step_1">Menu</button>
             <button id="step_2">Revision Pedido</button>
             <button id="step_3">Pago e inicio sesión</button>
             <button id="step_4">Confirmacion</button>
         </nav>
-        <div class="progess_bar_line col-6" ></div>
-        <div class="progess_bar_line2 " ></div>
+        <div class="progess_bar_line col-6 col-t-8" ></div>
+        <div class="progess_bar_line2" ></div>
     </div>
 
-    <section id="menu" class="col-12">
+    <section id="menu" >
         <article class="menu_top">
             <p id="go_back_inicio" class="go_back"><img src="media/menu/flecha.svg" alt="flecha"> Inicio</p>
-            <nav class="menu_choose col-6">
+            <nav class="menu_choose col-6 col-t-6">
                 <button id="menu_coffe"><img src="media/menu/taza-de-cafe.svg" alt="Cafe"><br>Cafe</button>
                 <button id="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Bebidas"><br>Bebidas</button>
                 <button id="menu_delicatessen"><img src="media/menu/macarron.svg" alt="macarrons"><br>Delicatessen</button>
@@ -82,7 +82,7 @@
                 </ul>
                 <button class="menu_saber_mas"> Saber más </button>
             </div>
-            <ul class="menu_dish col-8"></ul>
+            <ul class="menu_dish col-8 col-t-10"></ul>
         </article>
 
         <article class="menu_cart_open">
@@ -95,41 +95,41 @@
     </section>
     <section class="revisar_pedido col-12">
         <p id="go_back_menu" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Menu </p>
-        <ul class="revision_platos col-7"></ul>
-        <article class="revision_final col-4">
+        <ul class="revision_platos col-7 col-t-10"></ul>
+        <article class="revision_final col-4 col-t-10">
             <h1 >Revisión pedido</h1>
             <ul class="revision_list_food_select"></ul>
             <p class="revision_Total">Total 0 €</p>
-            <button class="revision_button_chek">Pagar</button>
+            <button class="revision_button_chek ">Pagar</button>
         </article>
     </section>
 
     <section class="sitio_pago">
         <p id="go_back_revisar" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Revisar pedido </p>
-        <div class="seleccion">
-            <article >
+        <article class="seleccion">
+            <div>
                 <button class="sitio_pago_tienda">Recoger en tienda </button>
-            </article>
-            <article >
+            </div>
+            <div>
                 <button class="sitio_pago_domicilio">Envio a  domicilio</button>
-                <p>*EL envio no tiene sobre coste</p>
-            </article>
-        </div>
+                <p>*El envio no tiene sobre coste</p>
+            </div>
+        </article>
     </section>
     <section class="forma_pago">
         <p id="go_back_sitio" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
         <div class="seleccion">
-            <article>
+            <div>
                 <button class="forma_pago_efectivo">Pago en efectivo </button>
-            </article>
-            <article>
+            </div>
+            <div>
                 <button class="forma_pago_tarjeta">Pago con tarjeta</button>
-            </article>
+            </div>
         </div>
     </section>
     <section class="direccion">
         <p id="go_back_f_pago" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
-        <article class="direccion_selccion col-5" >
+        <article class="direccion_selccion col-8 col-t-8" >
             <form >
                 <label> Introduzca su direción</label>
                 <input type="text" placeholder="Direccion">
@@ -141,7 +141,7 @@
     </section>
     <section class="pago_tarjeta">
         <p id="go_back_direcion" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Dirección </p>
-    	<article class="col-4 col-t-12 menu_card_div">
+    	<article class="col-8 col-t-10 menu_card_div">
     		<h2>Pago Online</h2>
     		<form id="menu_card_form">
     			<label for="menu_card_name" class="menu_label">Titular de la tarjeta</label>
@@ -166,7 +166,15 @@
                 <div class =></div>
     		</form>
     	</article>
+
     </section>
+    <article class="confirmar_pedido_c col-5">
+        <p>Desea confirmar el pago</p>
+        <div>
+            <button onclick="confirmar_pago_si()"> Si </button>
+            <button onclick="confirmar_pago_no()"> No </button>
+        </div>
+    </article>
     <section class="espera_pedido">
         <h2>Tu pedido esta hecho</h2>
         <h2>Tiempo hasta la entrega:</h2>
