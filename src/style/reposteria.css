@@ -39,24 +39,26 @@
 }
 
 #image_1 {
+	background-image: url("../media/reposteria/pan.jpeg");
+	background-size: 135% 100%;
 	top: 5%;
 	right: 30%;
-	background-color: black;
 	z-index: 0;
 }
 
 #image_2 {
+	background-image: url("../media/reposteria/galleta.jpeg");
+	background-size: 130% 100%;
 	top: 47%;
 	left: 20%;
-	background-color: black;
 	z-index: 0;
 }
 
 #title_1 {
 	background-color: #7E4D29;
 	text-align: center;
-	top:0%;
-	right:10%;
+	top: 6%;
+	right: 6%;
 	z-index: 1;
 	width: 16vw;
 	height: 16vw;
@@ -69,12 +71,24 @@ h1 {
 
 @media screen and (max-width: 768px) {
 	#title_1 {
+		top: -5%;
+		right: 5%;
 		width: 30vw;
-		height: 30vw
+		height: 30vw;
 	}
 	
-	#image_1, #image_2 {
-		display: none;
+	#image_1 {
+		height: 40vw;
+		width: 40vw;
+		top: 25%;
+		right:10%;
+	}
+	 
+	#image_2 {
+		height: 35vw;
+		width: 35vw;
+		top: 60%;
+		left:0%;
 	}
 	
 	.repostery_circle p{
@@ -98,6 +112,23 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
+	body {
+		background-image: url("../media/menu/Reposteria6.jpg");
+		background-size: 110%;
+	}
+	
+	#title_1 {
+		top: -2.5%;
+		right: -3%;
+	}
+	
+	#title_1 h1{
+		font-size: 0.75rem;
+	}
+	
+	.repostery_circle p {
+		font-size: 0.65rem;
+	}
 	
 	#text_1 {
 		top: 5%;
@@ -111,5 +142,10 @@ h1 {
 		width: 50vh;
 		height: 50vh;
 	}
+	
+	#image_1, #image_2{
+		display: none;
+	}
+	
 	
 }
