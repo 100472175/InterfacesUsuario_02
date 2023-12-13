@@ -11,5 +11,6 @@
     <orderEntry type="library" name="angular.js" level="application" />
     <orderEntry type="library" name="gsap" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="siema" level="application" />
   </component>
 </module>
