@@ -92,7 +92,7 @@
 
 #unfolding_specialities {
 	display: none;
-	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 	position: fixed;
 	z-index: 3;
 	background-color: #7E4D28;
@@ -109,7 +109,7 @@
 
 #unfolding_about_us{
 	display: none;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 	position: fixed;
 	z-index: 3;
 	background-color: #7E4D29;

@@ -128,7 +128,7 @@ function check_session(){
 	return true;
 }
 
-function check_login(localizacion) {
+function check_login() {
 	if (!check_session()) {
 		alert("Debe de iniciar sesión antes de pedir online");
 		window.location.href = "login.html";

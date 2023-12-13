@@ -1,0 +1,25 @@
+*{
+    overflow: hidden;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+}
+
+#tartas{
+    background-image: url("../media/subpags/fondo_tartas.png");
+    background-size: cover;
+}
+
+#tartas h3{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 6vh;
+}
+
+#tartas p{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20vh 6vh 0 6vh;
+}

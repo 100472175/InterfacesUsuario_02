@@ -97,9 +97,9 @@ section {
 .intro.bebidas{
     position: absolute;
     z-index: 1;
-    height: 50vh;
+    height: 55vh;
     width: 40vw;
-    margin-top: 25vh;
+    margin-top: 20vh;
     margin-left: 30vw;
     box-shadow: 0 4px 4px #7E4D29;
 }
@@ -205,7 +205,6 @@ section {
     font-size: 2.5rem;
     left: 67vw;
     top: 40vh;
-    width: 15vw;
     position: relative;
 }
 
@@ -286,10 +285,6 @@ section {
     display:inline-block;
     margin-left: 10vw;
     height: 18vh;
-}
-
-.subscribe label{
-    margin-left: 5vw;
 }
 
 .subscribe input{

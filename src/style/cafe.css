@@ -1,0 +1,93 @@
+*{
+    overflow: hidden;
+    border: none;
+    margin: none;
+}
+
+section {
+	background-image: url("../media/subpags/fondo_cafe.png");
+	background-size: cover;
+	background-position: bottom;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+	position: absolute;
+	top: 5%;
+	left: 20%;
+	font-size: 1.6rem; 
+}
+
+.cafe_text {
+	border-radius: 25px;
+	width: 60vw;
+	height: 25vh;
+	background-color: #F6EDE6;
+	box-shadow: 0 4px 4px rgb(170, 170, 170);
+}
+
+.cafe_text {
+	padding: 10px;
+	z-index: 1;
+}
+
+#text_1 {
+	position: absolute;
+	top: 12.5%;
+	left: 1%;
+}
+
+#text_2 {
+	position: absolute;
+	top: 42.5%;
+	right: 1%;
+}
+
+#cafe_top {
+	position: absolute;
+	width: 68vh;
+	height: 45vh;
+	left: 1%;
+	top: 35%;
+	z-index: 0;
+}
+
+#cafe_bean {
+	position: absolute;
+	width: 55vh;
+	height: 35vh;
+	right: 5%;
+	top: 5%;
+	z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+	#cafe_top {
+		left: -15%;
+	}
+	
+	#cafe_bean {
+		width: 35vh;
+		height: 22vh;
+		top: 13.5%;
+		right: 1%;
+	}
+	
+	.cafe_text p {
+		font-size: 0.65rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+.cafe_text {
+	width: 65vw;
+}
+
+.cafe_text p {
+	font-size: 0.6rem;
+}
+}

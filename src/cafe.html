@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Café - Café Florencia</title>
+    <script src="script/base.js"></script>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/cafe.css">
 </head>
 <body>
-
+	<header class="main_header">
+        <nav>
+            <button id="open_menu_h"></button>
+            <a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
+            <a class="main_header_link" id="menu_specialities">Especialidades</a>
+            <a class="main_header_link" id="menu_menu" onclick="check_login()">Menu</a>
+            <a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
+            <a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
+            <a href="login.html" class="main_header_link" id="menu_register">Registro</a>
+        </nav>
+        <aside id="menu_h">
+            <a id="logo_h" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
+            <a id="menu_h_specialities">Especialidades<br></a>
+            <a id="menu_h_menu" href="menu.html" onclick="check_login()">Menu<br></a>
+            <a id="menu_h_about_us">Sobre Nosotros<br></a>
+            <a href="reservas.html">Reserva<br></a>
+            <a href="login.html">Registro</a>
+        </aside>
+        <div id="unfolding_specialities">
+            <a href="cafe.html">Café</a>
+            <a href="bebidas_dulces.html">Bebidas dulces</a>
+            <a href="delicatessen.html">Delicatessen</a>
+            <a href="tartas.html">Tartas</a>
+            <a href="reposteria.html">Repostería</a>
+        </div>
+        <div id="unfolding_about_us">
+            <a href="historia.html">Historia</a>
+            <a href="galeria.html">Galería</a>
+        </div>
+    </header>
+	<section class="cafe">
+		<h1>Café</h1>
+		<img src="media/subpags/cafe_top.png" id="cafe_top">
+		<div class="cafe_text" id="text_1">
+			<p>Con nuestro café, podrás disfrutar de las bebidas calientes de todo el mundo. Utilizamos café de Etiopía, Kenya e Indonesia. Molemos el café tostado en el momento para lograr un sabor y un aroma inigualables. Nos ajustamos a los gustos de nuestra clientela, porque cada uno es único.</p>
+		</div>
+		<img src="media/subpags/coffeebeans.png" id="cafe_bean">
+		<div class="cafe_text" id="text_2">
+			<p>Muchos de nuestros clientes prefieren distintos tipos de café, algunos con leche, otros sólos e incluso algunos dsfrutan del toque dulce de la nata montada. Usamos todo tipo de leche para nuestros cafés: de vaca, de almendra, sin lactosa...</p>
+		</div>
+	</section>
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 section {
 	margin-top: 5vh;
-	background-color: #F6EDE6;
+	background-color: #E6CDBA;
 }
 
 section h1 {
@@ -15,7 +15,7 @@ section h1 {
 }
 
 .galery_image {
-	border-width: 2px;
+	border-width: 1px;
 	border-style: solid;
 	border-color: black;
 	width: 40vmin;
@@ -33,6 +33,18 @@ section h1 {
 	transform: translate(0%, -50%) 
 }
 
+#galery_arrow {
+	position: absolute;
+	top: 85%;
+	left: 40%;
+}
+
+@media screen and (max-width: 768px) {
+	#galery_arrow {
+		left: 25%;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	.galery_image {
 		width: 60vmin;
@@ -42,4 +54,9 @@ section h1 {
 	#galery_track {
 		transform: translate(0%, -45%);
 	}
+	
+	#galery_arrow {
+		left: 20%;
+	}
+	 
 }

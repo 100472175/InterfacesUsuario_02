@@ -14,11 +14,18 @@ window.onmousemove = e => {
 	if (track.dataset.mouseDownAt === "0") return;
 
 	const diff_raton = parseFloat(track.dataset.mouseDownAt) - e.clientX, diff_max = window.innerWidth/2;
-	const porcentaje = (diff_raton / diff_max)*0.75 * -100;
-	var siguiente = parseFloat(track.dataset.porcentajePrevio) + porcentaje;
+	const porcentaje = (diff_raton / diff_max) * -100;
+	var siguiente = parseFloat(track.dataset.porcentajePrevio)*0.75 + porcentaje;
 	
 	siguiente = Math.min(siguiente, 0);
 	siguiente = Math.max(siguiente, -100);
+	console.log(siguiente)
+	if (porcentaje < -50*0.75) {
+		document.getElementById("galery_arrow").style.transform="scaleX(-1)";
+	}
+	else {
+		document.getElementById("galery_arrow").style.transform="scaleX(1)";
+	}
 	
 	track.dataset.porcentaje = siguiente;
 	
