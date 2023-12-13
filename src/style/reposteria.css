@@ -16,17 +16,17 @@
 	position: relative;
 	text-align: center;
 	font-size: 0.8rem;
-	height: 28vw;
-	width: 28vw;
-	left: 10%;
-	top: 16%;
+	height: 100%;
+	width: 100%;
+	padding: 10%;
+	padding-top: 25%;
 }
 
 #text_1 {
 	top: 0%;
-	left: 2%;
-	width: 36vw;
-	height: 36vw;
+	left: 5%;
+	width: 32vw;
+	height: 32vw;
 	z-index: 1; 
 }
 
@@ -92,10 +92,7 @@ h1 {
 	}
 	
 	.repostery_circle p{
-		font-size: 0.68rem;
-		text-align: center;
-		width: 80%;
-		height: 90%;
+		font-size: 0.75rem;
 	}	
 	
 	#text_1 {
