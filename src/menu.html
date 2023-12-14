@@ -48,11 +48,13 @@
         <nav class="progess_bar_button  ">
             <button id="step_1">Menu</button>
             <button id="step_2">Revision Pedido</button>
-            <button id="step_3">Pago e inicio sesión</button>
+            <button id="step_3">Pago</button>
             <button id="step_4">Confirmacion</button>
         </nav>
-        <div class="progess_bar_line col-6 col-t-8" ></div>
-        <div class="progess_bar_line2" ></div>
+        <div class="progess_bar_line col-6 col-t-7" ></div>
+        <div class=" progess_bar_line progess_bar_line_ordenador"></div>
+        <div class="progess_bar_line progess_bar_line_tablet"></div>
+        <div class="progess_bar_line progess_bar_line_movil" ></div>
     </div>
 
     <section id="menu" >
@@ -94,7 +96,6 @@
 
     </section>
     <section class="revisar_pedido col-12">
-        <p id="go_back_menu" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Menu </p>
         <ul class="revision_platos col-7 col-t-10"></ul>
         <article class="revision_final col-4 col-t-10">
             <h1 >Revisión pedido</h1>
@@ -105,7 +106,6 @@
     </section>
 
     <section class="sitio_pago">
-        <p id="go_back_revisar" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Revisar pedido </p>
         <article class="seleccion">
             <div>
                 <button class="sitio_pago_tienda">Recoger en tienda </button>
@@ -117,7 +117,6 @@
         </article>
     </section>
     <section class="forma_pago">
-        <p id="go_back_sitio" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
         <div class="seleccion">
             <div>
                 <button class="forma_pago_efectivo">Pago en efectivo </button>
@@ -126,13 +125,19 @@
                 <button class="forma_pago_tarjeta">Pago con tarjeta</button>
             </div>
         </div>
+        <article class="confirmar_pedido_efectivo_c col-5">
+            <p>Desea confirmar el pedido</p>
+            <div>
+                <button onclick="confirmar_pago_si()"> Si </button>
+                <button onclick="confirmar_pago_efectivo_no()"> No </button>
+            </div>
+        </article>
     </section>
     <section class="direccion">
-        <p id="go_back_f_pago" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Cambiar sitio </p>
-        <article class="direccion_selccion col-8 col-t-8" >
+        <article class="direccion_selccion col-5 col-t-8" >
             <form >
                 <label> Introduzca su direción</label>
-                <input type="text" placeholder="Direccion">
+                <input type="text" id="dir" placeholder="Direccion">
             </form>
             <p>Su pedido puede tardar entre 15 y 30 minutos</p>
             <button> Realizar pago </button>
@@ -140,13 +145,12 @@
         </article>
     </section>
     <section class="pago_tarjeta">
-        <p id="go_back_direcion" class="go_back"> <img src="media/menu/flecha.svg" alt="flecha"> Dirección </p>
     	<article class="col-8 col-t-10 menu_card_div">
     		<h2>Pago Online</h2>
     		<form id="menu_card_form">
     			<label for="menu_card_name" class="menu_label">Titular de la tarjeta</label>
 				<div id="menu_card_owner_data">	
-					<input type="text" id="menu_card_name" placeholder="Nombre">
+					<input type="text" id="menu_card_name" placeholder="Nombre" >
 					<input type="text" id="menu_card_surname" placeholder="Apellido">
     			</div>
     			<label for="menu_card_number" class="menu_label">Número de tarjeta</label>
@@ -160,25 +164,27 @@
 					<input type="text" id="menu_card_cvv" placeholder="XXX">
     			</div>
     			<div id="menu_card_payment">
-					<p id="menu_card_price">Total</p>
+					<p id="menu_card_price">Total 0 €</p>
 					<button id="menu_card_confirm">Confirmar Pago</button>
     			</div>
                 <div class =></div>
     		</form>
     	</article>
-
+        <article class="confirmar_pedido_c col-5">
+            <p>Desea confirmar el pago</p>
+            <div>
+                <button onclick="confirmar_pago_si()"> Si </button>
+                <button onclick="confirmar_pago_no()"> No </button>
+            </div>
+        </article>
     </section>
-    <article class="confirmar_pedido_c col-5">
-        <p>Desea confirmar el pago</p>
-        <div>
-            <button onclick="confirmar_pago_si()"> Si </button>
-            <button onclick="confirmar_pago_no()"> No </button>
-        </div>
-    </article>
+
     <section class="espera_pedido">
-        <h2>Tu pedido esta hecho</h2>
-        <h2>Tiempo hasta la entrega:</h2>
-        <p id="timer"></p>
+        <article class="espera">
+            <h2>Tu pedido esta hecho</h2>
+            <h2>Tiempo hasta la entrega:</h2>
+            <p id="timer"></p>
+        </article>
     </section>
 
 </body>

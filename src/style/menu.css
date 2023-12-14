@@ -5,22 +5,23 @@
     grid-template-rows: 1fr 1fr;
     margin: auto;
     margin-top: 6vh;
-
     place-content: center;
     border-radius: 15px;
 }
 
+
 .progess_bar_button{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    gap: 5%;
-    margin-bottom: 10%;
-
+    gap: 20%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    text-decoration: underline;
 }
 .progess_bar button{
     background-color: transparent;
     border: none;
-    font-size: 0.8em;
+    font-size: 0.7em;
     text-align: center;
 }
 .progess_bar_line{
@@ -31,20 +32,23 @@
     top: 15%;
     margin-left: 5%;
 }
-.progess_bar_line2{
+.progess_bar_line_ordenador{
+    display: block;
     background: #7E4D29;
-    position: absolute;
-    height: 3%;
-    border-radius: 30px;
-    top: 15%;
-    margin-left: 5%;
 }
-
+.progess_bar_line_tablet{
+    display: none;
+    background: #7E4D29;
+}
+.progess_bar_line_movil{
+    display: none;
+    background: #7E4D29;
+}
 .menu_top{
     height: 20vh;
 }
 .menu_button{
-    height: 70vh;
+    height: 80vh;
 }
 
 .menu_choose{
@@ -59,7 +63,7 @@
     height: 15vh;
     width: 15vh;
     border: none;
-    font-size: 0.7em;
+    font-size: 0.65em;
 }
 
 .menu_choose button img{
@@ -82,6 +86,7 @@
     box-shadow: 0 10px 10px #757676;
     border-radius: 30px;
     height: auto;
+
 }
 
 .elem_img{
@@ -90,7 +95,10 @@
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 15px;
-    margin-top: 5%;
+    display: grid;
+    place-content: center;
+
+
 }
 .menu_elemt_right{
     float:right ;
@@ -242,7 +250,8 @@
 .go_back{
     position: absolute;
     left: 3vw;
-    top: 19vh
+    top: 17vh;
+    font-size: 0.7em;
 }
 .menu_alergies{
     background-color: #FFF8F4;
@@ -312,7 +321,6 @@
 
 }
 .basura{
-
     background-color: transparent;
     border: none;
 }
@@ -339,24 +347,25 @@
 }
 .revision_Total{
     position: absolute;
-    left: 41%;
+    left: 43%;
     bottom: 20%;
+    font-size: 1em;
 }
 .revision_final h1{
     text-align: center;
     margin-top: 5%;
-}
-.revision_final ul{
-    height: 50%;
-    margin: 5%;
+    padding-top:5% ;
 }
 .revision_list_food_select{
     height: 40vh;
     overflow-y: scroll;
+    margin: 5%;
 }
 .revision_list_food_select li{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
+    place-content: center;
+    text-align: center;
 }
 
 .seleccion{
@@ -425,8 +434,6 @@
     text-align: center;
 }
 
-
-
 .menu_card_div {
 	display: block;
 	position: relative;
@@ -453,8 +460,8 @@
 
 #menu_card_form {
 	display: grid;
-	grid-gap: 0%;
-	grid-template-rows: 1fr 0.8fr 1fr 0.8fr 1fr 0.8fr 2fr;
+	grid-gap: 0;
+	grid-template-rows: 1fr 0.8fr 1fr 0.8fr 1fr 0.8fr 3fr;
 }
 
 .menu_label {
@@ -536,7 +543,6 @@
 
 }
 .confirmar_pedido_c{
-    display: none;
     position: absolute;
     z-index: 3;
     background-color: #7E4D28;
@@ -546,12 +552,89 @@
     left: 25%;
     border-radius: 25px;
     box-shadow: 0 4px 4px black;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-content: center;
+}
+.confirmar_pedido_c p{
+    margin: auto;
+    color: white;
+    font-size: 0.8em;
+}
+.confirmar_pedido_c div  {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    place-content: center;
+    gap: 25%;
+    margin: auto;
+
+}
+.confirmar_pedido_c div button{
+    background-color: #F6EDE6;
+    height: 7vh;
+    width: 10vw;
+    border: none;
+    border-radius: 15px;
+    margin: auto;
+}
+
+
+.confirmar_pedido_efectivo_c{
+    position: absolute;
+    z-index: 3;
+    background-color: #7E4D28;
+    width: 50vw;
+    height: 40vh;
+    top: 30%;
+    left: 25%;
+    border-radius: 25px;
+    box-shadow: 0 4px 4px black;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-content: center;
+}
+.confirmar_pedido_efectivo_c p{
+    margin: auto;
+    color: white;
+    font-size: 0.8em;
+}
+.confirmar_pedido_efectivo_c div  {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    place-content: center;
+    gap: 25%;
+    margin: auto;
+}
+.confirmar_pedido_efectivo_c div button{
+    background-color: #F6EDE6;
+    height: 7vh;
+    width: 10vw;
+    border: none;
+    border-radius: 15px;
+    margin: auto;
+}
+.espera{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 @media screen and (max-width: 768px) {
-    .progess_bar{
-        width: 80vw;
+    .progess_bar_button{
+        gap: 0;
     }
+    .progess_bar_line_ordenador{
+        display: none;
+
+    }
+    .progess_bar_line_tablet{
+        display: block;
+    }
+    .progess_bar_line_movil{
+        display: none;
+    }
+
     .menu_alergies{
         display: none;
         position: absolute;
@@ -560,10 +643,7 @@
         left: 20%;
     }
 
-    .menu_choose button{
-        font-size: 0.7em;
 
-    }
     .menu_choose button img{
         height: 40%;
     }
@@ -579,7 +659,10 @@
         place-items: center;
         margin: auto;
         top: 0;
-
+        margin-left: 11vw;
+    }
+    .revision_list_food_select {
+        height: auto;
     }
     .revision_platos li img{
         height: 13vh;
@@ -591,19 +674,37 @@
     .seleccion div{
         height: 20vh;
     }
+    .menu_cuantity{
+        right: 5%;
+    }
 
 }
 
 @media screen and (max-width: 600px) {
     .progess_bar {
-        width: 90vw;
+        width: 70vw;
+        height: 15vh;
     }
     .progess_bar_button{
+        margin-top:  5%;
         font-size: 0.8em;
+        gap:0;
     }
     .progess_bar_line{
-        width: 60%;
+        width: 67vw;
+        margin-left: 2%;
     }
+    .progess_bar_line_ordenador{
+        display: none;
+
+    }
+    .progess_bar_line_tablet{
+        display: none;
+    }
+    .progess_bar_line_movil{
+        display: block;
+    }
+
     .menu_alergies{
         display: none;
         position: absolute;
@@ -612,29 +713,40 @@
         left: 20%;
     }
     .menu_choose{
-        width: 70vw;
+        width: 60vw;
     }
     .menu_choose button{
-
-        height: 14vh;
-        width: 14vh;
+        height: 13.5vh;
+        width: 13.5vh;
         border-radius: 25px;
     }
     .menu_choose button img{
         height: 35%;
 
     }
+    .menu_cuantity{
+        right: 3%;
+
+    }
     .menu_dish{
         grid-template-columns: repeat(1, 1fr);
         width: 70%;
     }
+    .elem_img{
+        width: 40%;
+    }
+    .titulo{
+        font-size: 0.65em;
+    }
     .revision_platos{
         height: auto;
-        width: 80%;
+        width: 80vw;
+        margin-left: 5vw;
 
     }
     .revision_platos li img{
         height: 10vh;
+
     }
     .revision_platos li  div:nth-child(2){
         font-size: 0.8em;
@@ -651,7 +763,14 @@
         place-items: center;
         margin: auto;
         top: 0;
-        width: 80%;
+        width: 80vw;
+        margin-left: 15vw;
+    }
+    .revision_final ul{
+        height: auto;
+    }
+    .revision_list_food_select{
+        height: auto;
     }
     .seleccion{
 
@@ -667,6 +786,10 @@
     .menu_card_div{
         width: 90vw;
     }
-
+    .cesta{
+        width: 8%;
+        height: 8%;
+        top:11%
+    }
 
 }
