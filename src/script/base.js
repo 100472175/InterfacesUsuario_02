@@ -1,14 +1,25 @@
 //Funciones del menú de hamburguesa
 function menu_h() {
 	var transform = document.getElementById("menu_h").style.transform;
-	if (transform == "scaleY(0)" || transform == "") {display_menu();}
+	if (transform == "scaleY(0)" || transform == "") {display_menu(); fold();}
 	else {close_menu();}
 }
 
 function display_menu (){
+	console.log(window.innerWidth)
 	document.getElementById('menu_h').style.transform = "scaleY(1)";
-	if (window.innerWidth <= 768) {document.getElementById('menu_h').style.width = "35vw";}
-	else {document.getElementById('menu_h').style.width = "23.5vw"}
+	document.getElementById('menu_h').style.width = "23.5vw";
+	document.getElementById('unfolding_specialities').style.width = "13vw";
+	document.getElementById('unfolding_about_us').style.width = "13vw";
+	if (window.innerWidth <= 768) {
+		document.getElementById('menu_h').style.width = "50vw";
+		document.getElementById('unfolding_specialities').style.width = "15vw";
+		document.getElementById('unfolding_about_us').style.width = "15vw";
+		}
+	if (window.innerWidth <= 600) {
+		document.getElementById('unfolding_specialities').style.width = "30vw";
+		document.getElementById('unfolding_about_us').style.width = "30vw";
+	}
 }
 
 function close_menu (){
@@ -16,6 +27,12 @@ function close_menu (){
 	document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
 	document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 	fold();
+}
+
+function hamburguer_close() {
+	document.getElementById('menu_h').style.transform = "scaleY(0)";
+	document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
+	document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 }
 
 function fold (){
@@ -26,8 +43,12 @@ function fold (){
 function display_unfolding_s (){
 	unfold_specialities = document.getElementById('unfolding_specialities');
 	document.getElementById('unfolding_about_us').style.display = "none";
-	if (window.innerWidth > 768) {unfold_specialities.style.marginLeft = "45vw"}
-	else {unfold_specialities.style.marginLeft = "32.5vw"}	
+	unfold_specialities.style.width = "13vw";
+	unfold_specialities.style.marginLeft = "45vw";
+	if (window.innerWidth <= 768) {
+		unfold_specialities.style.marginLeft = "35vw"
+		unfold_specialities.style.width = "15vw";
+	}
 	if (unfold_specialities.style.top != "5%"){
 		unfold_specialities.style.top = "5%";
 		unfold_specialities.style.display="grid";
@@ -40,6 +61,7 @@ function display_unfolding_s (){
 		}
 		else {
 			unfold_specialities.style.display = "grid";
+			unfold_specialities.style.width = "13vw";
 			document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
 			document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 		}
@@ -50,7 +72,7 @@ function display_unfolding_s_h (){
 	unfold_specialities = document.getElementById('unfolding_specialities');
 	document.getElementById('unfolding_about_us').style.display = "none";	
 	if (unfold_specialities.style.top != "19%"){
-		if (window.innerWidth <= 768) {unfold_specialities.style.marginLeft = "35vw";}
+		if (window.innerWidth <= 768) {unfold_specialities.style.marginLeft = "50vw";}
 		else {unfold_specialities.style.marginLeft = "23.5vw";}
 		unfold_specialities.style.top = "19%";
 		unfold_specialities.style.display="grid";
@@ -63,7 +85,7 @@ function display_unfolding_s_h (){
 			document.getElementById('menu_h_specialities').style.backgroundColor = "#7E4D28";
 		}
 		else {
-			if (window.innerWidth <= 768) {unfold_specialities.style.marginLeft = "35vw";}
+			if (window.innerWidth <= 768) {unfold_specialities.style.marginLeft = "50vw";}
 			else {unfold_specialities.style.marginLeft = "23.5vw";}
 			unfold_specialities.style.display = "grid";
 			document.getElementById('menu_h_specialities').style.backgroundColor = "#C48152";
@@ -75,8 +97,12 @@ function display_unfolding_s_h (){
 function display_unfolding_a (){
 	unfold_about_us = document.getElementById('unfolding_about_us');
 	document.getElementById('unfolding_specialities').style.display = "none";
-	if (window.innerWidth > 768) {unfold_about_us.style.marginLeft = "67vw"}
-	else {unfold_about_us.style.marginLeft = "58vw"}
+	unfold_about_us.style.width = "13vw";
+	unfold_about_us.style.marginLeft = "67vw";
+	if (window.innerWidth <= 768) {
+		unfold_about_us.style.marginLeft = "61vw"
+		unfold_about_us.style.width = "15vw";
+	}
 	if (unfold_about_us.style.top != "5%") {
 		unfold_about_us.style.top = "5%";
 		unfold_about_us.style.display="grid";
@@ -99,7 +125,7 @@ function display_unfolding_a_h (){
 	unfold_about_us = document.getElementById('unfolding_about_us');
 	document.getElementById('unfolding_specialities').style.display = "none";
 	if (unfold_about_us.style.top != "32.5%") {
-		if (window.innerWidth <= 768) {unfold_about_us.style.marginLeft="35vw";}
+		if (window.innerWidth <= 768) {unfold_about_us.style.marginLeft="50vw";}
 		else {unfold_about_us.style.marginLeft = "23.5vw";}
 		unfold_about_us.style.top = "32.5%";
 		unfold_about_us.style.display="grid";
@@ -112,7 +138,7 @@ function display_unfolding_a_h (){
 			document.getElementById('menu_h_about_us').style.backgroundColor = "#7E4D28";
 		}
 		else {
-			if (window.innerWidth <= 768) {unfold_about_us.style.marginLeft="35vw";}
+			if (window.innerWidth <= 768) {unfold_about_us.style.marginLeft="50vw";}
 			else {unfold_about_us.style.marginLeft = "23.5vw";}
 			unfold_about_us.style.display = "grid";
 			document.getElementById('menu_h_about_us').style.backgroundColor = "#C48152";
@@ -175,7 +201,9 @@ function load() {
 	for (i = 0; i < labels.length; i++) {labels[i].addEventListener("click", close_menu);}
 	let buttons = document.getElementsByTagName('button');
 	for (i = 0; i < buttons.length; i++) {if (buttons[i].id != "open_menu_h") {buttons[i].addEventListener("click", close_menu);}}
+	let anchors = document.getElementById("header").getElementsByTagName('a');
+	for (i = 0; i < anchors.length; i++) {anchors[i].addEventListener("click", hamburguer_close);}
 	window.addEventListener("resize", close_menu);
 }
 
-document.addEventListener("DOMContentLoaded", load, false);
+document.addEventListener("DOMContentLoaded", load, false);close_menu
