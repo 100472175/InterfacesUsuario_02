@@ -10,15 +10,15 @@ section {
 .front_page{
     background-image: url("../media/landing/portada.jpg");
     background-size: cover;
+    background-position: center;
 }
 
 .front_page nav{
     background-color: #7E4D29;
     text-align: center;
-    margin-left: 42vw;
-    margin-top: 5vh;
+    margin: 5vh auto;
     height: 6vh;
-    width: 16vw;
+    width: 12vw;
 }
 .front_page nav a{
     text-decoration: None;
@@ -36,6 +36,7 @@ section {
 .coffee{
     background-image: url("../media/landing/coffee_fondo.png");
     background-size: cover;
+    background-position: center;
 }
 
 .beverages{
@@ -45,25 +46,27 @@ section {
 .delicatessen{
     background-image: url("../media/landing/delicatessen.jpg");
     background-size: cover;
+    background-position: center;
 }
 
 .reposteria{
     background-image: url("../media/landing/donuts.jpg");
     background-size: cover;
+    background-position: center;
 }
 
 .history{
     background-image: url("../media/landing/historia_fondo.png");
     background-size: cover;
+    background-position: right;
 }
 
 .intro{
     background-color: #F6EDE6;
     border-radius: 3vh;
-    height: 60vh;
-    width: 50vw;
-    margin-top: 20vh;
-    margin-left: 25vw;
+    height: auto;
+    padding: 3vh;
+    margin: 20vh auto;
 }
 
 .intro h3{
@@ -81,10 +84,9 @@ section {
 .intro nav{
     background-color: #7E4D29;
     text-align: center;
-    margin-left: 17vw;
-    margin-top: 7vh;
+    margin: 2vh auto;
     height: 6vh;
-    width: 16vw;
+    width: 70%;
     border-radius: 5vh;
 }
 
@@ -101,7 +103,7 @@ section {
     width: 40vw;
     margin-top: 20vh;
     margin-left: 30vw;
-    box-shadow: 0 4px 4px #7E4D29;
+    box-shadow: 0 4px 4px rgb(170,170,170);
 }
 
 .intro.bebidas h3{
@@ -110,10 +112,6 @@ section {
 
 .intro.bebidas p{
     font-size: 1.5rem;
-}
-
-.intro.bebidas nav{
-    margin-left: 12vw;
 }
 
 #batido1{
@@ -160,10 +158,6 @@ section {
     margin-top: 14vh;
 }
 
-.intro.tartas nav{
-    margin-left: 12vw;
-}
-
 #tarta{
     position: absolute;
     z-index: 0;
@@ -180,25 +174,20 @@ section {
     border-radius: 0;
     border: black solid 1px;
     rotate: -10deg;
-    height: 70vh;
-    width: 33vw;
+    height: auto;
     margin-left: 15vw;
-    margin-top: 14vh;
+    margin-top: 0;
+    padding-bottom: 5vh;
     background-color: white;
     position: absolute;
 }
 
 .intro.historia img{
     height: auto;
-    width: 30vw;
+    width: 90%;
     margin-top: 2.5vh;
-    margin-left: 1.5vw;
+    margin-left: 5%;
     border: black solid 1px;
-}
-
-.intro.historia nav {
-    margin-left: 8.5vw;
-    margin-top: 2.5vh;
 }
 
 .history h3{
@@ -225,13 +214,13 @@ section {
     font-size: 1.25rem;
     border: None;
     border-radius: 50%;
-    height: 5vh;
-    width: 5vh;
+    height: 7vh;
+    width: 7vh;
     margin-left: 10%;
 }
 
 .next {
-    margin-left: 70%;
+    margin-left: 73%;
 }
 
 .galery h3{
@@ -243,7 +232,6 @@ section {
     background-color: #7E4D29;
     text-align: center;
     margin-left: 42vw;
-    margin-top: 7vh;
     height: 6vh;
     width: 16vw;
     border-radius: 10px 10px 10px 10px;
@@ -266,7 +254,7 @@ section {
 }
 
 .contactos{
-    margin-top: 15vh;
+    margin-top: 13vh;
     margin-left: 15vw;
     display:inline-block;
 }
@@ -309,7 +297,7 @@ section {
 }
 
 footer{
-    margin-top: 16.3vh;
+    margin-top: 17.9vh;
     background-color: #7E4D29;
     height: 34vh;
 }
@@ -344,4 +332,189 @@ footer a{
 
 .a_externo{
     padding-bottom: 19.5vh;
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .front_page img{
+        content: url("../media/logo/logo_movil.png");
+        width: 80%;
+        margin-top: 30vh;
+        margin-left: 10%;
+        margin-bottom: 5vh;
+    }
+
+    .front_page nav{
+        width: 50%;
+        padding-top: 0.5vh;
+    }
+
+    .intro{
+        width: 80%;
+    }
+
+    .intro p{
+        margin:2vh;
+        font-size: 1.4rem;
+    }
+
+    .intro h3{
+        font-size: 2rem;
+    }
+
+    .coffee{
+        height: auto;
+    }
+
+    .intro.bebidas{
+        width: 80%;
+        margin: 10vh auto;
+        position: static;
+        height: auto;
+    }
+
+    #batido1, #batido2{
+        display: none;
+    }
+
+    .reposteria{
+        height: auto;
+    }
+
+    .delicatessen{
+        height: auto;
+    }
+
+    .intro.tartas{
+        width: 90%;
+        margin: 20vh auto;
+        position: static;
+        height: 55vh;
+    }
+
+    .intro.tartas h3{
+        margin:5vh;
+    }
+
+    .intro.tartas p{
+        font-size: 1.6rem;
+    }
+
+    #tarta{
+        display: none;
+    }
+
+    .history{
+        height: auto;
+    }
+
+    .intro.historia{
+        position: static;
+        margin: 5vh auto;
+    }
+
+    .history h3{
+        position: static;
+        text-align: center;
+    }
+
+    .next{
+        margin-left: 55%;
+    }
+
+    .galery{
+        height: auto;
+    }
+
+    .galery nav{
+        width: 40vw;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .contact{
+        height: auto;
+    }
+
+    .contactos{
+        margin-top: 3vh;
+        margin-left: 8vw;
+        display:inline-block;
+        font-size: 1.5rem;
+    }
+
+    .contactos p{
+        font-size: 1rem;
+    }
+
+    .contactos img{
+        width: 5vw;
+        height: auto;
+        margin-top: 1vh;
+    }
+
+    .subscribe{
+        margin-left: 6vw;
+        height: auto;
+        padding-bottom: 1vh;
+    }
+
+    .subscribe input{
+        font-size: 1.2rem;
+        width: auto;
+        height: 8vh;
+        margin-top: 2vh;
+        margin-left: 6vw;
+    }
+
+    .subscribe button{
+        padding: 2vh 5vw 2vh 5vw;
+        margin-top: 2vh;
+        font-size: 1.1rem;
+        height: auto;
+        width: auto;
+        margin-left: 6vw;
+    }
+
+    footer{
+        margin-top: 2vh;
+        text-align: center;
+        height:auto;
+    }
+
+    footer img{
+        margin-bottom: 0;
+        padding-left: 0;
+        margin-top: 1vh;
+    }
+
+    footer div a{
+        display: none;
+    }
+
+    footer div{
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .navegador{
+        display: initial;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .nosotros{
+        padding: 0;
+    }
+
+    .a_externo{
+        padding: 0;
+        font-size: 1.2rem;
+        text-align: center;
+    }
 }

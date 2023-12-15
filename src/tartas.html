@@ -3,6 +3,7 @@
 <head>
     <title>Tartas - Cafe Florencia</title>
     <link rel="icon" href="./media/logo/logo_icono.png">
+    <meta name="viewport" content="width=device-width">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style/base.css">
     <link rel="stylesheet" href="./style/tartas.css">
@@ -10,11 +11,11 @@
 </head>
 <body>
 <header class="main_header">
-    <nav>
+    <nav id="header">
         <button id="open_menu_h"></button>
         <a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
         <a class="main_header_link" id="menu_specialities">Especialidades</a>
-        <a href="menu.html" class="main_header_link" id="menu_menu" onclick="check_login()">Menu</a>
+        <a class="main_header_link" id="menu_menu" onclick="check_login()">Menu</a>
         <a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
         <a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
         <a href="login.html" class="main_header_link" id="menu_register">Registro</a>
@@ -31,13 +32,12 @@
         <a href="cafe.html">Café</a>
         <a href="bebidas_dulces.html">Bebidas dulces</a>
         <a href="delicatessen.html">Delicatessen</a>
-        <a href="reposteria.html">Repostería</a>
         <a href="tartas.html">Tartas</a>
+        <a href="reposteria.html">Repostería</a>
     </div>
     <div id="unfolding_about_us">
         <a href="historia.html">Historia</a>
         <a href="galeria.html">Galería</a>
-        <a href="contactos.html">Contacto</a>
     </div>
 </header>
 <section id="tartas">
