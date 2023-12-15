@@ -1,3 +1,4 @@
+// Lista de los productos disponibles
 let platos = [
         {id: 1,
         nombre: 'Cafe con leche',
@@ -299,8 +300,11 @@ let platos = [
     },
 ];
 
-// Lista de los productos disponibles
+//Variables que obtienen las clases de los json
+
 let body =document.querySelector("body");
+
+//Barra de progreso
 let step_1 = document.querySelector("#step_1");
 let step_2 = document.querySelector("#step_2");
 let step_3 = document.querySelector("#step_3");
@@ -310,6 +314,7 @@ let barra_progreso_tablet = document.querySelector(".progess_bar_line_tablet");
 let barra_progreso_movil = document.querySelector(".progess_bar_line_movil");
 let barra_progreso_cuadro = document.querySelector(".progess_bar");
 
+//Selección  de menu
 let menu = document.querySelector("#menu");
 let cafe = document.querySelector("#menu_coffe");
 let bebidas = document.querySelector("#menu_sweet_drinks");
@@ -319,11 +324,7 @@ let reposteria = document.querySelector("#menu_bakery");
 let go_back_inicio = document.querySelector("#go_back_inicio");
 
 
-let go_back_menu = document.querySelector("#go_back_menu");
-let go_back_revisar = document.querySelector("#go_back_revisar");
-let go_back_sitio = document.querySelector("#go_back_sitio");
-let go_back_f_pago = document.querySelector("#go_back_f_pago");
-let go_back_direccion = document.querySelector("#go_back_direcion");
+
 let lista = document.querySelector(".menu_dish");
 let cesta = document.querySelector(".cesta");
 let equis = document.querySelector(".menu_cerrar_compra");
@@ -373,6 +374,9 @@ let dir  = document.querySelector("#dir");
 let precio_total  = 0;
 let f = 0;
 
+//Funciones que se activan a al hacer click
+
+//Cuando se carga la paguina va menu
 window.addEventListener('load', () => {
     /*Seleccion menu de cafes*/
     bebidas.style.background = 'transparent'
@@ -392,8 +396,60 @@ window.addEventListener('load', () => {
     barra_progreso_movil.style.width ='18vw'
     barra_progreso_tablet.style.width ='14vw'
     pago_tarjeta.style.display = 'none'
+    menu_alergies.style.display = 'none'
     initApp(0);
 })
+
+/*Seleccion de distintos menus*/
+cafe.addEventListener('click', () =>{
+    cafe.style.background = '#E6CDBA'
+    bebidas.style.background = 'transparent'
+    tartas.style.background = 'transparent'
+    reposteria.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    menu_select = 1;
+    initApp(0)
+
+})
+bebidas.addEventListener('click', () =>{
+    cafe.style.background = 'transparent'
+    bebidas.style.background = '#E6CDBA'
+    tartas.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    menu_select = 2;
+    initApp(6)
+
+})
+delicatessen.addEventListener('click', () =>{
+    cafe.style.background = 'transparent'
+    bebidas.style.background = 'transparent'
+    tartas.style.background = 'transparent'
+    delicatessen.style.background = '#E6CDBA'
+    reposteria.style.background = 'transparent'
+    menu_select = 3;
+    initApp(12)
+})
+tartas.addEventListener('click', () =>{
+    bebidas.style.background = 'transparent'
+    cafe.style.background = 'transparent'
+    tartas.style.background = '#E6CDBA'
+    delicatessen.style.background = 'transparent'
+    reposteria.style.background = 'transparent'
+    menu_select = 4;
+    initApp(18)
+})
+
+reposteria.addEventListener('click', () =>{
+    bebidas.style.background = 'transparent'
+    cafe.style.background = 'transparent'
+    tartas.style.background = 'transparent'
+    delicatessen.style.background = 'transparent'
+    reposteria.style.background = '#E6CDBA'
+    menu_select = 5;
+    initApp(24)
+})
+
 
 /*Selección del alergeno que no quieres que aparezca*/
 tick1.addEventListener('click', () =>{
@@ -447,55 +503,7 @@ tick4.addEventListener('click', () =>{
 
 })
 
-/*Seleccion de distintos menus*/
-cafe.addEventListener('click', () =>{
-    cafe.style.background = '#E6CDBA'
-    bebidas.style.background = 'transparent'
-    tartas.style.background = 'transparent'
-    reposteria.style.background = 'transparent'
-    delicatessen.style.background = 'transparent'
-    menu_select = 1;
-    initApp(0)
-
-})
-bebidas.addEventListener('click', () =>{
-    cafe.style.background = 'transparent'
-    bebidas.style.background = '#E6CDBA'
-    tartas.style.background = 'transparent'
-    delicatessen.style.background = 'transparent'
-    delicatessen.style.background = 'transparent'
-    menu_select = 2;
-    initApp(6)
-
-})
-delicatessen.addEventListener('click', () =>{
-    cafe.style.background = 'transparent'
-    bebidas.style.background = 'transparent'
-    tartas.style.background = 'transparent'
-    delicatessen.style.background = '#E6CDBA'
-    reposteria.style.background = 'transparent'
-    menu_select = 3;
-    initApp(12)
-})
-tartas.addEventListener('click', () =>{
-    bebidas.style.background = 'transparent'
-    cafe.style.background = 'transparent'
-    tartas.style.background = '#E6CDBA'
-    delicatessen.style.background = 'transparent'
-    reposteria.style.background = 'transparent'
-    menu_select = 4;
-    initApp(18)
-})
-
-reposteria.addEventListener('click', () =>{
-    bebidas.style.background = 'transparent'
-    cafe.style.background = 'transparent'
-    tartas.style.background = 'transparent'
-    delicatessen.style.background = 'transparent'
-    reposteria.style.background = '#E6CDBA'
-    menu_select = 5;
-    initApp(24)
-})
+//Función para saber que alergenos tiene cada plato
 saber_mas.addEventListener('click', () => {
     if (saber_mas_select === 0) {
         if (menu_select === 1) {
@@ -525,12 +533,20 @@ saber_mas.addEventListener('click', () => {
         saber_mas_select = 0;
     }
 })
+
+//Función que vuelve a la paguina de inicio
+go_back_inicio.addEventListener('click' ,() =>{
+    window.location.href= "landing.html"
+})
+//Funciones para abrir y cerrar  la cesta y ver los platos
 cesta.addEventListener('click', () => {
     menu_carrito.style.display = 'block'
 })
 equis.addEventListener('click', () => {
     menu_carrito.style.display = 'none'
 })
+
+//Funion para abrir y cerrar el despegable donde se eligen los alergenos
 filtro.addEventListener('click', () => {
     if (f === 0){
         menu_alergies.style.display = 'block'
@@ -542,13 +558,11 @@ filtro.addEventListener('click', () => {
     }
 })
 menu_cerrar_filtro.addEventListener('click', () => {
-        if (f === 1){
-            menu_alergies.style.display = 'none'
-            f = 0;
-        }
+        menu_alergies.style.display = 'none'
+        f = 0;
 })
 
-
+//Metodo que llama a la función que cambia al primer paso del menu que es selcionar los platos
 step_1.addEventListener('click', () => {
     if (posicion_bar_progreso !== 6){
         cambiar_a_select_menu();
@@ -557,6 +571,8 @@ step_1.addEventListener('click', () => {
         global_error_message(1, "Ya he hecho el pedido no puedo volver atras", menu);
     }
 })
+
+//Metodos que llama a la función que pasa a revisar el pedido
 menu_button_chek.addEventListener('click',() =>{
     if (cantidad.textContent === "0") {
         global_error_message(1, "No ha seleccionado ningún elemento", menu);
@@ -565,6 +581,7 @@ menu_button_chek.addEventListener('click',() =>{
         cambiar_a_revision_pedido();
     }
 })
+
 step_2.addEventListener('click', () => {
     if (posicion_bar_progreso === 6) {
         global_error_message(1, "Ya he hecho el pedido no puedo volver atras", menu);
@@ -575,8 +592,9 @@ step_2.addEventListener('click', () => {
     else {
         cambiar_a_revision_pedido();
     }
-
 })
+
+//Metodo que llama a la función que pasa a elegir el sitio donde se va ha recivir el producto va después de la recisón del pedido
 revison_button_chek.addEventListener('click',() =>{
     if (revision_total.textContent === "Total 0 €") {
         global_error_message(1, "No ha seleccionado ningún elemento", revisar_pedido);
@@ -599,6 +617,7 @@ step_3.addEventListener('click', () =>{
     }
 })
 
+//Metodo que llama al paso de de confirmación del pedido
 step_4.addEventListener('click', () =>{
     if (posicion_bar_progreso === 0 ) {
         global_error_message(1, "Primero hay que revisar el pedido", menu);
@@ -608,6 +627,7 @@ step_4.addEventListener('click', () =>{
     }
 })
 
+//Metodos que llaman a la función de ir a forma de pago
 sitio_pago_tienda.addEventListener('click',() =>{
     cambiar_a_forma_pago()
 })
@@ -615,9 +635,11 @@ sitio_pago_domicilio.addEventListener('click',() =>{
     cambiar_a_forma_pago();
 })
 
+//Metodoq que llama a la función de ir a la paguina donde se introduce la dirección
 forma_pago_tarjeta.addEventListener('click',() =>{
     cambiar_a_direccion();
 })
+//Función que activa lel div de confirmación del pedido  en efectivo
 forma_pago_efectivo.addEventListener('click',() =>{
     confirmar_pedido_efectivo_c.style.display = 'grid'
 })
@@ -632,16 +654,15 @@ direccion_seleccion.addEventListener('click',() =>{
     }
     */
 })
+
+//Función que activa lel div de confirmación del pedido por tarjeta
 menu_card_confirm.addEventListener('click', () =>{
     if (check_card_form() === true) {
         confirmar_pedido_c.style.display = 'grid'
     }
 })
-go_back_inicio.addEventListener('click' ,() =>{
-    window.location.href= "landing.html"
-})
 
-
+//Función que va a la seleción del menu
 function cambiar_a_select_menu() {
     barra_progreso_cuadro.style.backgroundColor ='#FFFBF8'
     menu.style.display = 'block'
@@ -659,6 +680,7 @@ function cambiar_a_select_menu() {
     posicion_bar_progreso = 0;
     initApp(0);
 }
+//Función que va a la pàgina de revisión del pedido
 function cambiar_a_revision_pedido() {
     barra_progreso_cuadro.style.backgroundColor ='#FFFBF8'
     menu.style.display = 'none'
@@ -675,7 +697,7 @@ function cambiar_a_revision_pedido() {
     posicion_bar_progreso = 1;
     mostarElemento()
 }
-
+//Función que va a la pàgina donde se elige el sitio de pago
 function cambiar_a_sitio_pago() {
     barra_progreso_cuadro.style.backgroundColor ='#F6EDE6'
     menu.style.display = 'none'
@@ -692,6 +714,7 @@ function cambiar_a_sitio_pago() {
     body.style.backgroundSize = 'cover'
     posicion_bar_progreso = 2;
 }
+//Función que va a la pàgina donde se elige la forma de pago
 function cambiar_a_forma_pago() {
     barra_progreso_cuadro.style.backgroundColor =' #F6EDE6'
     menu.style.display = 'none'
@@ -709,6 +732,7 @@ function cambiar_a_forma_pago() {
     confirmar_pedido_efectivo_c.style.display = 'none'
     posicion_bar_progreso = 3;
 }
+//Función que va a la pàgina donde se introduce la dirección del pedido
 function cambiar_a_direccion() {
     barra_progreso_cuadro.style.backgroundColor =' #F6EDE6'
     menu.style.display = 'none'
@@ -724,6 +748,7 @@ function cambiar_a_direccion() {
     body.style.backgroundImage = "url(media/menu/fondo_direccion.webp)"
     posicion_bar_progreso = 4;
 }
+//Función que va a la pàgina donde se introduce la tarjeta para pagar
 function cambiar_a_tarjeta() {
     barra_progreso_cuadro.style.backgroundColor =' #F6EDE6'
     menu.style.display = 'none'
@@ -742,6 +767,7 @@ function cambiar_a_tarjeta() {
     menu_card_price.innerText = "Total ".concat(precio_total.toLocaleString()).concat(' €');precio_total
     posicion_bar_progreso = 5;
 }
+//Función que va a la pàgina donde se ve el tiempo que le queda al pedido
 function cambiar_a_espera_pedido() {
     barra_progreso_cuadro.style.backgroundColor ='#FFFBF8'
     menu.style.display = 'none'
@@ -758,6 +784,8 @@ function cambiar_a_espera_pedido() {
     posicion_bar_progreso = 6;
     setInterval(startTimer,1000);
 }
+
+//Función que genera los platos disponibles en cada menu
 function initApp(st_elem) {
     while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
@@ -789,6 +817,7 @@ function initApp(st_elem) {
     recargaElemento();
 }
 
+//Función que genera los platos disponibles en cada menu con sus alergenos
 function initApp2(st_elem) {
     while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
@@ -823,7 +852,7 @@ function initApp2(st_elem) {
 }
 
 
-// Función para recargar el carrito
+// Función para mustrar en el carrito los platos selccionados
 function recargaElemento() {
     lista_platos_selecionados.innerHTML ='';
     let cuenta = 0;
@@ -850,6 +879,7 @@ function recargaElemento() {
     cantidad.innerText = cuenta;
 }
 
+//Función que muestar en revisar pedido los platos selcionados
 function mostarElemento() {
     lista_revision.innerHTML ='';
     let prods = Array.from(platos);
@@ -872,6 +902,7 @@ function mostarElemento() {
         revisfinal()
     })
 }
+//Función que hace un resumen del pedido en revisón pedido
 function revisfinal() {
     lista_platos_selecionados_revision.innerHTML ='';
     let precioTotal = 0;
@@ -893,6 +924,7 @@ function revisfinal() {
     precio_total = precioTotal;
 }
 
+//Función para cambiar entre menus y saber en cual se esta en el paso anterior
 function saber_menu() {
     if (saber_mas_select === 1) {
         if (menu_select === 1) {
@@ -919,9 +951,9 @@ function saber_menu() {
             initApp(24);
         }
     }
-
 }
 
+//Funciones para aumentar y disminuir la cantidad de los platos
 function cambiarCantidad_suma(key){
     let encontrado = 0;
     let i = 0;
@@ -1006,7 +1038,7 @@ function cambiarCantidad_resta_m(key){
     mostarElemento()
 }
 
-
+//Funiones para hacer las confirmaciones de la tarjeta
 function check_card_form() {
 	event.preventDefault();
 	let name_input = document.getElementById('menu_card_name');
@@ -1104,6 +1136,8 @@ function startTimer() {
     }
     timerElement.textContent = minutos + ':' + segundos;
 }
+
+//Funciones para confirmar al pago
 function confirmar_pago_si(){
     global_error_message(1, "Su pago a sido realizado con exito");
     cambiar_a_espera_pedido();

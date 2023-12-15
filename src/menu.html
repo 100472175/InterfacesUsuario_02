@@ -1,193 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="stylesheet" href="style/base.css">
-    <link rel="stylesheet" href="style/menu.css">
-    <script src="./script/base.js"></script>
-</head>
-<body>
-    <header class="main_header">
-        <nav id="header">
-            <button id="open_menu_h"></button>
-            <a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
-            <a class="main_header_link" id="menu_specialities">Especialidades</a>
-            <a class="main_header_link" id="menu_menu" onclick="check_login()">Menu</a>
-            <a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
-            <a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
-            <a href="login.html" class="main_header_link" id="menu_register">Registro</a>
-        </nav>
-        <aside id="menu_h">
-            <a id="logo_h" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
-            <a id="menu_h_specialities">Especialidades<br></a>
-            <a id="menu_h_menu" href="menu.html" onclick="check_login()">Menu<br></a>
-            <a id="menu_h_about_us">Sobre Nosotros<br></a>
-            <a href="reservas.html">Reserva<br></a>
-            <a href="login.html">Registro</a>
-        </aside>
-        <div id="unfolding_specialities">
-            <a href="cafe.html">Café</a>
-            <a href="bebidas_dulces.html">Bebidas dulces</a>
-            <a href="delicatessen.html">Delicatessen</a>
-            <a href="tartas.html">Tartas</a>
-            <a href="reposteria.html">Repostería</a>
-        </div>
-        <div id="unfolding_about_us">
-            <a href="historia.html">Historia</a>
-            <a href="galeria.html">Galería</a>
-        </div>
-    </header>
-	<div id="error_div">
-		<p id="error_p"></p>
-		<button id="error_button" onclick="global_error_message(0)">Aceptar</button>
-	</div>
-    <div class="progess_bar col-7 col-t-8" >
-        <nav class="progess_bar_button  ">
-            <button id="step_1">Menu</button>
-            <button id="step_2">Revision Pedido</button>
-            <button id="step_3">Pago</button>
-            <button id="step_4">Confirmacion</button>
-        </nav>
-        <div class="progess_bar_line col-6 col-t-7" ></div>
-        <div class=" progess_bar_line progess_bar_line_ordenador"></div>
-        <div class="progess_bar_line progess_bar_line_tablet"></div>
-        <div class="progess_bar_line progess_bar_line_movil" ></div>
-    </div>
-
-    <section id="menu" >
-        <div class="filtro"><img src="media/menu/filtrar.png" alt="Filtro"></div>
-        <article class="menu_top">
-            <p id="go_back_inicio" class="go_back"><img src="media/menu/flecha.svg" alt="flecha"> Inicio</p>
-            <nav class="menu_choose col-6 col-t-6">
-                <button id="menu_coffe"><img src="media/menu/taza-de-cafe.svg" alt="Cafe"><br>Cafe</button>
-                <button id="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Bebidas"><br>Bebidas</button>
-                <button id="menu_delicatessen"><img src="media/menu/macarron.svg" alt="macarrons"><br>Delicatessen</button>
-                <button id="menu_cakes"><img src="media/menu/porcion-de-tarta.svg" alt="tarta"><br>Tartas</button>
-                <button id="menu_bakery"><img src="media/menu/tortitas.svg" alt="reposteri"><br>Reposteria</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu</title>
+        <link rel="stylesheet" href="style/base.css">
+        <link rel="stylesheet" href="style/menu.css">
+        <script src="./script/base.js"></script>
+    </head>
+    <body>
+        <!-- Header y menu hamburgesa-->
+        <header class="main_header">
+            <nav id="header">
+                <button id="open_menu_h"></button>
+                <a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
+                <a class="main_header_link" id="menu_specialities">Especialidades</a>
+                <a class="main_header_link" id="menu_menu" onclick="check_login()">Menu</a>
+                <a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
+                <a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
+                <a href="login.html" class="main_header_link" id="menu_register">Registro</a>
             </nav>
-
-            <div class="menu_car col-1">
-                <img class="cesta" src="media/menu/carrito-de-compra.svg" alt="Cesta">
-                <span class="menu_cuantity"> </span>
+            <aside id="menu_h">
+                <a id="logo_h" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
+                <a id="menu_h_specialities">Especialidades<br></a>
+                <a id="menu_h_menu" href="menu.html" onclick="check_login()">Menu<br></a>
+                <a id="menu_h_about_us">Sobre Nosotros<br></a>
+                <a href="reservas.html">Reserva<br></a>
+                <a href="login.html">Registro</a>
+            </aside>
+            <div id="unfolding_specialities">
+                <a href="cafe.html">Café</a>
+                <a href="bebidas_dulces.html">Bebidas dulces</a>
+                <a href="delicatessen.html">Delicatessen</a>
+                <a href="tartas.html">Tartas</a>
+                <a href="reposteria.html">Repostería</a>
             </div>
-        </article>
-        <article class="menu_button">
-            <div class="menu_alergies ">
-                <img class="menu_cerrar_filtro" src="media/menu/eliminar.svg" alt="equis">
-                <h1> Alergenos </h1>
-                <ul>
-                    <li><img id="cuadro1" src="media/menu/cuadrado.png" alt="cuadro"><img src="media/menu/trigo.svg" alt="Trigo"> Gluten</li>
-                    <li><img id="cuadro2" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/leche.svg" alt="Leche"> Lactosa</li>
-                    <li><img id="cuadro3" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/Huevos.svg" alt="Huevos"> Huevos</li>
-                    <li><img id="cuadro4" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/almendra.svg" alt="Almendra"> Frutos secos </li>
-                </ul>
-                <button class="menu_saber_mas"> Saber más </button>
+            <div id="unfolding_about_us">
+                <a href="historia.html">Historia</a>
+                <a href="galeria.html">Galería</a>
             </div>
-            <ul class="menu_dish col-8 col-t-10"></ul>
-        </article>
-
-        <article class="menu_cart_open">
-            <img class="menu_cerrar_compra" src="media/menu/eliminar.svg" alt="equis">
-            <ul class="menu_list_foos_select"></ul>
-            <p class="menu_Total">Total 0 €</p>
-            <button class="menu_button_chek"> Revisar pedido</button>
-        </article>
-
-    </section>
-    <section class="revisar_pedido col-12">
-        <ul class="revision_platos col-7 col-t-10"></ul>
-        <article class="revision_final col-4 col-t-10">
-            <h1 >Revisión pedido</h1>
-            <ul class="revision_list_food_select"></ul>
-            <p class="revision_Total">Total 0 €</p>
-            <button class="revision_button_chek ">Pagar</button>
-        </article>
-    </section>
-
-    <section class="sitio_pago">
-        <article class="seleccion">
-            <div>
-                <button class="sitio_pago_tienda">Recoger en tienda </button>
-            </div>
-            <div>
-                <button class="sitio_pago_domicilio">Envio a  domicilio</button>
-                <p>*El envio no tiene sobre coste</p>
-            </div>
-        </article>
-    </section>
-    <section class="forma_pago">
-        <div class="seleccion">
-            <div>
-                <button class="forma_pago_efectivo">Pago en efectivo </button>
-            </div>
-            <div>
-                <button class="forma_pago_tarjeta">Pago con tarjeta</button>
-            </div>
+        </header>
+        <!--Mensajes de error-->
+        <div id="error_div">
+            <p id="error_p"></p>
+            <button id="error_button" onclick="global_error_message(0)">Aceptar</button>
         </div>
-        <article class="confirmar_pedido_efectivo_c col-5">
-            <p>Desea confirmar el pedido</p>
-            <div>
-                <button onclick="confirmar_pago_si()"> Si </button>
-                <button onclick="confirmar_pago_efectivo_no()"> No </button>
-            </div>
-        </article>
-    </section>
-    <section class="direccion">
-        <article class="direccion_selccion col-5 col-t-8" >
-            <form >
-                <label> Introduzca su direción</label>
-                <input type="text" id="dir" placeholder="Direccion">
-            </form>
-            <p>Su pedido puede tardar entre 15 y 30 minutos</p>
-            <button> Realizar pago </button>
-            <p>*Campo Obligatorio</p>
-        </article>
-    </section>
-    <section class="pago_tarjeta">
-    	<article class="col-8 col-t-10 menu_card_div">
-    		<h2>Pago Online</h2>
-    		<form id="menu_card_form">
-    			<label for="menu_card_name" class="menu_label">Titular de la tarjeta</label>
-				<div id="menu_card_owner_data">	
-					<input type="text" id="menu_card_name" placeholder="Nombre" >
-					<input type="text" id="menu_card_surname" placeholder="Apellido">
-    			</div>
-    			<label for="menu_card_number" class="menu_label">Número de tarjeta</label>
-    			<input type="text" id="menu_card_number" placeholder="XXXX-XXXX-XXXX-XXXX">
-				<div id="menu_card_date_cvv">	
-					<label for="menu_card_date" class="menu_label">Fecha de caducidad</label>
-					<label for="menu_card_cvv" class="menu_label">CVV</label>
-    			</div>
-				<div id="menu_card_date_cvv_datas">	
-					<input type="text" id="menu_card_date" placeholder="MM/AA">
-					<input type="text" id="menu_card_cvv" placeholder="XXX">
-    			</div>
-    			<div id="menu_card_payment">
-					<p id="menu_card_price">Total 0 €</p>
-					<button id="menu_card_confirm">Confirmar Pago</button>
-    			</div>
-                <div class =></div>
-    		</form>
-    	</article>
-        <article class="confirmar_pedido_c col-5">
-            <p>Desea confirmar el pago</p>
-            <div>
-                <button onclick="confirmar_pago_si()"> Si </button>
-                <button onclick="confirmar_pago_no()"> No </button>
-            </div>
-        </article>
-    </section>
+        <!--Barra de progreso-->
+        <div class="progess_bar col-7 col-t-8" >
+            <nav class="progess_bar_button  ">
+                <button id="step_1">Menu</button>
+                <button id="step_2">Revision Pedido</button>
+                <button id="step_3">Pago</button>
+                <button id="step_4">Confirmacion</button>
+            </nav>
+            <div class="progess_bar_line col-6 col-t-7" ></div>
+            <div class=" progess_bar_line progess_bar_line_ordenador"></div>
+            <div class="progess_bar_line progess_bar_line_tablet"></div>
+            <div class="progess_bar_line progess_bar_line_movil" ></div>
+        </div>
+        <!--Menu-->
+        <section id="menu" >
+            <div class="filtro"><img src="media/menu/filtrar.png" alt="Filtro"></div>
+            <article class="menu_top">
+                <p id="go_back_inicio" class="go_back"><img src="media/menu/flecha.svg" alt="flecha"> Inicio</p>
+                <nav class="menu_choose col-6 col-t-6">
+                    <button id="menu_coffe"><img src="media/menu/taza-de-cafe.svg" alt="Cafe"><br>Cafe</button>
+                    <button id="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Bebidas"><br>Bebidas</button>
+                    <button id="menu_delicatessen"><img src="media/menu/macarron.svg" alt="macarrons"><br>Delicatessen</button>
+                    <button id="menu_cakes"><img src="media/menu/porcion-de-tarta.svg" alt="tarta"><br>Tartas</button>
+                    <button id="menu_bakery"><img src="media/menu/tortitas.svg" alt="reposteri"><br>Reposteria</button>
+                </nav>
 
-    <section class="espera_pedido">
-        <article class="espera">
-            <h2>Tu pedido esta hecho</h2>
-            <h2>Tiempo hasta la entrega:</h2>
-            <p id="timer"></p>
-        </article>
-    </section>
+                <div class="menu_car col-1">
+                    <img class="cesta" src="media/menu/carrito-de-compra.svg" alt="Cesta">
+                    <span class="menu_cuantity"> </span>
+                </div>
+            </article>
+            <article class="menu_button">
+                <div class="menu_alergies ">
+                    <img class="menu_cerrar_filtro" src="media/menu/eliminar.svg" alt="equis">
+                    <h1> Alergenos </h1>
+                    <ul>
+                        <li><img id="cuadro1" src="media/menu/cuadrado.png" alt="cuadro"><img src="media/menu/trigo.svg" alt="Trigo"> Gluten</li>
+                        <li><img id="cuadro2" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/leche.svg" alt="Leche"> Lactosa</li>
+                        <li><img id="cuadro3" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/Huevos.svg" alt="Huevos"> Huevos</li>
+                        <li><img id="cuadro4" src="media/menu/cuadrado.png" alt="cuadro"> <img src="media/menu/almendra.svg" alt="Almendra"> Frutos secos </li>
+                    </ul>
+                    <button class="menu_saber_mas"> Saber más </button>
+                </div>
+                <ul class="menu_dish col-8 col-t-10"></ul>
+            </article>
 
-</body>
-<script src="script/menu.js"></script>
+            <article class="menu_cart_open">
+                <img class="menu_cerrar_compra" src="media/menu/eliminar.svg" alt="equis">
+                <ul class="menu_list_foos_select"></ul>
+                <p class="menu_Total">Total 0 €</p>
+                <button class="menu_button_chek"> Revisar pedido</button>
+            </article>
+        </section>
+        <!--Revisión Pedido-->
+        <section class="revisar_pedido col-12">
+            <ul class="revision_platos col-7 col-t-10"></ul>
+            <article class="revision_final col-4 col-t-10">
+                <h1 >Revisión pedido</h1>
+                <ul class="revision_list_food_select"></ul>
+                <p class="revision_Total">Total 0 €</p>
+                <button class="revision_button_chek ">Pagar</button>
+            </article>
+        </section>
+        <!--Sitio Pago-->
+        <section class="sitio_pago">
+            <article class="seleccion">
+                <div>
+                    <button class="sitio_pago_tienda">Recoger en tienda </button>
+                </div>
+                <div>
+                    <button class="sitio_pago_domicilio">Envio a  domicilio</button>
+                    <p>*El envio no tiene sobre coste</p>
+                </div>
+            </article>
+        </section>
+        <!--Forma de pago-->
+        <section class="forma_pago">
+            <div class="seleccion">
+                <div>
+                    <button class="forma_pago_efectivo">Pago en efectivo </button>
+                </div>
+                <div>
+                    <button class="forma_pago_tarjeta">Pago con tarjeta</button>
+                </div>
+            </div>
+            <article class="confirmar_pedido_efectivo_c col-5">
+                <p>Desea confirmar el pedido</p>
+                <div>
+                    <button onclick="confirmar_pago_si()"> Si </button>
+                    <button onclick="confirmar_pago_efectivo_no()"> No </button>
+                </div>
+            </article>
+        </section>
+        <!--Dirección deonde enviar el pedido-->
+        <section class="direccion">
+            <article class="direccion_selccion col-5 col-t-8" >
+                <form >
+                    <label> Introduzca su direción</label>
+                    <input type="text" id="dir" placeholder="Direccion">
+                </form>
+                <p>Su pedido puede tardar entre 15 y 30 minutos</p>
+                <button> Realizar pago </button>
+                <p>*Campo Obligatorio</p>
+            </article>
+        </section>
+        <!--Pago con tarjeta -->
+        <section class="pago_tarjeta">
+            <article class="col-8 col-t-10 menu_card_div">
+                <h2>Pago Online</h2>
+                <form id="menu_card_form">
+                    <label for="menu_card_name" class="menu_label">Titular de la tarjeta</label>
+                    <div id="menu_card_owner_data">
+                        <input type="text" id="menu_card_name" placeholder="Nombre" >
+                        <input type="text" id="menu_card_surname" placeholder="Apellido">
+                    </div>
+                    <label for="menu_card_number" class="menu_label">Número de tarjeta</label>
+                    <input type="text" id="menu_card_number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                    <div id="menu_card_date_cvv">
+                        <label for="menu_card_date" class="menu_label">Fecha de caducidad</label>
+                        <label for="menu_card_cvv" class="menu_label">CVV</label>
+                    </div>
+                    <div id="menu_card_date_cvv_datas">
+                        <input type="text" id="menu_card_date" placeholder="MM/AA">
+                        <input type="text" id="menu_card_cvv" placeholder="XXX">
+                    </div>
+                    <div id="menu_card_payment">
+                        <p id="menu_card_price">Total 0 €</p>
+                        <button id="menu_card_confirm">Confirmar Pago</button>
+                    </div>
+
+                </form>
+            </article>
+            <article class="confirmar_pedido_c col-5">
+                <p>Desea confirmar el pago</p>
+                <div>
+                    <button onclick="confirmar_pago_si()"> Si </button>
+                    <button onclick="confirmar_pago_no()"> No </button>
+                </div>
+            </article>
+        </section>
+        <!--Confirmacióon y espera del pedido-->
+        <section class="espera_pedido">
+            <article class="espera">
+                <h2>Tu pedido esta hecho</h2>
+                <h2>Tiempo hasta la entrega:</h2>
+                <p id="timer"></p>
+            </article>
+        </section>
+        <script src="script/menu.js"></script>
+    </body>
 </html>
