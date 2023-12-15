@@ -213,7 +213,7 @@ section {
 }
 
 .siema{
-    margin-top: 20vh;
+    margin-top: 5vh;
     margin-left: 10vw;
     height: auto;
     width: 80vw;
@@ -222,7 +222,7 @@ section {
 .prev, .next{
     background-color: #7E4D29;
     color: white;
-    font-size: 2rem;
+    font-size: 1.25rem;
     border: None;
     border-radius: 50%;
     height: 5vh;
@@ -246,7 +246,7 @@ section {
     margin-top: 7vh;
     height: 6vh;
     width: 16vw;
-    border-radius: 0 10px 0 10px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .galery nav a{
