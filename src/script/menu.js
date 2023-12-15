@@ -353,6 +353,9 @@ let menu_card_confirm= document.querySelector("#menu_card_confirm");
 let revision_total = document.querySelector(".revision_Total");
 let confirmar_pedido_c = document.querySelector(".confirmar_pedido_c");
 let confirmar_pedido_efectivo_c = document.querySelector(".confirmar_pedido_efectivo_c");
+let filtro = document.querySelector(".filtro");
+let menu_alergies = document.querySelector(".menu_alergies_m");
+let menu_cerrar_filtro = document.querySelector(".menu_cerrar_filtro");
 let menu_card_price = document.querySelector("#menu_card_price");
 let tick1 =document.querySelector("#cuadro1");
 let tick2 =document.querySelector("#cuadro2");
@@ -368,6 +371,7 @@ let lista_alergenos  = [];
 let posicion_bar_progreso= 0;
 let dir  = document.querySelector("#dir");
 let precio_total  = 0;
+let f = 0;
 
 window.addEventListener('load', () => {
     /*Seleccion menu de cafes*/
@@ -527,6 +531,23 @@ cesta.addEventListener('click', () => {
 equis.addEventListener('click', () => {
     menu_carrito.style.display = 'none'
 })
+filtro.addEventListener('click', () => {
+    if (f === 0){
+        menu_alergies.style.display = 'block'
+        f = 1;
+    }
+    else {
+        menu_alergies.style.display = 'none'
+        f = 0;
+    }
+})
+menu_cerrar_filtro.addEventListener('click', () => {
+        if (f === 1){
+            menu_alergies.style.display = 'none'
+            f = 0;
+        }
+})
+
 
 step_1.addEventListener('click', () => {
     if (posicion_bar_progreso !== 6){

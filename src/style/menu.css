@@ -9,7 +9,6 @@
     border-radius: 15px;
 }
 
-
 .progess_bar_button{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
@@ -97,8 +96,6 @@
     border-radius: 15px;
     display: grid;
     place-content: center;
-
-
 }
 .menu_elemt_right{
     float:right ;
@@ -254,6 +251,7 @@
     font-size: 0.7em;
 }
 .menu_alergies{
+
     background-color: #FFF8F4;
     position: absolute;
     width: 14vw;
@@ -263,6 +261,13 @@
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     box-shadow: 0 10px 10px #757676;
+}
+.menu_alergies_m{
+    display: none;
+}
+.menu_alergies_g{
+    display: block;
+
 }
 .menu_alergies h1{
     text-align: center;
@@ -277,6 +282,21 @@
 .menu_alergies img{
     height: 20px;
 }
+.menu_cerrar_filtro{
+    display: none;
+}
+.filtro{
+    display: none;
+    position: absolute;
+    top:4vw;
+    left: 10vh;
+    height: 1vh;
+}
+.filtro img{
+    height: 7vh;
+    width: auto;
+}
+
 .menu_saber_mas{
     background-color: #E6CDBA;
     border: none;
@@ -380,7 +400,6 @@
     height: 40vh ;
     display: grid;
     place-content: center;
-
 }
 .seleccion div button{
     background-color: #7E4D29;
@@ -634,15 +653,29 @@
     .progess_bar_line_movil{
         display: none;
     }
-
     .menu_alergies{
-        display: none;
-        position: absolute;
-        width: 80%;
-        height: 20%;
-        left: 20%;
+        width: 40vw;
+        left: 30%;
     }
 
+    .menu_alergies_g{
+        display: none;
+    }
+    .menu_alergies_m{
+        display: block;
+    }
+    .menu_saber_mas{
+        margin-left: 30%;
+    }
+    .menu_cerrar_filtro{
+        display: block;
+        position: absolute;
+        right: 3vw;
+        top: 3vh;
+    }
+    .menu_cart_open{
+        width: 70%;
+    }
 
     .menu_choose button img{
         height: 40%;
@@ -677,6 +710,17 @@
     .menu_cuantity{
         right: 5%;
     }
+    .filtro{
+        display: block;
+        position: absolute;
+        top:7vw;
+        left: 7vh;
+        height: 1vh;
+    }
+    .filtro img{
+        height: 7vh;
+        width: auto;
+    }
 
 }
 
@@ -704,13 +748,23 @@
     .progess_bar_line_movil{
         display: block;
     }
-
     .menu_alergies{
+        width: 40vw;
+        left: 30%;
+    }
+
+    .menu_alergies_m{
         display: none;
-        position: absolute;
+
+    }
+    .menu_saber_mas{
+        margin-left: 30%;
+    }
+    .menu_cerrar_filtro{
+        display: block;
+    }
+    .menu_cart_open{
         width: 80%;
-        height: 20%;
-        left: 20%;
     }
     .menu_choose{
         width: 60vw;
@@ -790,6 +844,17 @@
         width: 8%;
         height: 8%;
         top:11%
+    }
+    .filtro{
+        display: block;
+        position: absolute;
+        top:10vw;
+        left: 5vh;
+        height: 1vh;
+    }
+    .filtro img{
+        height: 5vh;
+        width: auto;
     }
 
 }
