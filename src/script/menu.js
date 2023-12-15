@@ -201,7 +201,7 @@ let platos = [
         id: 21,
         nombre: 'Tarta de fresa',
         imagen: 'media/menu/tartas3.jpg',
-        precio: 2.30,
+        precio: 2.35,
         cantidad: 0,
         coste: 0,
         alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
@@ -549,7 +549,7 @@ step_2.addEventListener('click', () => {
         global_error_message(1, "Ya he hecho el pedido no puedo volver atras", menu);
     }
     else if (cantidad.textContent === "0") {
-        global_error_message(1, "No ha seleccionado ningún elemento", menu);
+        global_error_message(1, "No se ha seleccionado ningún elemento", menu);
     }
     else {
         cambiar_a_revision_pedido();
@@ -619,21 +619,7 @@ menu_card_confirm.addEventListener('click', () =>{
 go_back_inicio.addEventListener('click' ,() =>{
     window.location.href= "landing.html"
 })
-go_back_menu.addEventListener('click' ,() =>{
-    cambiar_a_select_menu()
-})
-go_back_revisar.addEventListener('click' ,() =>{
-    cambiar_a_revision_pedido()
-})
-go_back_sitio.addEventListener('click' ,() =>{
-    cambiar_a_sitio_pago()
-})
-go_back_f_pago.addEventListener('click' ,() =>{
-    cambiar_a_forma_pago()
-})
-go_back_direccion.addEventListener('click' ,() =>{
-    cambiar_a_direccion()
-})
+
 
 function cambiar_a_select_menu() {
     barra_progreso_cuadro.style.backgroundColor ='#FFFBF8'
@@ -732,7 +718,7 @@ function cambiar_a_tarjeta() {
     barra_progreso_movil.style.width ='50vw'
     barra_progreso_tablet.style.width ='45vw'
     confirmar_pedido_c.style.display = 'none'
-    menu_card_price.innerText = precio_total
+    menu_card_price.innerText = "Total ".concat(precio_total.toLocaleString()).concat(' €');precio_total
     posicion_bar_progreso = 5;
 }
 function cambiar_a_espera_pedido() {
@@ -883,7 +869,7 @@ function revisfinal() {
         }
     })
     totalrevision.innerText = "Total ".concat(precioTotal.toLocaleString()).concat(' €');
-    menu_ca
+    precio_total = precioTotal;
 }
 
 function saber_menu() {
