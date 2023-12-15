@@ -648,21 +648,15 @@
     .progess_bar_line_movil{
         display: none;
     }
+    .menu_alergies{
+        width: 40vw;
+        left: 30%;
+    }
 
     .menu_saber_mas{
         margin-left: 30%;
     }
-    .filtro{
-        top:7vw;
-        left: 7vh;
-        height: 1vh;
-    }
-    .filtro img{
-        height: 7vh;
-        width: auto;
-    }
     .menu_cerrar_filtro{
-        position: absolute;
         right: 3vw;
         top: 3vh;
     }
@@ -703,7 +697,15 @@
     .menu_cuantity{
         right: 5%;
     }
-
+    .filtro{
+        top:7vw;
+        left: 7vh;
+        height: 1vh;
+    }
+    .filtro img{
+        height: 7vh;
+        width: auto;
+    }
 
 }
 
@@ -731,19 +733,15 @@
     .progess_bar_line_movil{
         display: block;
     }
+    .menu_alergies{
+        width: 40vw;
+        left: 30%;
+    }
 
     .menu_saber_mas{
         margin-left: 30%;
     }
-    .filtro{
-        top:10vw;
-        left: 5vh;
-        height: 1vh;
-    }
-    .filtro img{
-        height: 5vh;
-        width: auto;
-    }
+
     .menu_cart_open{
         width: 80%;
     }
@@ -826,6 +824,14 @@
         height: 8%;
         top:11%
     }
-
+    .filtro{
+        top:10vw;
+        left: 5vh;
+        height: 1vh;
+    }
+    .filtro img{
+        height: 5vh;
+        width: auto;
+    }
 
 }
