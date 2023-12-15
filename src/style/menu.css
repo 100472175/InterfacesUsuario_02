@@ -251,24 +251,18 @@
     font-size: 0.7em;
 }
 .menu_alergies{
-
     background-color: #FFF8F4;
     position: absolute;
-    width: 14vw;
+    width: 20vw;
     height: auto;
-    left: 1%;
+    left: 40%;
+    top:30%;
     border: none;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     box-shadow: 0 10px 10px #757676;
 }
-.menu_alergies_m{
-    display: none;
-}
-.menu_alergies_g{
-    display: block;
 
-}
 .menu_alergies h1{
     text-align: center;
     margin-top: 10%;
@@ -283,13 +277,14 @@
     height: 20px;
 }
 .menu_cerrar_filtro{
-    display: none;
+    position: absolute;
+    top: 3vh;
+    right: 2vw;
 }
 .filtro{
-    display: none;
     position: absolute;
-    top:4vw;
-    left: 10vh;
+    top:5vw;
+    left: 30vh;
     height: 1vh;
 }
 .filtro img{
@@ -653,22 +648,20 @@
     .progess_bar_line_movil{
         display: none;
     }
-    .menu_alergies{
-        width: 40vw;
-        left: 30%;
-    }
 
-    .menu_alergies_g{
-        display: none;
-    }
-    .menu_alergies_m{
-        display: block;
-    }
     .menu_saber_mas{
         margin-left: 30%;
     }
+    .filtro{
+        top:7vw;
+        left: 7vh;
+        height: 1vh;
+    }
+    .filtro img{
+        height: 7vh;
+        width: auto;
+    }
     .menu_cerrar_filtro{
-        display: block;
         position: absolute;
         right: 3vw;
         top: 3vh;
@@ -710,17 +703,7 @@
     .menu_cuantity{
         right: 5%;
     }
-    .filtro{
-        display: block;
-        position: absolute;
-        top:7vw;
-        left: 7vh;
-        height: 1vh;
-    }
-    .filtro img{
-        height: 7vh;
-        width: auto;
-    }
+
 
 }
 
@@ -748,20 +731,18 @@
     .progess_bar_line_movil{
         display: block;
     }
-    .menu_alergies{
-        width: 40vw;
-        left: 30%;
-    }
 
-    .menu_alergies_m{
-        display: none;
-
-    }
     .menu_saber_mas{
         margin-left: 30%;
     }
-    .menu_cerrar_filtro{
-        display: block;
+    .filtro{
+        top:10vw;
+        left: 5vh;
+        height: 1vh;
+    }
+    .filtro img{
+        height: 5vh;
+        width: auto;
     }
     .menu_cart_open{
         width: 80%;
@@ -845,16 +826,6 @@
         height: 8%;
         top:11%
     }
-    .filtro{
-        display: block;
-        position: absolute;
-        top:10vw;
-        left: 5vh;
-        height: 1vh;
-    }
-    .filtro img{
-        height: 5vh;
-        width: auto;
-    }
+
 
 }
