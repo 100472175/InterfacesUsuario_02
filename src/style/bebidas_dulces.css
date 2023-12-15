@@ -10,6 +10,7 @@ section {
 #bebidas{
     background-image: url("../media/subpags/fondo_bebidas.png");
     background-size: cover;
+    background-position: center;
 }
 
 #bebidas h3{
