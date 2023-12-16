@@ -21,13 +21,14 @@
 }
 .iframe-container {
     position: absolute;
-    top: 50px; /* adjust as necessary */
-    left: 50px; /* adjust as necessary */
-    width: 80%; /* or the width you want */
-    height: 400px; /* or the height you want */
+    top: 9.75%; /* adjust as necessary */
+    left: 11.6%; /* adjust as necessary */
+    width: 73.75vw; /* or the width you want */
+    height: 59vh; /* or the height you want */
 }
 iframe {
-    width: 100%;
+    width: 50%;
     height: 100%;
     border: none; /* optional, removes the default border */
+
 }
