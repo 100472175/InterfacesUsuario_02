@@ -633,6 +633,9 @@
     text-align: center;
     grid-template-rows: 1fr 1fr 1fr;
 }
+.menu_label_oculto{
+    color: transparent;
+}
 
 @media screen and (max-width: 768px) {
     .progess_bar_button{
