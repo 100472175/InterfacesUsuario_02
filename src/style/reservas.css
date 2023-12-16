@@ -698,6 +698,6 @@
     justify-content: center; /* Horizontally center the items */
     align-items: center; /* Vertically center the items */
     padding-top: 40%;
-    margin: auto auto auto 20%;
+    margin: 40% auto auto 20%;
   }
 }
