@@ -688,12 +688,15 @@
 }
 
 @media screen and (max-width: 619px)  {
-  position: inherit;
-  display: grid;
-  /* Force it to be in the bottom of the page */
-  bottom: 0;
-  /* Center horizontally and vertically */
-  justify-content: center; /* Horizontally center the items */
-  align-items: center; /* Vertically center the items */
-  padding-top: 1000%;
+  .dropdown-position{
+    position: inherit;
+    display: grid;
+    /* Force it to be in the bottom of the page */
+    bottom: 0;
+    /* Center horizontally and vertically */
+    justify-content: center; /* Horizontally center the items */
+    align-items: center; /* Vertically center the items */
+    padding-top: 40%;
+    margin: auto auto auto 20%;
+  }
 }
