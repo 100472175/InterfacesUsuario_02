@@ -729,7 +729,7 @@ function cambiar_a_forma_pago() {
     barra_progreso.style.width = '35vw'
     barra_progreso_movil.style.width ='50vw'
     barra_progreso_tablet.style.width ='45vw'
-    body.style.backgroundImage = "url('media/menu/fondo_forma_pago.webp')"
+    body.style.backgroundImage = "url('media/menu/fondo_forma_pago.jpg')"
     body.style.backgroundSize = 'cover'
     confirmar_pedido_efectivo_c.style.display = 'none'
     posicion_bar_progreso = 3;
@@ -747,7 +747,7 @@ function cambiar_a_direccion() {
     barra_progreso.style.width = '35vw'
     barra_progreso_movil.style.width ='50vw'
     barra_progreso_tablet.style.width ='45vw'
-    body.style.backgroundImage = "url(media/menu/fondo_direccion.webp)"
+    body.style.backgroundImage = "url(media/menu/fondo_direccion.jpg)"
     posicion_bar_progreso = 4;
 }
 //Función que va a la pàgina donde se introduce la tarjeta para pagar
@@ -1098,7 +1098,7 @@ function check_card_number(number) {
 }
 
 function check_card_date(date) {
-	const re = /^(0[1-9]{1})|(1[0-2]{1})\/[0-9]{2}$/;
+	const re = /(0[1-9]{1})|(1[0-2]{1})\/[0-9]{2}/;
 	return re.test(date);
 }
 
