@@ -12,35 +12,35 @@
     <body>
         <!-- Header y menu hamburgesa-->
         <header class="main_header">
-		    <nav id="header">
-		        <button id="open_menu_h"> . </button>
-		        <a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
-		        <a class="main_header_link" id="menu_specialities">Especialidades</a>
-		        <a class="main_header_link" id="menu_menu" onclick="check_login()">Menu</a>
-		        <a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
-		        <a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
-		        <a href="login.html" class="main_header_link" id="menu_register">Registro</a>
-		    </nav>
-		    <aside id="menu_h">
-		        <a id="logo_h" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
-		        <a id="menu_h_specialities">Especialidades<br></a>
-		        <a id="menu_h_menu" href="menu.html" onclick="check_login()">Menu<br></a>
-		        <a id="menu_h_about_us">Sobre Nosotros<br></a>
-		        <a href="reservas.html">Reserva<br></a>
-		        <a href="login.html">Registro</a>
-		    </aside>
-		    <div id="unfolding_specialities">
-		        <a href="cafe.html">Café</a>
-		        <a href="bebidas_dulces.html">Bebidas dulces</a>
-		        <a href="delicatessen.html">Delicatessen</a>
-		        <a href="tartas.html">Tartas</a>
-		        <a href="reposteria.html">Repostería</a>
-		    </div>
-		    <div id="unfolding_about_us">
-		        <a href="historia.html">Historia</a>
-		        <a href="galeria.html">Galería</a>
-		    </div>
-		</header>
+            <nav id="header">
+                <button id="open_menu_h">.</button>
+                <a id="logo" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
+                <a class="main_header_link" id="menu_specialities">Especialidades</a>
+                <a class="main_header_link" id="menu_menu" onclick="check_login()">Menu</a>
+                <a class="main_header_link" id="menu_about_us">Sobre Nosotros</a>
+                <a href="reservas.html" class="main_header_link" id="menu_booking">Reserva</a>
+                <a href="login.html" class="main_header_link" id="menu_register">Registro</a>
+            </nav>
+            <aside id="menu_h">
+                <a id="logo_h" href="landing.html"><img src="./media/logo/logo_blanco.png" alt="logo cafe florencia"></a>
+                <a id="menu_h_specialities">Especialidades<br></a>
+                <a id="menu_h_menu" onclick="check_login()">Menu<br></a>
+                <a id="menu_h_about_us">Sobre Nosotros<br></a>
+                <a href="reservas.html">Reserva<br></a>
+                <a href="login.html">Registro</a>
+            </aside>
+            <div id="unfolding_specialities">
+                <a href="cafe.html">Café</a>
+                <a href="bebidas_dulces.html">Bebidas dulces</a>
+                <a href="delicatessen.html">Delicatessen</a>
+                <a href="tartas.html">Tartas</a>
+                <a href="reposteria.html">Repostería</a>
+            </div>
+            <div id="unfolding_about_us">
+                <a href="historia.html">Historia</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+        </header>
         <!--Mensajes de error-->
         <div id="error_div">
             <p id="error_p"></p>
@@ -48,7 +48,7 @@
         </div>
         <!--Barra de progreso-->
         <div class="progess_bar col-7 col-t-8" >
-            <nav class="progess_bar_button  ">
+            <nav class="progess_bar_button ">
                 <button id="step_1">Menu</button>
                 <button id="step_2">Revision Pedido</button>
                 <button id="step_3">Pago</button>
@@ -63,7 +63,7 @@
         <section id="menu" >
             <button class="filtro"><img src="media/menu/filtrar.png" alt="Filtro"></button>
             <article class="menu_top">
-                <p id="go_back_inicio" class="go_back"><img src="media/menu/flecha.svg" alt="flecha"> Inicio</p>
+                <button id="go_back_inicio" class="go_back"><img src="media/menu/flecha.svg" alt="flecha"> Inicio</button>
                 <nav class="menu_choose col-6 col-t-6">
                     <button id="menu_coffe"><img src="media/menu/taza-de-cafe.svg" alt="Cafe"><br>Cafe</button>
                     <button id="menu_sweet_drinks"><img src="media/menu/batido.svg" alt="Bebidas"><br>Bebidas</button>
@@ -78,14 +78,14 @@
                 </button>
             </article>
             <article class="menu_button">
-                <div class="menu_alergies ">
+                <div class="menu_alergies">
                     <img class="menu_cerrar_filtro" src="media/menu/eliminar.svg" alt="equis">
                     <h1> Alergenos </h1>
                     <ul>
-                        <li><img id="cuadro1" src="media/menu/cuadrado.png" alt="cuadro1"><img src="media/menu/trigo.svg" alt="Trigo"> Gluten</li>
-                        <li><img id="cuadro2" src="media/menu/cuadrado.png" alt="cuadro2"> <img src="media/menu/leche.svg" alt="Leche"> Lactosa</li>
-                        <li><img id="cuadro3" src="media/menu/cuadrado.png" alt="cuadro3"> <img src="media/menu/Huevos.svg" alt="Huevos"> Huevos</li>
-                        <li><img id="cuadro4" src="media/menu/cuadrado.png" alt="cuadro4"> <img src="media/menu/almendra.svg" alt="Almendra"> Frutos secos </li>
+                        <li><button><img id="cuadro1" src="media/menu/cuadrado.png" alt="cuadro1"></button><img src="media/menu/trigo.svg" alt="Trigo"> Gluten</li>
+                        <li><button><img id="cuadro2" src="media/menu/cuadrado.png" alt="cuadro2"></button><img src="media/menu/leche.svg" alt="Leche"> Lactosa</li>
+                        <li><button><img id="cuadro3" src="media/menu/cuadrado.png" alt="cuadro3"></button><img src="media/menu/Huevos.svg" alt="Huevos"> Huevos</li>
+                        <li><button><img id="cuadro4" src="media/menu/cuadrado.png" alt="cuadro4"></button><img src="media/menu/almendra.svg" alt="Almendra"> Frutos secos </li>
                     </ul>
                     <button class="menu_saber_mas"> Saber más </button>
                 </div>
