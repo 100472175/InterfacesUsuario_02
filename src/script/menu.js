@@ -1108,7 +1108,7 @@ function check_card_cvv(cvv) {
 	return re.test(cvv);
 }
 function check_direcion(dir){
-    const re = /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+,\s\d+, (\d+º[A-Z], )?\d{5}, [A-Za-záéíóúÁÉÍÓÚñÑ\s]+$/;
+    const re = /^[A-z0-9,\s]+$/;
     return re.test(dir);
 }
 
