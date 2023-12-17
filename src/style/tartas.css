@@ -1,5 +1,5 @@
 *{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 section {
@@ -24,4 +24,10 @@ section {
     text-align: center;
     margin: 18vh 6vh 0 6vh;
     background-color: #F6EDE6;
+}
+
+@media screen and (max-width: 600px) {
+    section{
+        height: auto;
+    }
 }

@@ -24,15 +24,18 @@ section {
     width: 14vw;
 }
 
-.front_page button{
+.front_page div{
     background-color: #7E4D29;
-    text-align: center;
     height: 100%;
     width: 100%;
-    text-decoration: None;
     color: white;
-    border: none;
     font-size: 1.2rem;
+    padding-top: 0.5vh;
+}
+
+.front_page a{
+    text-decoration: none;
+    text-align: center;
 }
 
 .front_page img{
@@ -104,7 +107,7 @@ section {
     font-size: 1.5rem;
 }
 
-.intro button{
+.intro div{
     background-color: #7E4D29;
     text-align: center;
     height: 100%;
@@ -112,12 +115,8 @@ section {
     border-radius: 5vh;
     color: white;
     font-size: 1.5rem;
-    border: none
 }
 
-.intro nav a{
-
-}
 
 .intro.bebidas{
     position: absolute;
@@ -264,6 +263,9 @@ section {
 .galery nav a{
     text-decoration: None;
     color: white;
+}
+
+.galery nav a div{
     font-size: 1.5rem;
 }
 
@@ -355,7 +357,7 @@ footer a{
 
 .cuadricula{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1.4fr 0.7fr 1.2fr 0.9fr 0.9fr;
     margin-left: 30%;
 }
 
