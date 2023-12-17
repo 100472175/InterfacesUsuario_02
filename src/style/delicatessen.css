@@ -31,7 +31,7 @@
 	z-index: 0;
 	position: absolute;
 	top: -50%;
-	background-image: url("../media/subpags/trufas.jpeg");
+	background-image: url("../images/subpags/trufas.jpeg");
 	background-size: cover;	
 }
 
@@ -39,7 +39,7 @@
 	display: none;
 	z-index: 1;
 	position: absolute;
-	background-image: url("../media/subpags/bonbon.jpg");
+	background-image: url("../images/subpags/bonbon.jpg");
 }
 
 @media screen and (max-width: 768px) {

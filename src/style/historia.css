@@ -14,7 +14,7 @@
     position: absolute;
     width: 100vw; /* or the width you want */
     height: 75vh; /* or the height you want */
-    background-image: url("../media/historia/historia_base.png"); /* replace with your image path */
+    background-image: url("../images/historia/historia_base.png"); /* replace with your image path */
     background-size: contain ;
     background-position: center;
     background-repeat: no-repeat;

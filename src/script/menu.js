@@ -2,38 +2,38 @@
 let platos = [
         {id: 1,
         nombre: 'Cafe con leche',
-        imagen: 'media/menu/cafe1.jpg',
+        imagen: 'images/menu/cafe1.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/leche.svg',null,null,null],
+        alergenos: ['images/menu/leche.svg',null,null,null],
         alerg: ['L']
     },
     {
         id: 2,
         nombre: 'Latte machiato',
-        imagen: 'media/menu/cafe2.jpg',
+        imagen: 'images/menu/cafe2.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/leche.svg',null,null,null],
+        alergenos: ['images/menu/leche.svg',null,null,null],
         alerg: ['L']
 
     },
     {
         id: 3,
         nombre: 'Capuchino',
-        imagen: 'media/menu/cafe3.jpg',
+        imagen: 'images/menu/cafe3.jpg',
         precio: 2.25,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/leche.svg',null,null,null],
+        alergenos:  ['images/menu/leche.svg',null,null,null],
         alerg: ['L']
     },
     {
         id: 4,
         nombre: 'Cafe con hielo',
-        imagen:'media/menu/cafe4.jpg',
+        imagen:'images/menu/cafe4.jpg',
         precio: 1.50,
         cantidad: 0,
         coste: 0,
@@ -43,7 +43,7 @@ let platos = [
     {
         id: 5,
         nombre: 'Cafe solo',
-        imagen: 'media/menu/cafe5.jpg',
+        imagen: 'images/menu/cafe5.jpg',
         precio: 1.50,
         cantidad: 0,
         coste: 0,
@@ -53,249 +53,249 @@ let platos = [
     {
         id: 6,
         nombre: 'Chocolate',
-        imagen: 'media/menu/cafe6.jpg',
+        imagen: 'images/menu/cafe6.jpg',
         precio: 2.5,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/leche.svg',null,null,null],
+        alergenos: ['images/menu/leche.svg',null,null,null],
         alerg: ['L']
     },
     {id: 7,
         nombre: 'Batido de chocolate',
-        imagen: 'media/menu/bebida1.jpg',
+        imagen: 'images/menu/bebida1.jpg',
         precio: 3.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/leche.svg',null,null,null],
+        alergenos: ['images/menu/leche.svg',null,null,null],
         alerg: ['L']
     },
     {
         id: 8,
         nombre: 'Batido de caramelo',
-        imagen: 'media/menu/bebida2.jpg',
+        imagen: 'images/menu/bebida2.jpg',
         precio: 4.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/leche.svg',null,null,null],
+        alergenos: ['images/menu/leche.svg',null,null,null],
         alerg: ['L']
     },
     {
         id: 9,
         nombre: 'Batido de strachatela',
-        imagen: 'media/menu/bebida3.jpg',
+        imagen: 'images/menu/bebida3.jpg',
         precio: 4.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/leche.svg',null,null,null],
+        alergenos: ['images/menu/leche.svg',null,null,null],
         alerg: ['L']
     },
     {
         id: 10,
         nombre: 'Batido de vainilla',
-        imagen:'media/menu/bebida4.jpg',
+        imagen:'images/menu/bebida4.jpg',
         precio: 4.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/leche.svg',null,null,null],
+        alergenos: ['images/menu/leche.svg',null,null,null],
         alerg: ['L']
     },
     {
         id: 11,
         nombre: 'Batido de strachatela',
-        imagen: 'media/menu/bebida5.jpg',
+        imagen: 'images/menu/bebida5.jpg',
         precio: 4.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/leche.svg',null,null,null],
+        alergenos: ['images/menu/leche.svg',null,null,null],
         alerg: ['L']
     },
     {
         id: 12,
         nombre: 'Batido de nubes',
-        imagen: 'media/menu/bebida6.jpg',
+        imagen: 'images/menu/bebida6.jpg',
         precio: 4.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/leche.svg',null,null,null],
+        alergenos: ['images/menu/leche.svg',null,null,null],
         alerg: ['L']
     },
     {id: 13,
         nombre: 'Macarons de chocolate',
-        imagen: 'media/menu/delicatessen1.jpg',
+        imagen: 'images/menu/delicatessen1.jpg',
         precio: 1.50,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/trigo.svg','media/menu/Huevos.svg','media/menu/almendra.svg',null],
+        alergenos: ['images/menu/trigo.svg','images/menu/Huevos.svg','images/menu/almendra.svg',null],
         alerg: ['G','H','F']
     },
     {
         id: 14,
         nombre: 'Mini delicias',
-        imagen: 'media/menu/delicatessen2.jpg',
+        imagen: 'images/menu/delicatessen2.jpg',
         precio: 2.50,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos:  ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 15,
         nombre: 'Bombones',
-        imagen: 'media/menu/delicatessen3.jpg',
+        imagen: 'images/menu/delicatessen3.jpg',
         precio: 2.25,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/trigo.svg','media/menu/Huevos.svg','media/menu/leche.svg',null],
+        alergenos: ['images/menu/trigo.svg','images/menu/Huevos.svg','images/menu/leche.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 16,
         nombre: 'Macarons de oreo',
-        imagen:'media/menu/delicatessen4.jpg',
+        imagen:'images/menu/delicatessen4.jpg',
         precio: 1.50,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/trigo.svg','media/menu/Huevos.svg','media/menu/almendra.svg','media/menu/leche.svg'],
+        alergenos: ['images/menu/trigo.svg','images/menu/Huevos.svg','images/menu/almendra.svg','images/menu/leche.svg'],
         alerg: ['G','F','H','L']
     },
     {
         id: 17,
         nombre: 'Mini tartitas',
-        imagen: 'media/menu/delicatessen5.jpg',
+        imagen: 'images/menu/delicatessen5.jpg',
         precio: 2.50,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos:  ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
 
     },
     {
         id: 18,
         nombre: 'Macarons de fresa',
-        imagen: 'media/menu/delicatessen6.jpg',
+        imagen: 'images/menu/delicatessen6.jpg',
         precio: 1.50,
         cantidad: 0,
         coste: 0,
-        alergenos:['media/menu/trigo.svg','media/menu/Huevos.svg','media/menu/almendra.svg',null],
+        alergenos:['images/menu/trigo.svg','images/menu/Huevos.svg','images/menu/almendra.svg',null],
         alerg: ['G','F','H']
     },
     {id: 19,
         nombre: 'Tarta mixta',
-        imagen: 'media/menu/tartas1.jpg',
+        imagen: 'images/menu/tartas1.jpg',
         precio: 2.50,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos:  ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 20,
         nombre: 'Tarta de nata',
-        imagen: 'media/menu/tartas2.jpg',
+        imagen: 'images/menu/tartas2.jpg',
         precio: 2.50,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos:  ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 21,
         nombre: 'Tarta de fresa',
-        imagen: 'media/menu/tartas3.jpg',
+        imagen: 'images/menu/tartas3.jpg',
         precio: 2.50,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos: ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 22,
         nombre: 'Tarta de oreo',
-        imagen:'media/menu/tartas4.jpg',
+        imagen:'images/menu/tartas4.jpg',
         precio: 2.50,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos:  ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 23,
         nombre: 'Tarta de vainilla',
-        imagen: 'media/menu/tartas5.jpg',
+        imagen: 'images/menu/tartas5.jpg',
         precio: 2.50,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos:  ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 24,
         nombre: 'Tarta de chocolate',
-        imagen: 'media/menu/tartas6.jpg',
+        imagen: 'images/menu/tartas6.jpg',
         precio: 2.50,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos: ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 25,
         nombre: 'Donas glaseadas',
-        imagen: 'media/menu/Reposteria1.jpg',
+        imagen: 'images/menu/Reposteria1.jpg',
         precio: 2.00,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos:  ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 26,
         nombre: 'Tortitas especiales',
-        imagen: 'media/menu/Reposteria2.jpg',
+        imagen: 'images/menu/Reposteria2.jpg',
         precio: 3.00,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos:  ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 27,
         nombre: 'Tortitas con fresas',
-        imagen: 'media/menu/Reposteria3.jpg',
+        imagen: 'images/menu/Reposteria3.jpg',
         precio: 2.50,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos:  ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 28,
         nombre: 'Gofres',
-        imagen:'media/menu/Reposteria4.jpg',
+        imagen:'images/menu/Reposteria4.jpg',
         precio: 3.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos: ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 29,
         nombre: 'Totitas con chocolate',
-        imagen: 'media/menu/Reposteria5.jpg',
+        imagen: 'images/menu/Reposteria5.jpg',
         precio: 2.50,
         cantidad: 0,
         coste: 0,
-        alergenos:  ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos:  ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
     {
         id: 30,
         nombre: 'Crepes',
-        imagen: 'media/menu/Reposteria6.jpg',
+        imagen: 'images/menu/Reposteria6.jpg',
         precio: 3.00,
         cantidad: 0,
         coste: 0,
-        alergenos: ['media/menu/trigo.svg','media/menu/leche.svg','media/menu/Huevos.svg',null],
+        alergenos: ['images/menu/trigo.svg','images/menu/leche.svg','images/menu/Huevos.svg',null],
         alerg: ['G','L','H']
     },
 ];
@@ -462,11 +462,11 @@ reposteria.addEventListener('click', () =>{
 /*Selección del alergeno que no quieres que aparezca*/
 tick1.addEventListener('click', () =>{
     if (t1 === 0) {
-        tick1.src = "media/menu/tick.png"
+        tick1.src = "images/menu/tick.png"
         t1 = 1;
         lista_alergenos.push('G')
     } else {
-        tick1.src = "media/menu/cuadrado.png"
+        tick1.src = "images/menu/cuadrado.png"
         t1 = 0;
         lista_alergenos = lista_alergenos.filter(alergia => alergia != 'G')
     }
@@ -474,11 +474,11 @@ tick1.addEventListener('click', () =>{
 })
 tick2.addEventListener('click', () =>{
     if (t2 === 0) {
-        tick2.src = "media/menu/tick.png"
+        tick2.src = "images/menu/tick.png"
         t2 = 1;
         lista_alergenos.push('L')
     } else {
-        tick2.src = "media/menu/cuadrado.png"
+        tick2.src = "images/menu/cuadrado.png"
         t2 = 0;
         lista_alergenos = lista_alergenos.filter(alergia => alergia != 'L')
     }
@@ -487,11 +487,11 @@ tick2.addEventListener('click', () =>{
 
 tick3.addEventListener('click', () =>{
     if (t3 === 0) {
-        tick3.src = "media/menu/tick.png"
+        tick3.src = "images/menu/tick.png"
         t3 = 1;
         lista_alergenos.push('H')
     } else {
-        tick3.src = "media/menu/cuadrado.png"
+        tick3.src = "images/menu/cuadrado.png"
         t3 = 0;
         lista_alergenos = lista_alergenos.filter(alergia => alergia != 'H')
     }
@@ -499,11 +499,11 @@ tick3.addEventListener('click', () =>{
 })
 tick4.addEventListener('click', () =>{
     if (t4 === 0) {
-        tick4.src = "media/menu/tick.png"
+        tick4.src = "images/menu/tick.png"
         t4 = 1;
         lista_alergenos.push('F')
     } else {
-        tick4.src = "media/menu/cuadrado.png"
+        tick4.src = "images/menu/cuadrado.png"
         t4 = 0;
         lista_alergenos = lista_alergenos.filter(alergia => alergia != 'F')
     }
@@ -738,7 +738,7 @@ function cambiar_a_sitio_pago() {
     barra_progreso.style.width = '35vw'
     barra_progreso_movil.style.width ='50vw'
     barra_progreso_tablet.style.width ='45vw'
-    body.style.backgroundImage = "url('media/menu/fondo_sitio.jpg')"
+    body.style.backgroundImage = "url('images/menu/fondo_sitio.jpg')"
     body.style.backgroundSize = 'cover'
     posicion_bar_progreso = 2;
 }
@@ -755,7 +755,7 @@ function cambiar_a_forma_pago() {
     barra_progreso.style.width = '35vw'
     barra_progreso_movil.style.width ='50vw'
     barra_progreso_tablet.style.width ='45vw'
-    body.style.backgroundImage = "url('media/menu/fondo_forma_pago.jpg')"
+    body.style.backgroundImage = "url('images/menu/fondo_forma_pago.jpg')"
     body.style.backgroundSize = 'cover'
     confirmar_pedido_efectivo_c.style.display = 'none'
     posicion_bar_progreso = 3;
@@ -773,7 +773,7 @@ function cambiar_a_direccion() {
     barra_progreso.style.width = '35vw'
     barra_progreso_movil.style.width ='50vw'
     barra_progreso_tablet.style.width ='45vw'
-    body.style.backgroundImage = "url(media/menu/fondo_direccion.jpg)"
+    body.style.backgroundImage = "url(images/menu/fondo_direccion.jpg)"
     confirmar_pedido_efectivo_c_2.style.display = 'none'
     posicion_bar_progreso = 4;
 }
@@ -787,7 +787,7 @@ function cambiar_a_tarjeta() {
     direccion.style.display = 'none'
     espera_pedido.style.display = 'none'
     pago_tarjeta.style.display = 'block'
-    body.style.backgroundImage = "url('media/menu/fondo_tarjeta.png')"
+    body.style.backgroundImage = "url('images/menu/fondo_tarjeta.png')"
     body.style.backgroundSize = 'cover'
     barra_progreso.style.width = '35vw'
     barra_progreso_movil.style.width ='50vw'

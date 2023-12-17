@@ -39,7 +39,7 @@
 }
 
 #image_1 {
-	background-image: url("../media/subpags/pan.jpeg");
+	background-image: url("../images/subpags/pan.jpeg");
 	background-size: 135% 100%;
 	top: 5%;
 	right: 30%;
@@ -47,7 +47,7 @@
 }
 
 #image_2 {
-	background-image: url("../media/subpags/galleta.jpeg");
+	background-image: url("../images/subpags/galleta.jpeg");
 	background-size: 130% 100%;
 	top: 47%;
 	left: 20%;
@@ -110,7 +110,7 @@ h1 {
 
 @media screen and (max-width: 600px) {
 	body {
-		background-image: url("../media/menu/Reposteria6.jpg");
+		background-image: url("../images/menu/Reposteria6.jpg");
 		background-size: 110%;
 	}
 	
