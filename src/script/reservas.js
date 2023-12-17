@@ -1,19 +1,20 @@
-//import { global_error_message } from './base.js';
 let fecha_seleccionada = "";
 const app = angular.module('dateTimeApp', []);
 let app2 = "21";
+
+// Defines the controller for the date picker
 app.controller('dateTimeCtrl', function () {
+    // 'this' refers to the controller instance
     const ctrl = this;
 
+    // Set the default date.
     ctrl.selected_date = new Date();
 	ctrl.selected_date.setHours(10);
 	ctrl.selected_date.setMinutes(0);
-	
+
+    // Set the default time.
 	ctrl.updateDate = function (newdate) {
         fecha_seleccionada = newdate;
-		// Do something with the returned date here.
-		// Aqui es donde lo tienes que guardar en el webstore o cookie.
-		//console.log(newdate);
 	};
 });
 
@@ -33,6 +34,7 @@ app.directive('datePicker', function ($timeout, $window) {
 			mondayfirst: '@'
         },
 		transclude: true,
+
         link: function (scope, element, attrs, ctrl, transclude) {
 			transclude(scope, function(clone) {
 				element.append(clone);
@@ -46,6 +48,7 @@ app.directive('datePicker', function ($timeout, $window) {
                 scope.datepicker_title = attrs.datepickerTitle;
             }
 
+            // Define the days of the week
             scope.days = [
                 { "long": "Domingo", "short": "Dom" },
                 { "long": "Lunes", "short": "Lun" },
@@ -65,6 +68,7 @@ app.directive('datePicker', function ($timeout, $window) {
                 "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
             ];
 
+            // Function to get the current date and time
             function getSelected() {
                 if (scope.currentViewDate.getMonth() === scope.localdate.getMonth()) {
                     if (scope.currentViewDate.getFullYear() === scope.localdate.getFullYear()) {
@@ -85,21 +89,25 @@ app.directive('datePicker', function ($timeout, $window) {
                 }
             }
 
+            // Function to get the days in the month
             function getDaysInMonth() {
                 var month = scope.currentViewDate.getMonth();
                 var date = new Date(scope.currentViewDate.getFullYear(), month, 1);
                 var days = [];
                 var today = new Date();
                 while (date.getMonth() === month) {
+                    // Check if the day is in the past
                     var showday = true;
                     if (!scope.pickpast && date < today) {
                         showday = false;
                     }
+                    // Check if the day is today
                     if (today.getDate() === date.getDate() &&
                         today.getYear() === date.getYear() &&
                         today.getMonth() === date.getMonth()) {
                         showday = true;
                     }
+                    // Check if the day is selected
                     var day = new Date(date);
                     var dayname = day.getDay();
                     var daydate = day.getDate();
@@ -109,6 +117,7 @@ app.directive('datePicker', function ($timeout, $window) {
                 scope.month = days;
             }
 
+            // Initialize the date with the selected date and the days in the month
             function initializeDate() {
                 scope.currentViewDate = new Date(scope.localdate);
                 scope.currentMonthName = function () {
@@ -146,7 +155,8 @@ app.directive('datePicker', function ($timeout, $window) {
                 const strTime = hours + ':' + minutes;
                 return strTime;
             }
-			
+
+            // Update the time when the timepicker is clicked
             scope.$watch('open', function() {
                 if (scope.selecteddate !== undefined && scope.selecteddate !== null) {
                     scope.localdate = convertFromUTC(scope.selecteddate);
@@ -160,8 +170,8 @@ app.directive('datePicker', function ($timeout, $window) {
 				scope.updateInputTime();
             });
 
+            // Update the date when the timepicker is clicked
             scope.selectDate = function (day) {
-
                 if (scope.pickdate === "true" && day.showday) {
                     for (var number in scope.month) {
                         var item = scope.month[number];
@@ -177,6 +187,7 @@ app.directive('datePicker', function ($timeout, $window) {
                 }
             };
 
+            // Update the date when the calendar is clicked and a new date is fetched
             scope.updateDate = function () {
                 if (scope.localdate) {
                     var newdate = getDateAndTime(scope.localdate);
@@ -184,6 +195,7 @@ app.directive('datePicker', function ($timeout, $window) {
                 }
             };
 
+            // Move the calendar to the next month
             scope.moveForward = function () {
                 scope.currentViewDate.setMonth(scope.currentViewDate.getMonth() + 1);
                 if (scope.currentViewDate.getMonth() === 12) {
@@ -193,6 +205,7 @@ app.directive('datePicker', function ($timeout, $window) {
                 getSelected();
             };
 
+            // Move the calendar to the previous month
             scope.moveBack = function () {
                 scope.currentViewDate.setMonth(scope.currentViewDate.getMonth() - 1);
                 if (scope.currentViewDate.getMonth() === -1) {
@@ -202,6 +215,7 @@ app.directive('datePicker', function ($timeout, $window) {
                 getSelected();
             };
 
+            // Move the calendar to the current month and calculates the offset
             scope.calcOffset = function (day, index) {
                 if (index === 0) {
                     let offset = (day.dayname * 14.2857142) + '%';
@@ -261,7 +275,8 @@ app.directive('datePicker', function ($timeout, $window) {
 				};
 				
 				scope.updateInputTime();
-				
+
+                // Function that checks if the time selected by the user is valid
 				function checkValidTime (number) {
                     let validity = true;
 					switch (scope.edittime.digits.length) {
@@ -289,7 +304,8 @@ app.directive('datePicker', function ($timeout, $window) {
 					}
 					return validity;
 				}
-				
+
+                // Function that formats the time to be displayed in the input
 				function formatTime () {
                     let time = "";
                     if (scope.edittime.digits.length === 1) {
@@ -304,7 +320,8 @@ app.directive('datePicker', function ($timeout, $window) {
 					}
 					return time + ' ' + scope.timeframe;
 				}
-				
+
+                // Function that handles the input of the time
 				scope.changeInputTime = function (event) {
                     const numbers = {48: 0, 49: 1, 50: 2, 51: 3, 52: 4, 53: 5, 54: 6, 55: 7, 56: 8, 57: 9};
                     if (numbers[event.which] !== undefined) {
@@ -330,7 +347,8 @@ app.directive('datePicker', function ($timeout, $window) {
 					scope.edittime.formatted = scope.time_input;
 					// scope.edittime.input = formatted;
 				};
-				
+
+                // Function that adds a padding
                 var pad2 = function (number) {
                     return (number < 10 ? '0' : '') + number;
                 };
@@ -338,6 +356,7 @@ app.directive('datePicker', function ($timeout, $window) {
                 scope.moving = false;
                 scope.offsetx = 0;
                 scope.totaloffset = 0;
+                // Initialize the timepicker
                 scope.initializeTimepicker = function () {
                     currenttime = $('.current-time');
                     timeline = $('.timeline');
@@ -348,6 +367,7 @@ app.directive('datePicker', function ($timeout, $window) {
                     sectionlength = timeline_width / 24 / 6;
                 };
 
+                // Resizes the timepicker when the window is resized
                 angular.element($window).on('resize', function () {
                     scope.initializeTimepicker();
                     if (timeline.length > 0) {
@@ -356,7 +376,8 @@ app.directive('datePicker', function ($timeout, $window) {
                     sectionlength = timeline_width / 24;
 					scope.checkWidth(true);
                 });
-           
+
+                // Function that sets the time bar to the current time
                 scope.setTimeBar = function () {
 					currenttime = $('.current-time');
                     const timeline_width = $('.timeline')[0].offsetWidth;
@@ -374,6 +395,7 @@ app.directive('datePicker', function ($timeout, $window) {
                     });
                 };
 
+                // Function that gets the current time
                 scope.getTime = function () {
                     // get hours
                     var percenttime = (scope.currentoffset + 1) / timeline_width;
@@ -387,7 +409,6 @@ app.directive('datePicker', function ($timeout, $window) {
 						hour += 1;
 						minutes = 0;
 					}
-
                     scope.time = hour + ":" + pad2(minutes);
 					scope.updateInputTime();
                     scope.updateDate();
@@ -395,6 +416,7 @@ app.directive('datePicker', function ($timeout, $window) {
            
                 var initialized = false;
 
+                // Initialize the timepicker when the user clicks on it
                 element.on('touchstart', function() {
                     if (!initialized) {
                         element.find('.timeline-container').on('touchstart', function (event) {
@@ -404,6 +426,7 @@ app.directive('datePicker', function ($timeout, $window) {
                     }
                 });
 
+                // Changes the style to present it appropriately when the user clicks on the timepicker
                 scope.timeSelectStart = function (event) {
                     scope.initializeTimepicker();
                     const timepicker_container = element.find('.timepicker-container-inner');
@@ -428,7 +451,9 @@ app.directive('datePicker', function ($timeout, $window) {
                     });
                     scope.getTime();
                 };
-           
+
+                // Changes the style to present it appropriately when the user clicks on the timepicker, specifically
+                // when the user moves the mouse and in the inner part
                 angular.element($window).on('mousemove touchmove', function (event) {
                     if (scope.moving === true) {
                         event.preventDefault();
@@ -458,7 +483,9 @@ app.directive('datePicker', function ($timeout, $window) {
                         scope.$apply();
                     }
                 });
-           
+
+                // Changes the style to present it appropriately when the user clicks on the timepicker, specifically
+                // when the user lifts the click
                 angular.element($window).on('mouseup touchend', function () {
                     if (scope.moving) {
                         // var roundsection = Math.round(scope.currentoffset / sectionlength);
@@ -477,6 +504,7 @@ app.directive('datePicker', function ($timeout, $window) {
                     scope.moving = false;
                 });
 
+                // Function that adjusts the time.
                 scope.adjustTime = function (direction) {
                     event.preventDefault();
                     scope.initializeTimepicker();
@@ -526,7 +554,7 @@ let iniTransformX = 0;
 let currTransformX = 0;
 let currentPosition = 0;
 
-
+// Function that handles the picking of the time being a slider.
 selectNumber = (index, isDragging) => {
     //console.log(index, currentIndex);
     if (!isDragging) {
@@ -576,21 +604,22 @@ document.querySelectorAll('.options button').forEach((element) => {
 });
 
 
-
+// When the user clicks on the button, output thought the console the time
 document.getElementById('reservationSelector').addEventListener('change', function() {
     console.log("Selected option: " + this.value);
     // alert("Reservation for " + this.value + " people.");
 });
 
+// When the user clicks on the cancel button, redirect to the landing page
 $(document).ready(function() {
     $(".cancel-button").click(function() {
         var destinarion = "landing.html";
-        window.location.href = destinarion;
+        window.location.href = "landing.html";
         console.log("Cancel button clicked");
     });
 });
 
-
+// Function that formats the date to be displayed in Spanish format when it is stores later on
 function formatDateToSpanish(inputDateStr) {
     // Define los nombres de los meses y días en español
     const months = [
@@ -618,6 +647,7 @@ function formatDateToSpanish(inputDateStr) {
     return `${day} de ${month} de ${year} a las ${hours}:${minutes}:${seconds}`;
 }
 
+// When the user clicks on the save button, save the reservation
 $(document).ready(function() {
     $(".save-button").click(function () {
         let fecha_string = formatDateToSpanish(fecha_seleccionada.toString().substring(0, 25));
