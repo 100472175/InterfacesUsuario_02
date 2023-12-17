@@ -135,20 +135,27 @@
                 <p>Desea confirmar el pedido</p>
                 <div>
                     <button onclick="confirmar_pago_si()"> Si </button>
-                    <button onclick="confirmar_pago_efectivo_no()"> No </button>
+                    <button onclick="confirmar_pago_ef_no()"> No </button>
                 </div>
             </article>
         </section>
         <!--Dirección deonde enviar el pedido-->
         <section class="direccion">
-            <article class="direccion_selccion col-5 col-t-8" >
+            <article class="direccion_selccion  col-5 col-t-8" >
                 <form >
                     <label for="dir"> Introduzca su direción</label>
-                    <input type="text" id="dir" placeholder="Direccion">
+                    <input type="text" id="dir" placeholder="Calle Los Angeles, 3">
                 </form>
                 <p>Su pedido puede tardar entre 15 y 30 minutos</p>
                 <button> Realizar pago </button>
                 <p>*Campo Obligatorio</p>
+            </article>
+            <article class="confirmar_pedido_efectivo_c_2 col-5">
+                <p>Desea confirmar el pedido</p>
+                <div>
+                    <button onclick="confirmar_pago_si()"> Si </button>
+                    <button onclick="confirmar_pago_efectivo_no()"> No </button>
+                </div>
             </article>
         </section>
         <!--Pago con tarjeta -->
@@ -176,7 +183,6 @@
                         <p id="menu_card_price">Total 0 €</p>
                         <button id="menu_card_confirm">Confirmar Pago</button>
                     </div>
-
                 </form>
             </article>
             <article class="confirmar_pedido_c col-5">

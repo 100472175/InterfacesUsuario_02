@@ -372,11 +372,13 @@ let pago_tarjeta = document.querySelector(".pago_tarjeta");
 let direccion_seleccion = document.querySelector(".direccion_selccion button");
 let confirmar_pedido_c = document.querySelector(".confirmar_pedido_c");
 let confirmar_pedido_efectivo_c = document.querySelector(".confirmar_pedido_efectivo_c");
+let confirmar_pedido_efectivo_c_2 = document.querySelector(".confirmar_pedido_efectivo_c_2");
 let menu_card_price = document.querySelector("#menu_card_price");
 let menu_card_confirm= document.querySelector("#menu_card_confirm");
 let dir  = document.querySelector("#dir");
 let precio_total  = 0;
 let forma_pag = 0;
+let sitio_pag = 0;
 
 //Varibale para esperar a la entrega del pedido
 let espera_pedido = document.querySelector(".espera_pedido");
@@ -635,23 +637,46 @@ step_4.addEventListener('click', () =>{
 
 //Metodos que llaman a la función de ir a forma de pago
 sitio_pago_tienda.addEventListener('click',() =>{
+    sitio_pag = 1;
     cambiar_a_forma_pago()
+
 })
 sitio_pago_domicilio.addEventListener('click',() =>{
+    sitio_pag = 0
     cambiar_a_forma_pago();
+
 })
 
 //Metodoq que llama a la función de ir a la paguina donde se introduce la dirección
 forma_pago_tarjeta.addEventListener('click',() =>{
-    cambiar_a_direccion();
+    forma_pag = 0;
+    if (sitio_pag === 1){
+        cambiar_a_tarjeta()
+    }
+    else{
+        cambiar_a_direccion();
+    }
+
 })
 //Función que activa lel div de confirmación del pedido  en efectivo
 forma_pago_efectivo.addEventListener('click',() =>{
-    confirmar_pedido_efectivo_c.style.display = 'grid'
+    forma_pag = 1
+    if (sitio_pag === 1){
+        confirmar_pedido_efectivo_c.style.display = 'grid'
+    }
+    else{
+        cambiar_a_direccion();
+    }
+
 })
 direccion_seleccion.addEventListener('click',() =>{
     if (check_direcion(dir)){
-        cambiar_a_tarjeta();
+        if (forma_pag === 0){
+            cambiar_a_tarjeta();
+        }
+        else {
+            confirmar_pedido_efectivo_c_2.style.display = 'grid'
+        }
     }
     else{
         global_error_message(1, "Tienes que introducir una dirección", direccion);
@@ -749,6 +774,7 @@ function cambiar_a_direccion() {
     barra_progreso_movil.style.width ='50vw'
     barra_progreso_tablet.style.width ='45vw'
     body.style.backgroundImage = "url(media/menu/fondo_direccion.jpg)"
+    confirmar_pedido_efectivo_c_2.style.display = 'none'
     posicion_bar_progreso = 4;
 }
 //Función que va a la pàgina donde se introduce la tarjeta para pagar
@@ -1142,7 +1168,7 @@ function startTimer() {
 
 //Funciones para confirmar al pago
 function confirmar_pago_si(){
-    global_error_message(1, "Su pago a sido realizado con exito");
+    global_error_message(1, "Su pago ha sido realizado con exito");
     cambiar_a_espera_pedido();
 
 }
@@ -1151,6 +1177,10 @@ function confirmar_pago_no(){
 
 }
 function confirmar_pago_efectivo_no(){
-    cambiar_a_forma_pago()
+    cambiar_a_direccion()
+
+}
+function confirmar_pago_ef_no(){
+    cambiar_a_sitio_pago()
 
 }

@@ -536,7 +536,7 @@
 }
 
 #menu_card_date_cvv label:last-child {
-	margin-left: 13.8%;
+	margin-left: 22%;
 }
 
 #menu_card_date {
@@ -632,6 +632,41 @@
     margin: auto;
 }
 .confirmar_pedido_efectivo_c div button{
+    background-color: #F6EDE6;
+    height: 7vh;
+    width: 10vw;
+    border: none;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.confirmar_pedido_efectivo_c_2{
+    position: absolute;
+    z-index: 3;
+    background-color: #7E4D28;
+    width: 50vw;
+    height: 40vh;
+    top: 30%;
+    left: 25%;
+    border-radius: 25px;
+    box-shadow: 0 4px 4px black;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-content: center;
+}
+.confirmar_pedido_efectivo_c_2 p{
+    margin: auto;
+    color: white;
+    font-size: 0.8em;
+}
+.confirmar_pedido_efectivo_c_2 div  {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    place-content: center;
+    gap: 25%;
+    margin: auto;
+}
+.confirmar_pedido_efectivo_c_2 div button{
     background-color: #F6EDE6;
     height: 7vh;
     width: 10vw;
