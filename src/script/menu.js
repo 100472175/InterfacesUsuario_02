@@ -313,6 +313,7 @@ let barra_progreso = document.querySelector(".progess_bar_line_ordenador");
 let barra_progreso_tablet = document.querySelector(".progess_bar_line_tablet");
 let barra_progreso_movil = document.querySelector(".progess_bar_line_movil");
 let barra_progreso_cuadro = document.querySelector(".progess_bar");
+let posicion_bar_progreso= 0;
 
 //Selección  de menu
 let menu = document.querySelector("#menu");
@@ -322,59 +323,63 @@ let delicatessen = document.querySelector("#menu_delicatessen");
 let tartas = document.querySelector("#menu_cakes");
 let reposteria = document.querySelector("#menu_bakery");
 let go_back_inicio = document.querySelector("#go_back_inicio");
+let menu_select = 1;
 
-
-
+//Variables de selcion de platos
 let lista = document.querySelector(".menu_dish");
 let cesta = document.querySelector(".cesta");
 let equis = document.querySelector(".menu_cerrar_compra");
 let menu_carrito = document.querySelector(".menu_cart_open");
 let lista_platos_selecionados = document.querySelector(".menu_list_foos_select");
 let totalCarrito = document.querySelector(".menu_Total");
-
-let revisar_pedido = document.querySelector(".revisar_pedido")
-let lista_revision = document.querySelector(".revision_platos")
-let totalrevision = document.querySelector(".revision_Total");
-let lista_platos_selecionados_revision = document.querySelector(".revision_list_food_select");
-let forma_pago = document.querySelector(".forma_pago");
-let sitio_pago = document.querySelector(".sitio_pago");
-let revison_button_chek = document.querySelector(".revision_button_chek");
-let sitio_pago_tienda = document.querySelector(".sitio_pago_tienda");
-let sitio_pago_domicilio = document.querySelector(".sitio_pago_domicilio");
-let direccion = document.querySelector(".direccion");
-let forma_pago_tarjeta = document.querySelector(".forma_pago_tarjeta");
-let forma_pago_efectivo = document.querySelector(".forma_pago_efectivo");
 let cantidad = document.querySelector(".menu_cuantity");
-let espera_pedido = document.querySelector(".espera_pedido");
+
+//Alergenos
 let saber_mas = document.querySelector(".menu_saber_mas");
-let pago_tarjeta = document.querySelector(".pago_tarjeta");
-let direccion_seleccion = document.querySelector(".direccion_selccion button");
-let menu_button_chek= document.querySelector(".menu_button_chek");
-let menu_card_confirm= document.querySelector("#menu_card_confirm");
-let revision_total = document.querySelector(".revision_Total");
-let confirmar_pedido_c = document.querySelector(".confirmar_pedido_c");
-let confirmar_pedido_efectivo_c = document.querySelector(".confirmar_pedido_efectivo_c");
 let filtro = document.querySelector(".filtro");
 let menu_alergies = document.querySelector(".menu_alergies");
 let menu_cerrar_filtro = document.querySelector(".menu_cerrar_filtro");
-let menu_card_price = document.querySelector("#menu_card_price");
+let saber_mas_select = 0;
 let tick1 =document.querySelector("#cuadro1");
 let tick2 =document.querySelector("#cuadro2");
 let tick3 =document.querySelector("#cuadro3");
 let tick4 =document.querySelector("#cuadro4");
-let saber_mas_select = 0;
-let menu_select = 1;
 let t1 = 0;
 let t2 = 0;
 let t3 = 0;
 let t4 = 0;
 let lista_alergenos  = [];
-let posicion_bar_progreso= 0;
-let dir  = document.querySelector("#dir");
-let precio_total  = 0;
 let f = 0;
 
-//Funciones que se activan a al hacer click
+//Variables revisión pedido
+let revisar_pedido = document.querySelector(".revisar_pedido")
+let lista_revision = document.querySelector(".revision_platos")
+let totalrevision = document.querySelector(".revision_Total");
+let lista_platos_selecionados_revision = document.querySelector(".revision_list_food_select");
+let revison_button_chek = document.querySelector(".revision_button_chek");
+let revision_total = document.querySelector(".revision_Total");
+let menu_button_chek= document.querySelector(".menu_button_chek");
+
+//Variables pago
+let forma_pago = document.querySelector(".forma_pago");
+let sitio_pago = document.querySelector(".sitio_pago");
+let sitio_pago_tienda = document.querySelector(".sitio_pago_tienda");
+let sitio_pago_domicilio = document.querySelector(".sitio_pago_domicilio");
+let direccion = document.querySelector(".direccion");
+let forma_pago_tarjeta = document.querySelector(".forma_pago_tarjeta");
+let forma_pago_efectivo = document.querySelector(".forma_pago_efectivo");
+let pago_tarjeta = document.querySelector(".pago_tarjeta");
+let direccion_seleccion = document.querySelector(".direccion_selccion button");
+let confirmar_pedido_c = document.querySelector(".confirmar_pedido_c");
+let confirmar_pedido_efectivo_c = document.querySelector(".confirmar_pedido_efectivo_c");
+let menu_card_price = document.querySelector("#menu_card_price");
+let menu_card_confirm= document.querySelector("#menu_card_confirm");
+let dir  = document.querySelector("#dir");
+let precio_total  = 0;
+
+//Varibale para esperar a la entrega del pedido
+let espera_pedido = document.querySelector(".espera_pedido");
+
 
 //Cuando se carga la paguina va menu
 window.addEventListener('load', () => {
@@ -644,15 +649,12 @@ forma_pago_efectivo.addEventListener('click',() =>{
     confirmar_pedido_efectivo_c.style.display = 'grid'
 })
 direccion_seleccion.addEventListener('click',() =>{
-    cambiar_a_tarjeta();
-    /*
     if (check_direcion(dir)){
         cambiar_a_tarjeta();
     }
     else{
         global_error_message(1, "Tienes que introducir una dirección", direccion);
     }
-    */
 })
 
 //Función que activa lel div de confirmación del pedido por tarjeta
@@ -710,7 +712,7 @@ function cambiar_a_sitio_pago() {
     barra_progreso.style.width = '35vw'
     barra_progreso_movil.style.width ='50vw'
     barra_progreso_tablet.style.width ='45vw'
-    body.style.backgroundImage = "url('media/menu/fondo_sitio.png')"
+    body.style.backgroundImage = "url('media/menu/fondo_sitio.jpg')"
     body.style.backgroundSize = 'cover'
     posicion_bar_progreso = 2;
 }
@@ -1105,7 +1107,7 @@ function check_card_cvv(cvv) {
 	return re.test(cvv);
 }
 function check_direcion(dir){
-    const re = /^[a-z]$/;
+    const re = /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+,\s\d+, (\d+º[A-Z], )?\d{5}, [A-Za-záéíóúÁÉÍÓÚñÑ\s]+$/;
     return re.test(dir);
 }
 
