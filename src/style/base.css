@@ -208,7 +208,11 @@ button, a{
     .main_header a {
     	font-size: 0.52rem;
     }
-    
+
+	#header img{
+		width: auto;
+		height: 2.2vh;
+	}
     
     #unfolding_specialities {
     	width: 20vw;

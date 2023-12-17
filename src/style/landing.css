@@ -13,17 +13,26 @@ section {
     background-position: center;
 }
 
+.front_page h3{
+    display: none;
+}
+
 .front_page nav{
-    background-color: #7E4D29;
     text-align: center;
     margin: 5vh auto;
     height: 6vh;
-    width: 12vw;
+    width: 14vw;
 }
-.front_page nav a{
+
+.front_page button{
+    background-color: #7E4D29;
+    text-align: center;
+    height: 100%;
+    width: 100%;
     text-decoration: None;
     color: white;
-    font-size: 1.5rem;
+    border: none;
+    font-size: 1.2rem;
 }
 
 .front_page img{
@@ -66,13 +75,12 @@ section {
     border-radius: 3vh;
     height: auto;
     padding: 3vh;
-    margin: 20vh auto;
+    margin: 20vh auto 0 auto;
 }
 
 .intro h3{
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
-    margin-top: 2vh;
 }
 
 .intro p{
@@ -84,9 +92,9 @@ section {
 .intro nav{
     background-color: #7E4D29;
     text-align: center;
-    margin: 2vh auto;
+    margin: 2vh auto 0 auto;
     height: 6vh;
-    width: 70%;
+    width: 50%;
     border-radius: 5vh;
 }
 
@@ -96,18 +104,29 @@ section {
     font-size: 1.5rem;
 }
 
+.intro button{
+    background-color: #7E4D29;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 5vh;
+    color: white;
+    font-size: 1.5rem;
+    border: none
+}
+
+.intro nav a{
+
+}
+
 .intro.bebidas{
     position: absolute;
     z-index: 1;
-    height: 55vh;
+    height: auto;
     width: 40vw;
     margin-top: 20vh;
     margin-left: 30vw;
     box-shadow: 0 4px 4px rgb(170,170,170);
-}
-
-.intro.bebidas h3{
-    font-size: 2rem;
 }
 
 .intro.bebidas p{
@@ -173,7 +192,7 @@ section {
 .intro.historia{
     border-radius: 0;
     border: black solid 1px;
-    rotate: -10deg;
+    transform: rotate(-10deg);
     height: auto;
     margin-left: 15vw;
     margin-top: 0;
@@ -246,6 +265,7 @@ section {
 
 .contact{
     background-color: #FFFBF8;
+    height: auto
 }
 
 .contact h3{
@@ -262,6 +282,7 @@ section {
 
 .contactos p{
     display: inline;
+    font-size: 1.2rem;
 }
 
 .contactos img{
@@ -273,69 +294,274 @@ section {
 .subscribe{
     display:inline-block;
     margin-left: 10vw;
-    height: 18vh;
+    height: auto;
 }
 
 .subscribe input{
     background-color: #F2EAE3;
     font-size: 1.2rem;
-    width: 22vw;
+    width: auto;
     height: 8vh;
-    margin-top: 5vh;
+    margin-top: 3vh;
     border: None;
     text-align: center;
+    padding: 0 4vh 0 4vh;
     box-shadow: 0 4px 4px rgb(170,170,170);
 }
 
 .subscribe button{
     border: None;
     background-color: #E6CDBA;
-    margin-top: 5vh;
+    margin-top: 3vh;
     font-size: 1.1rem;
     height: 8vh;
-    width: 10vw;
+    width: auto;
+    padding: 0 5vh 0 5vh;
     box-shadow: 0 4px 4px rgb(170,170,170);
 }
 
+.subscribe label{
+    font-size: 1.2rem;
+
+}
+
 footer{
-    margin-top: 17.9vh;
+    margin-top: 18vh;
     background-color: #7E4D29;
-    height: 34vh;
+    height: auto;
 }
 
 footer img{
     width: auto;
     height: 4vh;
-    margin-bottom: 18vh;
     padding-left: 5vw;
-}
-
-footer div{
-    color: white;
-    display: inline-block;
     margin-top: 5vh;
-    margin-left: 3vw;
-}
-
-.nosotros{
-    padding-bottom: 12vh;
 }
 
 footer div a{
     display: block;
+    font-size: 1.2rem;
+    padding-bottom: 0.5vh;
 }
 
 footer a{
     color: white;
     text-decoration: none;
-    display: inline-block;
 }
 
-.a_externo{
-    padding-bottom: 19.5vh;
+.cuadricula{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 30%;
 }
 
 @media screen and (max-width: 768px) {
+    .front_page img{
+        width: 80%;
+        margin-top: 40vh;
+        margin-left: 10%;
+        margin-bottom: 5vh;
+    }
+
+    .front_page nav{
+        width: 30%;
+        padding-top: 0.5vh;
+    }
+
+    .intro{
+        width: 80%;
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+    }
+
+    .intro p{
+        margin:2vh;
+        font-size: 1.4rem;
+    }
+
+    .intro h3{
+        font-size: 2rem;
+    }
+
+    .coffee{
+        height: auto;
+    }
+
+    .beverages{
+        background-image: url("../media/landing/batido_choco.jpg");
+        background-size: cover;
+        height: auto;
+    }
+
+    .intro.bebidas{
+        width: 80%;
+        margin: 20vh auto;
+        position: static;
+        height: auto;
+    }
+
+    #batido1, #batido2{
+        display: none;
+    }
+
+    .reposteria{
+        height: auto;
+    }
+
+    .delicatessen{
+        height: auto;
+    }
+
+    .cakes{
+        background-image: url("../media/landing/tarta_choco.png");
+        background-size: cover;
+        height: auto;
+    }
+
+    .intro.tartas{
+        width: 90%;
+        margin: 20vh auto;
+        position: static;
+        height: auto;
+    }
+
+    .intro.tartas h3{
+        margin:5vh 0 2vh 0;
+    }
+
+    .intro.tartas p{
+        font-size: 1.6rem;
+    }
+
+    .intro.tartas nav{
+        margin-bottom:5vh;
+    }
+
+    #tarta{
+        display: none
+    }
+
+    .history{
+        height: auto;
+    }
+
+    .intro.historia{
+        position: static;
+        margin: 5vh auto;
+    }
+
+    .intro.historia img{
+        height:auto
+    }
+
+    .history h3{
+        position: static;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .next{
+        margin-left: 55%;
+    }
+
+    .galery{
+        height: auto;
+    }
+
+    .galery nav{
+        width: 40vw;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .contact{
+        height: auto;
+    }
+
+    .contactos{
+        text-align: center;
+        margin-top: 3vh;
+        margin-left: 8vw;
+        display:inline-block;
+        font-size: 1.5rem;
+    }
+
+    .contactos p{
+        font-size: 1rem;
+    }
+
+    .contactos img{
+        width: 5vw;
+        height: auto;
+        margin-top: 1vh;
+    }
+
+    .subscribe{
+        margin-left: 10%;
+        margin-top: 5%;
+        height: auto;
+        padding-bottom: 1vh;
+    }
+
+    .subscribe input{
+        font-size: 1.2rem;
+        width: auto;
+        height: 8vh;
+        margin-top: 2vh;
+    }
+
+    .subscribe button{
+        text-align: center;
+        padding: 2vh 5vw 2vh 5vw;
+        margin-top: 2vh;
+        font-size: 1.1rem;
+        height: 8vh;
+        width: auto;
+    }
+
+    footer{
+        margin-top: 2vh;
+        text-align: center;
+        height:auto;
+    }
+
+    footer img{
+        margin-bottom: 0;
+        padding-left: 0;
+        margin-top: 1vh;
+    }
+
+    footer div a{
+        display: none;
+    }
+
+    footer div{
+        margin-top: 0;
+        margin-left: 0;
+        padding-bottom: 0
+    }
+
+    .cuadricula{
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    .navegador{
+        display: initial;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .nosotros{
+        padding: 0;
+    }
+
+    .a_externo{
+        padding: 0;
+        font-size: 1.2rem;
+        text-align: center;
+        display: initial;
+    }
 
 }
 
@@ -417,6 +643,13 @@ footer a{
     .intro.historia{
         position: static;
         margin: 5vh auto;
+        padding: 2vh
+    }
+
+    .intro.historia img{
+        height:auto;
+        width: 90%;
+        margin: 1.5vh
     }
 
     .history h3{
@@ -443,6 +676,7 @@ footer a{
     }
 
     .contactos{
+        text-align: initial;
         margin-top: 3vh;
         margin-left: 8vw;
         display:inline-block;
@@ -467,10 +701,10 @@ footer a{
 
     .subscribe input{
         font-size: 1.2rem;
-        width: auto;
+        width: 90%;
         height: 8vh;
         margin-top: 2vh;
-        margin-left: 6vw;
+        margin-left: 0;
     }
 
     .subscribe button{
@@ -478,8 +712,8 @@ footer a{
         margin-top: 2vh;
         font-size: 1.1rem;
         height: auto;
-        width: auto;
-        margin-left: 6vw;
+        width: 90%;
+        margin-left: 0;
     }
 
     footer{
