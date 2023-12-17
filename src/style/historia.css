@@ -17,7 +17,7 @@
     background-image: url("../media/historia/historia_base.png"); /* replace with your image path */
     background-size: contain ;
     background-position: center;
-
+    background-repeat: no-repeat;
 }
 .iframe-container {
     position: absolute;
@@ -30,5 +30,51 @@ iframe {
     width: 50%;
     height: 100%;
     border: none; /* optional, removes the default border */
+}
+
+#history_text{
+    position: absolute;
+    top: 20%; /* adjust as necessary */
+    left: 53%; /* adjust as necessary */
+    width: 34%; /* or the width you want */
+    /* Center the text container */
+    text-align: center;
+}
+
+#history_text p{
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 768px) {
+    .background-container{
+        position: absolute;
+        transform: rotate(-90deg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .iframe-container{
+        transform: rotate(90deg);
+        position: absolute;
+        top: 5.8%; /* adjust as necessary */
+        left: 23%; /* adjust as necessary */
+    }
+
+    iframe {
+        width: 112%;
+        height: 60%;
+        border: none; /* optional, removes the default border */
+
+    }
+
+    #history_text{
+        font-size: 0.7rem;
+        position: absolute;
+        top: 53.5%; /* adjust as necessary */
+        left: 10%; /* adjust as necessary */
+        width: 78%;
+    }
+}
+
+@media screen and (max-width: 600px) {
 
 }
