@@ -681,9 +681,14 @@
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+.espera_pedido{
+    height:70vh;
+}
+
 .espera_pedido img{
-    height:70%;
-    width: auto
+    height: 87%;
+    width: auto;
+    margin-left: 40%;
 }
 
 .menu_label_oculto{
