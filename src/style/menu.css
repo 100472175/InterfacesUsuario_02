@@ -164,7 +164,10 @@
     grid-template-columns: 1fr 2fr 1fr;
     margin: auto;
 }
-
+.menu_car{
+    background-color: transparent;
+    border: none;
+}
 .cesta{
     position: absolute;
     top: 10%;
@@ -249,6 +252,8 @@
     left: 3vw;
     top: 17vh;
     font-size: 0.7em;
+    background-color: transparent;
+    border: none;
 }
 .menu_alergies{
     background-color: #FFF8F4;
@@ -280,12 +285,19 @@
     position: absolute;
     top: 3vh;
     right: 2vw;
+
+}
+.menu_alergies ul li button{
+    background-color: transparent;
+    border: none;
 }
 .filtro{
     position: absolute;
     top:5vw;
     left: 30vh;
     height: 1vh;
+    border: none;
+    background-color: transparent;
 }
 .filtro img{
     height: 7vh;
