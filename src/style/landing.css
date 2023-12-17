@@ -223,8 +223,12 @@ section {
 .siema{
     margin-top: 5vh;
     margin-left: 10vw;
-    height: auto;
+    height: 70vh;
     width: 80vw;
+}
+
+.siema img{
+    height: auto;
 }
 
 .prev, .next{
