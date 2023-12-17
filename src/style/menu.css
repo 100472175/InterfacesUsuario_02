@@ -645,6 +645,12 @@
     text-align: center;
     grid-template-rows: 1fr 1fr 1fr;
 }
+
+.espera_pedido img{
+    height:70%;
+    width: auto
+}
+
 .menu_label_oculto{
     color: transparent;
     height: 0;
