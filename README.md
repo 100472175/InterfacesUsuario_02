@@ -3,7 +3,7 @@ This is a responsive minimalist web for a restaurant made for the subject User I
 
 ## Authors
 
-- Eduardo Alarcón Navarro
-- Manuel Gómez-Plana Rodríguez
-- Marina Pérez Barbero
-- Irene Subías Serrano
+- [Eduardo Alarcón Navarro](https://github.com/100472175)
+- [Manuel Gómez-Plana Rodríguez](https://github.com/ManuGPR)
+- [Marina Pérez Barbero](https://github.com/Marina963)
+- [Irene Subías Serrano](https://github.com/IreneUc3m)
